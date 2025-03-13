@@ -1,0 +1,133 @@
+.topbar {
+    background-color: rgb(24, 24, 101);
+    display: flex;
+    justify-content: right;
+    padding: 10px 30px;
+    color: aliceblue;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+    height: 50px;
+}
+
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navLinks li {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+}
+
+.navLinks li:hover {
+    color: rgb(24, 24, 101);
+}
+
+
+.requestButton {
+    background-color: rgb(24, 24, 101) ;
+    color: white;
+    font-weight: bold ;
+    text-transform: none ;
+    border-radius: 20px ;
+    padding: 8px 16px ;
+}
+
+.requestButton:hover {
+    background-color: rgb(18, 18, 80) ;
+}
+
+
+/* maincontent */
+.container {
+    text-align: center;
+    padding: 50px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #121b43;
+}
+
+.highlight {
+    display: block;
+}
+
+.red {
+    color: red;
+    font-size: 3rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.primaryButton {
+    background: linear-gradient(to right, #2d2d78, #d41f33) !important;
+    color: white ;
+    font-weight: bold;
+    padding: 10px 20px ;
+    border-radius: 20px;
+}
+
+.secondaryButton {
+    background-color: #f2f2f2 ;
+    color: #d41f33 ;
+    font-weight: bold ;
+    padding: 10px 20px ;
+    border-radius: 20px ;
+    border: none ;
+}
+
+.subheading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #121b43;
+    margin-top: 40px;
+}
+
+.subDescription {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.imageContainer {
+    margin-top: 30px;
+}
+
+.imageContainer img {
+    max-width: 100%;
+    height: auto;
+}
