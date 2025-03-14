@@ -2,26 +2,26 @@ import { Box, Card, CardContent, CardMedia, IconButton, Typography } from "@mui/
 import { useState } from "react";
 import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 
-const data = [
+let data = [
   {
     image: "https://www.servosys.com/wp-content/uploads/2023/06/5.webp",
-    description: "Retail Landing",
+    description: "Retail Landing1",
   },
   {
     image: "https://www.servosys.com/wp-content/uploads/2023/06/3-1.webp",
-    description: "Retail Landing",
+    description: "Retail Landing2",
   },
   {
     image: "https://www.servosys.com/wp-content/uploads/2023/06/1.webp",
-    description: "Retail Landing",
+    description: "Retail Landing3",
   },
   {
     image: "https://www.servosys.com/wp-content/uploads/2023/06/4-1.webp",
-    description: "Retail Landing",
+    description: "Retail Landing3",
   },
   {
     image: "https://www.servosys.com/wp-content/uploads/2023/06/2-1.webp",
-    description: "Retail Landing",
+    description: "Retail Landing4",
   },
   
 ];
@@ -29,10 +29,28 @@ const data = [
 export default function MainContent3() {
   const [activeIndex, setActiveIndex] = useState(0);
   const handlePrev = () => {
+     data = rotateCounterClockwise([...data]);
+
     setActiveIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
   };
 
+
+  function rotateClockwise(arr) {
+    let last = arr.pop(); // Remove the last element
+    arr.unshift(last); // Add it to the front
+    return arr;
+  }
+  
+  // Counterclockwise Rotation
+  function rotateCounterClockwise(arr) {
+    let first = arr.shift(); // Remove the first element
+    arr.push(first); // Add it to the end
+    return arr;
+  }
+
   const handleNext = () => {
+     data = rotateClockwise([...data]);
+
     setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
   };
   return (
@@ -61,7 +79,7 @@ export default function MainContent3() {
           
           <Box display='inline-flex' p={1} justifyContent='space-between'>
             <Card sx={{ maxWidth: 400 }}>
-              <CardMedia component="img" height="300" image={data[activeIndex].image} alt={index.image} />
+              <CardMedia component="img" height="300" image={index.image} alt={index.image} />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                  {index.description}
