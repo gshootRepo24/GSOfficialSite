@@ -1,9 +1,19 @@
 import Topbar from './Topbar'
 import Navrbar from './Navrbar'
-import AutoSlider from './slider'
-import MainContent from './MainContent/MainContent'
-import MainContent2 from './MainContent/MainContent2'
-import MainContent3 from './MainContent/MainContent3'
+import AutoSlider from './Slider'
+import Boost4x from './MainContent/Boost4x'
+import DeleveredEnd from './MainContent/DeleveredEnd'
+import ClientSucess from './MainContent/ClientSucess'
+import ServosysProducts from './MainContent/ServosysProducts​'
+import DigitizeYourBusiness from './MainContent/DigitizeYourBusiness'
+import TalkComponent from './MainContent/TalkComponent'
+import TrustedBy from './MainContent/TrustedBy'
+import Tsetimonials from './MainContent/Tsetimonials'
+import Footer from './MainContent/Footer'
+import Results from './MainContent/Results'
+import Insights from './MainContent/Insights'
+import Events from './MainContent/Events'
+
 
 export default function RootLayout() {
   return (
@@ -11,9 +21,18 @@ export default function RootLayout() {
     <Topbar/>
     <Navrbar/>
     <AutoSlider/>
-    <MainContent/>
-    <MainContent2/>
-    <MainContent3/>
+    <Boost4x/>
+    <DeleveredEnd/>
+    <ClientSucess/>
+    <ServosysProducts/>
+    <DigitizeYourBusiness/>
+    <TalkComponent/>
+    <TrustedBy/>
+    <Tsetimonials/>
+    <Results/>
+    <Insights/>
+    <Events/>
+    <Footer/>
    </>
   )
 }
