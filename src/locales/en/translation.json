@@ -1,0 +1,36 @@
+{
+  "common": {
+    
+    "welcome": "Welcome",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password"
+  },
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete"
+  },
+  "nav":{
+    "Product":"Product",
+    "Solutions":"Solutions",
+    "Resources":"Resources",
+    "Company":"Company",
+    "Request Demo":"Request Demo"
+  },
+  "Slider":{
+    "Digital Lending Platform":"Digital Lending Platform",
+    "Fastest Solution Implementer":"Fastest Solution Implementer",
+    "Unlock Business Values With ModernTechnology":"Unlock Business Values With ModernTechnology",
+    "Learn more":"Learn more"
+  }
+ 
+} 

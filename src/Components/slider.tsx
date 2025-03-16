@@ -1,8 +1,15 @@
 import  { useState, useEffect } from "react";
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
+import { useTranslation } from 'react-i18next';
 
-const data = [
+
+const AutoSlider = () => {
+
+
+
+
+  const data = [
   {
     id: "slide1",
     image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-3.jpg",
@@ -21,8 +28,11 @@ const data = [
   },
 ];
 
-const AutoSlider = () => {
+
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useTranslation();
 
   
   useEffect(() => {
@@ -56,7 +66,7 @@ const AutoSlider = () => {
      
       <Box sx={{ position: "absolute", top:'20%', left: "20%", color: "white", padding: "10px" }}>
         <Typography variant="h3">{data[currentIndex].Title}</Typography>
-        <Button variant='contained' sx={{mt:'50px'}}>Learn more</Button>
+        <Button variant='contained' sx={{mt:'50px'}}>{t('Slider.Learn more')}</Button>
       </Box>
       
       <IconButton

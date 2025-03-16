@@ -1,0 +1,34 @@
+{
+  "common": {
+    "welcome": "مرحباً",
+    "home": "الرئيسية",
+    "about": "حول",
+    "contact": "اتصل بنا",
+    "language": "اللغة"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور"
+  },
+  "buttons": {
+    "submit": "إرسال",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف"
+  },
+  "nav": {
+    "Request Demo":"طلب عرض توضيحي",
+    "Product": "المنتجات",
+    "Solutions": "الحلول",
+    "Resources": "الموارد",
+    "Company": "الشركة"
+  },
+  "Slider": {
+    "Digital Lending Platform": "منصة الإقراض الرقمي",
+    "Fastest Solution Implementer": "أسرع منفذ للحلول",
+    "Unlock Business Values With ModernTechnology": "فتح القيم التجارية مع التكنولوجيا الحديثة",
+    "Learn more": "اعرف المزيد"
+  }
+} 

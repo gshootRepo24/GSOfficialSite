@@ -1,0 +1,35 @@
+{
+  "common": {
+   
+    "welcome": "स्वागत है",
+    "home": "होम",
+    "about": "हमारे बारे में",
+    "contact": "संपर्क करें",
+    "language": "भाषा"
+  },
+  "auth": {
+    "login": "लॉग इन",
+    "signup": "साइन अप",
+    "email": "ईमेल",
+    "password": "पासवर्ड"
+  },
+  "buttons": {
+    "submit": "सबमिट",
+    "cancel": "रद्द करें",
+    "save": "सेव करें",
+    "delete": "डिलीट"
+  },
+  "nav":{
+    "Request Demo":"डेमो का अनुरोध करें",
+    "Product":"उत्पाद",
+     "Solutions":"समाधान",
+     "Resources":"संसाधन",
+     "Company":"कंपनी"
+  },
+  "Slider": {
+    "Digital Lending Platform": "डिजिटल लेंडिंग प्लेटफॉर्म",
+    "Fastest Solution Implementer": "सबसे तेज समाधान कार्यान्वयनकर्ता",
+    "Unlock Business Values With ModernTechnology": "आधुनिक तकनीक के साथ व्यापार मूल्यों को अनलॉक करें",
+    "Learn more": "और जानें"
+  }
+} 
