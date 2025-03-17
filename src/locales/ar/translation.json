@@ -26,9 +26,18 @@
     "Company": "الشركة"
   },
   "Slider": {
-    "Digital Lending Platform": "منصة الإقراض الرقمي",
+    "Digital_Lending_Platform": "منصة الإقراض الرقمي",
     "Fastest Solution Implementer": "أسرع منفذ للحلول",
     "Unlock Business Values With ModernTechnology": "فتح القيم التجارية مع التكنولوجيا الحديثة",
     "Learn more": "اعرف المزيد"
+  },
+  "Boost": {
+    "BOOST": "تعزيز",
+    "PRODUCTIVITY": "الإنتاجية",
+    "Handshake_with_Futuristic_Technologies": "التعاون مع تقنيات المستقبل",
+    "Low-code platform": "منصة التطوير منخفض الكود",
+    "AI_Led_products_&_solutions": "منتجات وحلول مدعومة بالذكاء الاصطناعي",
+    "Handshake_with_Modern_Technologies": "التعاون مع التقنيات الحديثة",
+    "Embracing": "تبني التقنيات الناشئة ودمجها بسلاسة في الحلول، وتأمين مستقبل الأعمال وتمكينك من البقاء في المقدمة."
   }
 } 

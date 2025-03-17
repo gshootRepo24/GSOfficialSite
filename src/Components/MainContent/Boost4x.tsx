@@ -1,7 +1,6 @@
 import { useState } from "react";
-import styles from "./maincontent.module.css";
 import { Box, Button, Typography } from "@mui/material";
-import { color } from "@mui/system";
+
 
 // import { Button } from "@mui/material";
 
@@ -62,7 +61,7 @@ function Boost4x() {
               onClick={() => setActiveIndex(index)}
               sx={{
                 background: activeIndex === index ?"linear-gradient(90deg, #16224F, #E41E26)" : tab.color  ,
-                color: activeIndex === index ? "#E41E26" : "Black",
+                color: activeIndex === index ? "white" : "#E41E26",
                 borderRadius: "20px",
                 padding: "10px 20px",
                 fontWeight: "bold",

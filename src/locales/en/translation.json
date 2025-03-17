@@ -27,10 +27,20 @@
     "Request Demo":"Request Demo"
   },
   "Slider":{
-    "Digital Lending Platform":"Digital Lending Platform",
+    "Digital_Lending_Platform":"Digital Lending Platform",
     "Fastest Solution Implementer":"Fastest Solution Implementer",
     "Unlock Business Values With ModernTechnology":"Unlock Business Values With ModernTechnology",
     "Learn more":"Learn more"
+  },
+  "Boost":{
+    "BOOST":"BOOST",
+    "PRODUCTIVITY":"PRODUCTIVITY",
+    "Handshake_with_Futuristic_Technologies":"Handshake with Futuristic Technologies",
+    "Low-code platform":"Low-code platform",
+    "AI_Led_products_&_solutions":"AI Led products & solutions",
+    "Handshake_with_Modern_Technologies":"Handshake with Modern Technologies",
+    "Embracing":"Embracing emerging technologies and integrating them seamlessly into solutions, future-proofing businesses and enabling you to stay ahead of the curve."
+
   }
  
 } 

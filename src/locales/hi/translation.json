@@ -27,9 +27,18 @@
      "Company":"कंपनी"
   },
   "Slider": {
-    "Digital Lending Platform": "डिजिटल लेंडिंग प्लेटफॉर्म",
+    "Digital_Lending_Platform": "डिजिटल लेंडिंग प्लेटफॉर्म",
     "Fastest Solution Implementer": "सबसे तेज समाधान कार्यान्वयनकर्ता",
     "Unlock Business Values With ModernTechnology": "आधुनिक तकनीक के साथ व्यापार मूल्यों को अनलॉक करें",
     "Learn more": "और जानें"
+  },
+  "Boost": {
+    "BOOST": "बढ़ावा",
+    "PRODUCTIVITY": "उत्पादकता",
+    "Handshake_with_Futuristic_Technologies": "भविष्य की तकनीकों के साथ सहयोग",
+    "Low-code platform": "लो-कोड प्लेटफॉर्म",
+    "AI_Led_products_&_solutions": "एआई आधारित उत्पाद और समाधान",
+    "Handshake_with_Modern_Technologies": "आधुनिक तकनीकों के साथ सहयोग",
+    "Embracing": "उभरती हुई तकनीकों को अपनाना और उन्हें समाधानों में निर्बाध रूप से एकीकृत करना, व्यवसायों को भविष्य के लिए तैयार करना और आपको प्रतिस्पर्धा में आगे रखना।"
   }
 } 

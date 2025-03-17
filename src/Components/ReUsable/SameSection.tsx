@@ -6,7 +6,8 @@ export default function SameSection({ Title, SubHeading, Description }:any) {
       <Typography
         variant="h4"
         fontWeight="Bold"
-        color="red"
+        color="white"
+        sx={{WebkitTextStroke:'2px red'}}
         textTransform="uppercase"
       >
         ​{Title}
@@ -19,7 +20,7 @@ export default function SameSection({ Title, SubHeading, Description }:any) {
       >
         {SubHeading}
       </Typography>
-      <Typography variant="body1" fontWeight="800">
+      <Typography variant="body1"  maxWidth='70%' margin='auto'>
         {Description}
       </Typography>
     </Box>
