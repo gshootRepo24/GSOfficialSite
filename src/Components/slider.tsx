@@ -1,7 +1,6 @@
 import  { useState, useEffect } from "react";
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
-import { useTranslation } from 'react-i18next';
 import Translator from "./ReUsable/Translator";
 
 
@@ -9,7 +8,7 @@ const AutoSlider = () => {
 
 
 
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const data = [
   {
     id: "slide1",

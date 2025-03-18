@@ -25,6 +25,7 @@ const languages = [
 ];
 
 export default function Topbar() {
+  
   const { t, i18n } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const currentLanguageCode = cookies.get('i18next') || 'en';

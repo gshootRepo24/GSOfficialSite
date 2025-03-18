@@ -1,15 +1,12 @@
-import { Card, CardContent, CardMedia, Icon, Typography } from "@mui/material";
+import { Card, CardContent, Typography } from "@mui/material";
 
-
-const CustomCard = ({ image, heading, desc }:any) => {
+const CustomCard = ({ IconComponent, heading, desc }:any) => {
+  console.log('custom')
   return (
-    <Card sx={{ maxWidth: 300, boxShadow: 3, borderRadius: 2, textAlign: "center", p: 2 }}>
-      <CardMedia
-        component='img'
-        image={image}
-        alt="icon"
-        sx={{ width: 50, height: 50, margin: "10px auto" }}
-      />
+    <Card sx={{ maxWidth: 350, boxShadow: 3, borderRadius: 2, textAlign: "center", justifyItems:'left', p: 2 }}>
+      {IconComponent && (
+        <IconComponent sx={{ fontSize: 100, margin: "10px auto", display: "block" }} />
+      )}
       <CardContent>
         <Typography variant="h6" component="div" fontWeight="bold">
           {heading}

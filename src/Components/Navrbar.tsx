@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 import logo from "../assets/growshoot_logo-icon.svg";
 import { useTranslation } from "react-i18next";
 import Translator from "./ReUsable/Translator";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // Submenu data structure
 const menuItems = {
@@ -40,6 +40,10 @@ const menuItems = {
 };
 
 function Navbar() {
+  useEffect(()=>{
+    console.log('App is loading....')
+  },[])
+  
   const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
