@@ -13,31 +13,29 @@ import {
   import TwitterIcon from "@mui/icons-material/Twitter";
   import LinkedInIcon from "@mui/icons-material/LinkedIn";
   import bg from '../../assets/Footer/footer-bg.jpg';
+  import { useTranslation } from 'react-i18next';
   
   const Footer = () => {
+    const { t } = useTranslation();
+  
     return (
       <Box sx={{ backgroundColor: "#1a1b41", backgroundImage:`url(${bg})`, color: "white", paddingTop: 4, mt: 4 }}>
         {/* Top Section */}
         <Box
           sx={{
-            maxWidth: 1200,
+            // maxWidth: 1200,
             margin: "auto",
             padding: 3,
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
-            justifyContent: "space-between",
+            // justifyContent: "space-between",
+            gap:4 
           }}
         >
           {/* Company Info */}
           <Box sx={{ maxWidth: 400 }}>
             <Typography variant="body1" sx={{ fontSize: "1rem", marginBottom: 2 }}>
-              Servosys Solutions is a unit of EML Consultancy Services Private
-              Limited, a company headquartered in New Delhi, India. We are one of
-              the fastest-growing providers of software products and technology
-              services for business process automation solutions that address
-              challenges like process turn-around time, organizational
-              productivity, regulatory compliance, business scalability,
-              operational visibility, and excellence.
+              {t("company_info.description")}
             </Typography>
             {/* Subscription Form */}
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
@@ -47,13 +45,16 @@ import {
                 sx={{
                   backgroundColor: "white",
                   borderRadius: "5px",
+                  size: "small",
                   input: { color: "black" },
                 }}
-                fullWidth
+                // fullWidth
               />
               <Button
                 variant="contained"
-                sx={{ backgroundColor: "#0d6efd", color: "white" }}
+                sx={{ backgroundColor: "#0d6efd",
+                  fontSize: "0.8rem",
+                  color: "white" }}
               >
                 Get Quote
               </Button>
@@ -61,64 +62,64 @@ import {
           </Box>
   
           {/* Links Section */}
-          <Grid container spacing={2} sx={{ marginTop: { xs: 3, md: 0 } }}>
+            <Grid container spacing={2} justifyContent={'flex-end'} alignContent={'flex-start'}>
             {/* Products */}
             <Grid item xs={6} sm={4} md={3}>
-              <Typography variant="h6">
-                PRODUCTS
+              <Typography variant="h6" align="left">
+              {t("footer.products.title")}
               </Typography>
-              {["ServoStreams", "ServoDocs", "ServoWebScan", "ServoImage"].map(
-                (item) => (
-                  <Link key={item} href={`/products/${item.toLowerCase()}`} color="inherit" underline="hover">
-                    <Typography variant="body2">
-                      → {item}
-                    </Typography>
-                  </Link>
-                )
+              {["GsStreams", "GsDocs", "GsWebScan", "GsImage"].map(
+              (item) => (
+                <Link key={item} href={`/${item.toLowerCase()}`} color="inherit" underline="hover">
+                <Typography variant="body2" align="left">
+                  → {item}
+                </Typography>
+                </Link>
+              )
               )}
             </Grid>
-  
+        
             {/* Solutions */}
             <Grid item xs={6} sm={4} md={3}>
-              <Typography variant="h6">
-                SOLUTIONS
+              <Typography variant="h6" align="left">
+              {t("footer.solutions.title")}
               </Typography>
               {[
-                "ARC Solution",
-                "Digital Lending",
-                "Digital CASA",
-                "Home Loans",
-                "Mortgage Lending",
+              "ARC Solution",
+              "Digital Lending",
+              "Digital CASA",
+              "Home Loans",
+              "Mortgage Lending",
               ].map((item) => (
-                <Link key={item} href={`/solutions/${item.toLowerCase().replace(/ /g, '-')}`} color="inherit" underline="hover">
-                  <Typography variant="body2">
-                    → {item}
-                  </Typography>
-                </Link>
+              <Link key={item} href={`/solutions/${item.toLowerCase().replace(/\s+/g, '')}`} color="inherit" underline="hover">
+                <Typography variant="body2" align="left">
+                → {item}
+                </Typography>
+              </Link>
               ))}
             </Grid>
-  
+        
             {/* Quick Links */}
             <Grid item xs={6} sm={4} md={3}>
-              <Typography variant="h6">
-                QUICK LINKS
+              <Typography variant="h6" align="left">
+              {t("footer.quick_links.title")}
               </Typography>
               {[
-                "About Us",
-                "Careers",
-                "Leadership Team",
-                "Blog",
-                "Contact Us",
-                "Awards & Recognition",
+              "About Us",
+              "Careers",
+              "Leadership Team",
+              "Blog",
+              "Contact Us",
+              "Awards & Recognition",
               ].map((item) => (
-                <Link key={item} href={`/quick-links/${item.toLowerCase().replace(/ /g, '-')}`} color="inherit" underline="hover">
-                  <Typography variant="body2">
-                    → {item}
-                  </Typography>
-                </Link>
+              <Link key={item} href={`/${item.toLowerCase().replace(/\s+/g, '')}`} color="inherit" underline="hover">
+                <Typography variant="body2" align="left">
+                → {item}
+                </Typography>
+              </Link>
               ))}
             </Grid>
-          </Grid>
+            </Grid>
         </Box>
   
         {/* Middle Section */}
@@ -136,19 +137,19 @@ import {
           {/* Address */}
           <Typography variant="body2" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <LocationOn />
-            Pride Tower, 1st floor, Plot 12A, Sector 125, Noida, Uttar Pradesh 201313
+            {t("contact.address")}
           </Typography>
   
           {/* Contact */}
           <Box sx={{ display: "flex", alignItems: "center", gap: 2, marginTop: { xs: 2, md: 0 } }}>
             <Typography variant="body2" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <Email /> sales@servosys.com
+              <Email /> {t("contact.email_sales")}
             </Typography>
             <Typography variant="body2" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <Email /> inquiry@servosys.com
+              <Email /> {t("contact.email_inquiry")}
             </Typography>
             <Typography variant="body2" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <Phone /> +91-120-5112541
+              <Phone /> {t("contact.phone")}
             </Typography>
           </Box>
         </Box>
@@ -187,7 +188,7 @@ import {
   
           {/* Copyright */}
           <Typography variant="body2">
-            © Copyright 2024, Servosys – All Rights Reserved.
+            {t("footer.copyright")}
           </Typography>
         </Box>
       </Box>

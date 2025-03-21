@@ -2,38 +2,44 @@ import { Box, Typography, Button, Tabs, Tab } from "@mui/material";
 import  { useState } from "react";
 import {motion} from 'framer-motion'
 import SameSection from "../ReUsable/SameSection";
+import { useTranslation } from "react-i18next";
 
 
 
-const data =[
+
+export default function MainContent2() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const {t} = useTranslation();
+
+  const data =[
     {
-        title:'Digital Landing Platform',
-        descrption:'The refactoring of architecture with state-of-the-art technology provides a gateway to outgrow a traditional lending regime and embrace functional uniqueness with utmost scalability.',
+        title:t('Delevired_Slider.title1'),
+        descrption:t('Delevired_Slider.description1'),
         image:'https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-4.jpg',
         buttonText:'learn More'
     },
     {
-        title:'Digital Landing Platform',
-        descrption:'The refactoring of architecture with state-of-the-art technology provides a gateway to outgrow a traditional lending regime and embrace functional uniqueness with utmost scalability.',
+        title:t('Delevired_Slider.title2'),
+        descrption:t('Delevired_Slider.description2'),
         image:'https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-3.jpg',
         buttonText:'learn More'
     },
     {
-        title:'Digital Landing Platform',
-        descrption:'The refactoring of architecture with state-of-the-art technology provides a gateway to outgrow a traditional lending regime and embrace functional uniqueness with utmost scalability.',
+        title:t('Delevired_Slider.title3'),
+        descrption:t('Delevired_Slider.description3'),
         image:'https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-2.jpg',
         buttonText:'learn More'
     }
 ]
-export default function MainContent2() {
-  const [activeIndex, setActiveIndex] = useState(0);
+
+
+
+
   return (
     <Box  py={3} px={3}>
-      <SameSection Title='Delevired End to End​'
-        SubHeading='Digital Transformation Solutions'
-        Description=' Whether you’re looking to enhance operational efficiency, improve
-        customer experience, or unlock new growth opportunities, we have the
-        knowledge and experience to deliver impeccable outcomes.'/>
+      <SameSection Title={t('Delevired.title')}
+        SubHeading={t('Delevired.heading')}
+        Description={t('Delevired.description')}/>
      
       <Box
         sx={{

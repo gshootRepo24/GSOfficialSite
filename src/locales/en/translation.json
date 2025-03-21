@@ -1,6 +1,5 @@
 {
   "common": {
-    
     "welcome": "Welcome",
     "home": "Home",
     "about": "About",
@@ -19,28 +18,317 @@
     "save": "Save",
     "delete": "Delete"
   },
-  "nav":{
-    "Product":"Product",
-    "Solutions":"Solutions",
-    "Resources":"Resources",
-    "Company":"Company",
-    "Request Demo":"Request Demo"
+  "nav": {
+    "Product": "Product",
+    "Solutions": "Solutions",
+    "Resources": "Resources",
+    "Company": "Company",
+    "Request Demo": "Request Demo"
   },
-  "Slider":{
-    "Digital_Lending_Platform":"Digital Lending Platform",
-    "Fastest Solution Implementer":"Fastest Solution Implementer",
-    "Unlock Business Values With ModernTechnology":"Unlock Business Values With ModernTechnology",
-    "Learn more":"Learn more"
+  "Slider": {
+    "Digital_Lending_Platform": "Digital Lending Platform",
+    "Fastest Solution Implementer": "Fastest Solution Implementer",
+    "Unlock Business Values With ModernTechnology": "Unlock Business Values With ModernTechnology",
+    "Learn more": "Learn more"
   },
-  "Boost":{
-    "BOOST":"BOOST",
-    "PRODUCTIVITY":"PRODUCTIVITY",
-    "Handshake_with_Futuristic_Technologies":"Handshake with Futuristic Technologies",
-    "Low-code platform":"Low-code platform",
-    "AI_Led_products_&_solutions":"AI Led products & solutions",
-    "Handshake_with_Modern_Technologies":"Handshake with Modern Technologies",
-    "Embracing":"Embracing emerging technologies and integrating them seamlessly into solutions, future-proofing businesses and enabling you to stay ahead of the curve."
+  "Boost": {
+    "BOOST": "BOOST",
+    "PRODUCTIVITY": "PRODUCTIVITY",
+    "Handshake_with_Futuristic_Technologies": "Handshake with Futuristic Technologies",
+    "Low-code platform": "Low-code platform",
+    "AI_Led_products_&_solutions": "AI Led products & solutions",
+    "Handshake_with_Modern_Technologies": "Handshake with Modern Technologies",
+    "Embracing": "Embracing emerging technologies and integrating them seamlessly into solutions, future-proofing businesses and enabling you to stay ahead of the curve.",
+    "Low_Code": "Low Code Platform",
+    "Low_Code_T": "Low code BPM platform keeps you one step ahead in achieving high-speed implementation and digital transformation. Our solutions help you adapt to changing business needs while keeping your on-premise investment minimal.",
+    "AI_Led": "AI Led products & solutions",
+    "AI_Led_T": "Harnessing the power of AI to deliver predictive insights, automate tasks, and optimize processes, driving efficiency and improved decision-making."
+  },
+  "Delevired":{
+    "title":"​Delevired End to End​",
+    "heading":"Digital Transformation Solutions",
+    "description":"Whether you’re looking to enhance operational efficiency, improve customer experience, or unlock new growth opportunities, we have the knowledge and experience to deliver impeccable outcomes."
+  },
+  "Delevired_Slider":{
+    "title1":"Digital Landing Platform",
+    "description1":"The refactoring of architecture with state-of-the-art technology provides a gateway to outgrow a traditional lending regime and embrace functional uniqueness with utmost scalability.",
+    "title2":"CASA",
+    "description2":"Revolutionizing the CASA digital banking experience with our advanced BPM solutions for banks and financial institutions, enabling our clients to accelerate customer growth and streamline their account opening processes.",
+    "title3":"Mortgage Loan",
+    "description3":"Our Integrated Mortgage Loan Automation Software Solutions orchestrate efficiency, precision, and user-centricity to streamline loan processing seamlessly."
+  },
+  "clientSucess":{
+    "title":"​Client Success Spotlight",
+    "handling":"Empowering Businesses with Servosys Solutions",
+    "description":"With our suites, you can foster digital banking transformation and scale business operations to excellence while addressing challenges with high TAT, organizational productivity, service quality, and regulatory compliance.",
+    "title2":"Retail Landing",
+    "title3":"SME Lending",
+    "title4":"Corporate Lending",
+    "title5":"Gold Loan",
+    "title6":"Customer Durable Lending"
+  },
+  "GsProduct":{
+    "title":"​GS Products​",
+    "heading":"That will Streamline Your Complete Business Process",
+    "description":"Experience the future of digital innovation with GS Products. With our four innovative solutions, we empower businesses to streamline processes, enhance productivity, and elevate their digital capabilities.",
+    "Button":{
+      "GSStreams":"GSStreams",
+      "GSDocs":"GSDocs",
+      "GSWebScan":"GSWebScan",
+      "GSImage":"GSImage"
+    },
+    "tabs":{
+      "tab1":"Future-Ready BPM suite enables BFSI companies to leverage powerful features such as straight-through processing, instant customer checks, flexible configuration, and real-time dashboards for reporting.",
+      "tab2":"GSDocs® is a cutting-edge Document Management System (DMS) having capability to archive, versioning retrieve, and index documents. It is purposely designed to deliver high performance and integrates with external systems through APIs.",
+      "tab3":"GSWebScan® offers efficient document digitization using TWAIN compliant scanners. GSWebScan simplifies complex document scanning processes by providing quick access to controls for auto indexing, scanning, reordering, cropping, resizing, and editing/deleting documents.",
+      "tab4":"GSImage©, an API Toolkit and Image Processing SDK designed to tackle diverse business problems involving images. This powerful API can be seamlessly integrated into apps such as Customer Onboarding and Loan Origination, significantly reducing development time and effort for image-related functionalities."
+    }
+  },
 
+  "hgs":{
+    "title":"​How Does GrowShoot",
+    "heading":"Digitize Your Business?",
+    "description":"Ride the wave of technologies that are going to be epi-center of your futuristic journey to Digital Transformation",
+    "Cards":{
+      "card1":{
+        "title":"Future-Ready",
+        "description":"Stay ahead of the curve with the latest innovations and technologies backed by robust Research and Development, and Industry advancements."
+      },
+      "card2":{
+        "title":"Ai Powered",
+        "description":"Harnesses the power of APIs (Application Programming Interfaces) to facilitate seamless integration with external systems and services Digital Lending Solution Suite."
+      },
+      "card3":{
+        "title":"Low Code",
+        "description":"Our suite offers a low-code environment, allowing lenders to build and customize applications with minimal coding and infrastructure needs."
+      },
+      "card4":{
+        "title":"Micro Services",
+        "description":"Our solution is built on a microservice architecture that enables seamless collaboration between components and ensure cohesive lending solution."
+      },
+      "card5":{
+        "title":"End-To-End",
+        "description":"Our Digital Lending Solution covers the entire lending lifecycle, eliminating the need for multiple disjointed systems and delivering seamless borrowing experience.."
+      },
+      "card6":{
+        "title":"AI & Automation",
+        "description":"AI and automation are the cornerstones of our suite that enables lenders to optimize processes, reduce manual effort, and enhance efficiency."
+      }
+    }
+  },
+  "Talk":{
+    "title":"Unlock Future Today",
+    "heading":"Let Our Expert Talk To You",
+    "description":"Get in touch with industry’s experts and remove all the business constraints.",
+    "form":{
+      "name":"Name",
+      "email":"Email",
+      "phone":"Phone",
+      "message":"Message"
+    }
+  },
+  "​TRUSTEDBY":{
+    "title":"​TRUSTED BY",
+    "heading":"Leading Banks and Financial Institutions",
+    "description":"Leading BFSI players find Servosys BPMS solutions extremely reliable for Business Transformation."
+  },
+  "Result":{
+    "title":"​UNVEILING TANGIBLE RESULTS",
+    "heading":"Servosys Empowering Numerous Banks and Financial Institutions Across the Industry",
+    "result":{
+      "1":"Customer Delight with referenceability",
+      "2":"YOY Consistently Profitable",
+      "3":"Customer Attrition since Inception",
+      "4":"YOY Persistent Revenue Growth",
+      "5":"Managing Billions of transactions",
+      "6":"Compliance and Risk Management with Security"
+      
+    }
+  },
+  "Insights":{
+    "title":"Insights – PRs, Blogs & Articles",
+    "view":"View All",
+    "cards":{
+      "card1":{
+        "title":"BLOG & ARTICLE",
+        "description":"Low-Code BPM simplifying business process management in BFS Industry"
+      },
+      "card2":{
+        "title":"PRESS RELEASE",
+        "description":"Aadhaar Masking Solution for Banks & Financial Services"
+      },
+      "card3":{
+        "title":"BLOG & ARTICLE",
+        "description":"How to Find the Best Workflow Automation Software in 2025"
+      }
+
+    }
+  },
+  "events":{
+    "title":"Events, Awards & Accolades",
+     "button":"viewall",
+    "card":{
+      "card1":{
+        "title":"Awards",
+        "description":" honored as the winner of “Modernizing Digital Transformation” at FINNOVEX 2023, Dubai Middle East.",
+        "read":"read"
+       
+      },
+      "card2":{
+        "title":"Awards",
+        "description":" honored as the winner of “Modernizing Digital Transformation” at FINNOVEX 2023, Dubai Middle East.",
+        "read":"read"
+        
+      }
+      
+    }
+  },
+  
+  "contact": {
+    "phone": "+91-120-5112541",
+    "email_sales": "sales@servosys.com",
+    "email_inquiry": "inquiry@servosys.com",
+    "address": "Pride Tower, 1st floor, Plot 12A, Sector 125, Noida, Uttar Pradesh 201313"
+  },
+
+  "TestMon":{
+    "title":"​TESTIMONIALS",
+    "heading":"What the people say about us",
+    "description":"We have evaluated various products, and we thought Servosys Solutions is one of the best we have come across. We were also looking for a partner who is much more helpful in terms of migrations or much faster TAT, the needs we asked for, or the requirement we raised. Servosys was equally efficient and good in that particular aspect. We have been using this product for 3 odd years, and overall, I am very impressed."
+  },
+  "navbar": {
+    "logo": "Logo",
+    "product": "Product",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "company": "Company"
+  },
+  "hero_section": {
+    "title": "Supercharge Your Microsoft Ecosystem",
+    "description": "With its integration with Microsoft products, M-Files knowledge work automation platform helps organizations optimize investments in Microsoft 365 by providing complementary capabilities for business processes and information governance. M-Files makes Microsoft 365 the single point of access for all enterprise data, empowering enterprises to find, access, and manage all connected data, regardless of its storage repository, through Microsoft 365 user interfaces."
+  },
+  "integration_section": {
+    "title": "Achieve High ROI Through Microsoft Integration",
+    "description": "Uncover business-critical information concealed within the Ecosystem. M-Files works with popular business applications like ERPs and CRMs, helping to improve business processes and information management.",
+    "features": {
+      "single_view": "Single View of Enterprise Information",
+      "collective_intelligence": "Collective Intelligence",
+      "collective_intelligence_description": "Unlock insights as M-Files platform helps with organizing and finding information, managing versions and duplicates, and guiding content collaboration within the Microsoft Ecosystem.",
+      "regulatory_compliance": "Strong Regulatory Compliance",
+      "regulatory_compliance_description": "M-Files' enhanced integration drives regulatory compliance by automating permissions and compliance controls according to business context and embedding them into daily workflows.",
+      "holistic_view": "Holistic View",
+      "holistic_view_description": "Gain a holistic view of all relevant enterprise information across systems and data repositories. With M-Files, teams can work within Microsoft applications, including Microsoft Outlook, Microsoft Teams, and Microsoft Copilot, and access enterprise information through M-Files."
+    }
+  },
+  "microsoft_integration": {
+    "title": "Gain a Unified User Experience",
+    "teams_addin": {
+      "title": "Microsoft Teams Add-In",
+      "description": "M-Files Add-In for Microsoft Teams allows working in the context of a single team while providing unified access to all enterprise data from the M-Files Add-In tab. M-Files automates document governance and guides collaboration with workflows while enabling ad-hoc conversations within Microsoft Teams."
+    },
+    "outlook_addin": {
+      "title": "Microsoft Outlook Add-In",
+      "description": "M-Files Outlook Integration automates filing emails and conversations with the appropriate client and project, enabling users to concentrate more on their work. This enhanced integration streamlines email organization and ensures communications and official correspondence are safely retained within the M-Files platform, enhancing overall productivity, efficiency, and compliance."
+    },
+    "sharepoint_connector": {
+      "title": "Microsoft SharePoint Connector",
+      "description": "This M-Files integration connects to documents in SharePoint and adds new capabilities for knowledge work automation. M-Files allows connecting SharePoint documents to business objects from non-Microsoft systems, improving discoverability and driving business processes. M-Files supports complex, built-in workflows and compliance rules with states, triggers, actions, and conditions."
+    },
+    "microsoft_365_integration": {
+      "title": "M-Files Microsoft 365 Integration",
+      "description": "M-Files integrates into Microsoft 365 and eliminates the manual work associated with document creation, storing, and usage while ensuring consistency, confidentiality, and context."
+    },
+    "microsoft_office": {
+      "title": "Microsoft Excel, Word, PowerPoint",
+      "description": "M-Files helps find information based on what it is rather than where it is, whether it is in Microsoft Excel or Microsoft PowerPoint. M-Files connects to all repositories and systems to create a single source of truth."
+    },
+    "copilot_connector": {
+      "title": "Microsoft Copilot Connector",
+      "description": "Microsoft Copilot for Microsoft 365 is your AI companion at work. It helps access relevant data, summarize emails, transcribe meetings, create documents, and conduct research."
+    }
+  },
+  "call_to_action": {
+    "try": "Try M-Files for Free",
+    "get": " Get a Live Demo",
+    "title": "See M-Files In Action",
+    "description": "Seeing is believing. Schedule a demo to learn more about simplified search, automatic workflows, intuitive user interfaces, and built-in integrations with existing applications and file systems.",
+    "ratings": {
+      "rating_1": "4.3",
+      "rating_2": "4.5",
+      "rating_3": "4.4"
+    }
+  },
+  "company_info": {
+    "description": "Servosys Solutions is a unit of EML Consultancy Services Private Limited, a company headquartered in New Delhi, India. We are one of the fastest-growing providers of software products and technology services for business process automation solutions that address challenges like process turn-around time, organizational productivity, regulatory compliance, business scalability, operational visibility, and excellence."
+  },
+  "footer": {
+    "email": "Email",
+    "products": {
+      "title": "PRODUCTS",
+      "servo_streams": "ServoStreams",
+      "servo_docs": "ServoDocs",
+      "servo_webscan": "ServoWebScan",
+      "servo_image": "ServoImage"
+    },
+    "solutions": {
+      "title": "SOLUTIONS",
+      "arc_solution": "ARC Solution",
+      "digital_lending": "Digital Lending",
+      "digital_casa": "Digital CASA",
+      "home_loans": "Home Loans",
+      "mortgage_lending": "Mortgage Lending"
+    },
+    "quick_links": {
+      "title": "QUICK LINKS",
+      "about_us": "About Us",
+      "careers": "Careers",
+      "leadership_team": "Leadership Team",
+      "blog": "Blog",
+      "contact_us": "Contact Us",
+      "awards_recognition": "Awards & Recognition"
+    },
+    "legal": {
+      "terms_of_use": "Terms of Use",
+      "privacy_policy": "Privacy Policy",
+      "cookies_policy": "Cookies Policy"
+    },
+    "copyright": "© Copyright 2024, Servosys – All Rights Reserved."
+  },
+  "servoimage": {
+    "digitization_benefit": "An API toolkit built on open source, pluggable into an APP, provides high performance ‘Desktop to Mobile’ imaging solutions for documents used in process automation workflow.",
+    "overview_title": "Overview Of GSImages",
+    "overview_description": "Modern-day App Developers are often able to leverage the power of development environments and MADPs (Mobile Application Development Platforms) to the hilt. But when it comes to building Mobile Apps with powerful imaging-rich features like management of images or digitized documents, it is not easy.",
+    "gsimages_usage": "GSImages® is an API Toolkit, Image Processing SDK, built for addressing multiple business problems that involve images. The API can be used in Apps like Customer Onboarding, Loan Origination, etc. By using this API within your Apps, you can reduce the time and effort required to build the Apps for areas where document images are required.Various functionalities provided help you in business cases where transportation of images from the mobile device to the server is required instantly. Since images can be compressed and converted to standard multipage image file formats, viz. TIFF and PDF, the requirement for bandwidth is reduced and customer experience also enhances greatly.",
+    "features_title": "Advanced Features and Capabilities of GSImages",
+    "highly_integration_friendly": "HIGHLY INTEGRATION-FRIENDLY",
+    "highly_integration_friendly_description": "Readily available APIs allow integration with any 3rd party applications",
+    "multi_storage_support": "MULTI-STORAGE SUPPORT",
+    "multi_storage_support_description": "Readily available APIs allow integration with any 3rd party applications",
+    "fast_searching_mis": "FAST SEARCHING & MIS",
+    "fast_searching_mis_description": "Readily available APIs allow integration with any 3rd party applications",
+    "parallel_read_write": "PARALLEL READ/WRITE",
+    "parallel_read_write_description": "Readily available APIs allow integration with any 3rd party applications",
+    "security_encryption": "SECURITY & ENCRYPTION",
+    "security_encryption_description": "Readily available APIs allow integration with any 3rd party applications",
+    "increased_productivity": "INCREASED PRODUCTIVITY",
+    "increased_productivity_description": "Readily available APIs allow integration with any 3rd party applications",
+    "breakthrough_results": "Breakthrough results delivered across BFSI",
+    "lowered_tat_title": "Lowered TAT",
+    "lowered_tat_description": "Advance DMS automates workflows, streamlines document retrieval, ensures compliance, offers advanced search, and integrates with other systems, resulting in faster decision-making and reduced Turnaround Time (TAT).",
+    "compliance_security_title": "Compliance & Security",
+    "compliance_security_description": "Ensures that sensitive financial documents are protected and adhere to regulatory requirements. Having a secure and compliant document repository can expedite audits and regulatory inspections.",
+    "lessened_manpower_title": "Lessened Manpower",
+    "lessened_manpower_description": "Advanced DMS automates document processes, reducing the need for manual handling. Quick retrieval reduces time spent searching for documents.",
+    "integration_friendly_title": "Integration Friendly",
+    "integration_friendly_description": "Advanced DMS offers robust APIs for seamless integration with existing software. Supports real-time data synchronization for up-to-the-minute document updates and collaboration.",
+    "trusted_by": "TRUSTED BY",
+    "trusted_by_description": "Leading Banks and Financial Institutions. Leading BFSI players find Servosys BPMS solutions extremely reliable for Business Transformation."
+  },
+ "servodocs": {
+    "servodocs" : "ServoDocs®" ,
+    "DMSDescription" :"is a leading-edge Document Management System (DMS) product that has the capability to archive, retrieve, and index documents, and provide fast search, independent of the size of the document repository. This product has been designed for delivering high performance and integrates with external systems through APIs.",
+    "DigitizationText" :"With the ongoing process of Digitization, reduce your paper-based work and expect to have access to their important documents from anywhere and at any time.",
+    "ArchiveRetrieveDescription" :"is useful for long-term archive-retrieve use cases as well as short-term transactional use cases. It helps transform digitized paper documents and electronic files into valuable knowledge assets for organizations that need to deal with unstructured documents for conducting business, as the system allows authorized access to the archived documents. This product also helps users maintain versions of the documents uploaded into the system.",
+    "AdvancedFeaturesOfServoDocs" :"Advanced Features and Capabilities of "
   }
- 
-} 
+}

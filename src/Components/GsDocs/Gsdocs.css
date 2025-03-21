@@ -1,0 +1,16 @@
+/* @import "tailwindcss"; */
+
+.bgimage{
+  background-image: url("./assets//cloud-computing-data-management-concept-1.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  
+  
+}
+@font-face {
+  font-family: poppins;
+  src: url(./assets//Fonts/poppins-pxieyp8kv8jhgfvrjjfecg.woff2);
+}
+

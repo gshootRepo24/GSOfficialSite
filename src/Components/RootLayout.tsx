@@ -4,7 +4,7 @@ import AutoSlider from './Slider'
 import Boost4x from './MainContent/Boost4x'
 import DeleveredEnd from './MainContent/DeleveredEnd'
 import ClientSucess from './MainContent/ClientSucess'
-import ServosysProducts from './MainContent/ServosysProducts​'
+import GsProducts from './MainContent/GsProducts​'
 import DigitizeYourBusiness from './MainContent/DigitizeYourBusiness'
 import TalkComponent from './MainContent/TalkComponent'
 import TrustedBy from './MainContent/TrustedBy'
@@ -24,7 +24,7 @@ export default function RootLayout() {
     <Boost4x/>
     <DeleveredEnd/>
     <ClientSucess/>
-    <ServosysProducts/>
+    <GsProducts/>
     <DigitizeYourBusiness/>
     <TalkComponent/>
     <TrustedBy/>

@@ -3,13 +3,15 @@ import RootLayout from "./Components/RootLayout"
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 
-import "@fontsource/poppins/700.css"; // For Bold weight
-import ServoSysImage from "./Components/ServSysImage/ServoSysImage";
+import GsImage from "./Components/GsImage/GsSysImage";
+import Mfile from "./Components/Mfile/Mfile";
+import Gsdocs from "./Components/GsDocs/GsDocs";
 
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Poppins, sans-serif",
+    fontFamily: "Winky Sans, sans-serif",
+    fontSize:18,
   },
 });
 export default function App() {
@@ -17,7 +19,10 @@ export default function App() {
   console.log("i am loadign");
   const router = createBrowserRouter([
     {path:'/',element:<RootLayout/>},
-    { path: '/Product/ServosysImage', element:<ServoSysImage/> }
+    {path:'/servostreams',element:<RootLayout/>},
+    { path: '/Servoimage', element:<GsImage/> },
+    { path: '/Servodocs', element:<Gsdocs/> },
+    { path: '/mfile', element:<Mfile/> }
   ])
   
   return (

@@ -5,6 +5,7 @@ import logo from "../assets/growshoot_logo-icon.svg";
 import { useTranslation } from "react-i18next";
 import Translator from "./ReUsable/Translator";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // Submenu data structure
 const menuItems = {
@@ -78,7 +79,7 @@ function Navbar() {
         ))}
       </ul>
 
-      {/* Request Demo Button */}
+      
       <Button 
         variant="contained" 
         className={styles.requestButton}
@@ -87,7 +88,7 @@ function Navbar() {
         {t('nav.Request Demo')}
       </Button>
 
-      {/* Submenu */}
+      
       <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
@@ -103,7 +104,9 @@ function Navbar() {
             onClick={handleMenuClose}
             sx={{ minWidth: 200 }}
           >
-            {item}
+            <Link to={`/${item.replace(/\s+/g, '').toLowerCase()}`} style={{textDecoration:'none', color:'black'}} >
+              {item}
+            </Link>
           </MenuItem>
         ))}
       </Menu>

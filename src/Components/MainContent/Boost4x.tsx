@@ -1,45 +1,59 @@
 import { useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 
 // import { Button } from "@mui/material";
 
-const tabs = [
-  { label: "Handshake with Futuristic Technologies", color: "#eeeee4" },
-  { label: "Low-code platform", color: "#eeeee4" },
-  { label: "AI Led products & solutions", color: "#eeeee4" },
-];
-const data = [
-  {
-    title: "Handshake with Modern Technologies",
-    text: "Embracing emerging technologies and integrating them seamlessly into solutions, future-proofing businesses and enabling you to stay ahead of the curve.",
-    image: "https://www.servosys.com/wp-content/uploads/2021/11/Image-59.png",
-  },
-  {
-    title: "Low Code Platform",
-    text: "Low code BPM platform keeps you one step ahead in achieving high-speed implementation and digital transformation. Our solutions help you adapt to changing business needs while keeping your on-premise investment minimal.",
-    image:
-      "https://www.servosys.com/wp-content/uploads/2021/11/Low-Code-2048x1779.jpg",
-  },
-  {
-    title: "AI Led products & solutions",
-    text: "Harnessing the power of AI to deliver predictive insights, automate tasks, and optimize processes, driving efficiency and improved decision-making..",
-    image:
-      "https://www.servosys.com/wp-content/uploads/2021/11/AI-Led-Solutions-2048x1365.jpg",
-  },
-];
+
 
 function Boost4x() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const {t} = useTranslation();
+
+
+  ////this is data for boost 4x
+  const tabs = [
+    { label: t('Boost.Handshake_with_Futuristic_Technologies'), color: "#eeeee4" },
+    { label: t('Boost.Low-code platform'), color: "#eeeee4" },
+    { label: t('Boost.AI_Led_products_&_solutions'), color: "#eeeee4" },
+  ];
+  const data = [
+    {
+      title: t('Boost.Handshake_with_Modern_Technologies'),
+      text: t('Boost.Embracing'),
+      image: "https://www.servosys.com/wp-content/uploads/2021/11/Image-59.png",
+    },
+    {
+      title: t('Boost.Low_Code'),
+      text: t('Boost.Low_Code_T'),
+      image:
+        "https://www.servosys.com/wp-content/uploads/2021/11/Low-Code-2048x1779.jpg",
+    },
+    {
+      title: t('Boost.AI_Led'),
+      text:t('Boost.AI_Led_T') ,
+      image:
+        "https://www.servosys.com/wp-content/uploads/2021/11/AI-Led-Solutions-2048x1365.jpg",
+    },
+  ];
+  /////data end here
+
+
+
+
+
+
+  
   return (
     <>
       <Box display="flex" alignItems="center" justifyContent="center" gap={1}>
         <Box>
           <Typography variant="h4" fontWeight="bold" color="#16224F">
-            BOOST
+           {t('Boost.BOOST')}
           </Typography>
           <Typography variant="h4" fontWeight="bold" color="#16224F">
-            PRODUCTIVITY
+            {t('Boost.PRODUCTIVITY')}
           </Typography>
         </Box>
         <Typography
@@ -72,7 +86,7 @@ function Boost4x() {
             </Button>
           ))}
       </Box>
-      <Box display="flex" alignItems="center" justifyContent="space-between" gap={4} padding={20} mt={0}>
+      <Box display="flex"  alignItems="center" justifyContent="space-between" gap={2} maxWidth={'70%'} margin={'auto'} >
         <Box maxWidth="50%">
           <Typography variant="h4" fontWeight="bold" color="#16224F" gutterBottom>
             {data[activeIndex].title}

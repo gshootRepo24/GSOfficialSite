@@ -1,6 +1,8 @@
+// import { Box } from "@mui/material";
 import { Box } from "@mui/material";
 import CardComponent from "../ReUsable/CardComponent";
 import SameSection from "../ReUsable/SameSection";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 const cardData = [
   {
@@ -11,22 +13,20 @@ const cardData = [
   },
 ];
 
-export default function Tsetimonials() {
+export default function Testimonials() {
+  const { t } = useTranslation(); // Initialize translation hook
   const test = cardData[0];
+
   return (
     <>
-      <Box sx={{mt:2,justifyContent:'center',alignItems:'center'}}>
+      <Box sx={{ mt: 2, justifyContent: 'center', alignItems: 'center' }}>
         <SameSection
-          Title="TESTIMONIALS"
-          SubHeading="What the people say about us"
-          
+          Title={t('TestMon.title')} // Use translation for title
+          SubHeading={t('TestMon.heading')} // Use translation for subheading
         />
         <CardComponent 
-        
           image={test.image}
-          description={test.description}
-          
-          
+          description={t('TestMon.description')} // Use translation for description
         />
       </Box>
     </>

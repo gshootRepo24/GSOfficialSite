@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
 :root {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Winky Sans', sans-serif !important;
   line-height: 1.5;
   font-weight: 400;
 

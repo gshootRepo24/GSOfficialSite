@@ -29,9 +29,9 @@ const ImageTextCard = ({ image, textContent, position,title }: any) => {
           margin: isLeft ? '0 20px 0 0' : '0 0 0 20px',
         }}
       />
-      <Box sx={{ flex: 1, maxWidth: '40%' }}>
+      <Box sx={{ flex: 1, maxWidth: '50%' }}>
         <Typography variant='h3' color='red'>{title} </Typography>
-        <Typography variant="body1">{textContent}</Typography>
+        <Typography variant="body1" sx={{lineBreak:'initial'}}>{textContent}</Typography>
       </Box>
     </Box>
   );

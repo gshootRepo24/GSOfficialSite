@@ -54,11 +54,11 @@ export default function Topbar() {
     <div className={styles.topbar}>
       <Box display="flex" alignItems="center" gap={1}>
         <PhoneIcon fontSize="small" />
-        <Typography variant="body2">+91-120-5112541</Typography>
+        <Typography variant="body2">+91-7979737168</Typography>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
         <MailIcon fontSize="small" />
-        <Typography variant="body2">sales@servosys.com</Typography>
+        <Typography variant="body2">info@growshoot.com</Typography>
       </Box>
       <IconButton
         onClick={handleClick}

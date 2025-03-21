@@ -1,50 +1,58 @@
+
 import { Box, Typography, Grid, Button } from "@mui/material";
 import BlogCard from "../ReUsable/BlogCart";
+import { useTranslation } from 'react-i18next'; 
 
-// Sample Blog Data
+
 const blogData = [
   {
     image: 'https://www.servosys.com/wp-content/uploads/2025/02/Low-Code-BPM-simplifying-business-process-management-in-BFS-Industry-1400x900.jpg',
-    category: "BLOG & ARTICLE",
-    title: "Low-Code BPM simplifying business process management in BFS Industry",
+    categoryKey: "Insights.cards.card1.title", 
+    descriptionKey: "Insights.cards.card1.description", 
     link: "#",
   },
   {
     image: "https://www.servosys.com/wp-content/uploads/2025/01/Aadhaar-Masking-Solution-for-Banks-Financial-Services-700x450.jpg",
-    category: "BLOG & ARTICLE",
-    title: "Aadhaar Masking Solution for Banks & Financial Services",
+    categoryKey: "Insights.cards.card2.title",
+    descriptionKey: "Insights.cards.card2.description",
     link: "#",
   },
   {
     image: "https://www.servosys.com/wp-content/uploads/2025/01/workflow-automation-software-1400x900.jpg",
-    category: "BLOG & ARTICLE",
-    title: "How to Find the Best Workflow Automation Software in 2025",
+    categoryKey: "Insights.cards.card3.title",
+    descriptionKey: "Insights.cards.card3.description",
     link: "#",
   },
 ];
 
 export default function Insights() {
+  const { t } = useTranslation(); 
+
   return (
-    <Box sx={{ textAlign: "center", mt:2 }}>
+    <Box sx={{ textAlign: "center", mt: 2 }}>
       <Typography variant="h4" fontWeight="bold">
-        Insights – PRs, Blogs & Articles
+        {t('Insights.title')} 
       </Typography>
 
-      {/* Blog Cards */}
+  
       <Grid container spacing={1} justifyContent="center" sx={{ mt: 3 }}>
         {blogData.map((blog, index) => (
-          <Grid item  sm={6} md={3} key={index}>
-            <BlogCard {...blog} />
+          <Grid item sm={6} md={3} key={index}>
+            <BlogCard 
+              image={blog.image} 
+              category={t(blog.categoryKey)} 
+              title={t(blog.descriptionKey)} 
+              link={blog.link} 
+            />
           </Grid>
         ))}
       </Grid>
 
-     
       <Button 
         variant="contained" 
         sx={{ mt: 4, backgroundColor: "#89023E", "&:hover": { backgroundColor: "#700A2E" } }}
       >
-        View All
+        {t('Insights.view')} 
       </Button>
     </Box>
   );

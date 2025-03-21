@@ -1,37 +1,44 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
 
+import { Box, Button, Grid, Typography } from "@mui/material";
 import BlogCard from "../ReUsable/BlogCart";
+import { useTranslation } from 'react-i18next'; 
 
 const eventData = [
   {
     image:
       "https://www.servosys.com/wp-content/uploads/2023/09/Modernizing-Digital-Transformation-award-at-FINNOVEX-2023-Dubai-Middle-East.-1-720x480.jpg",
-    category: "Awards",
-    title:
-      "Honored as a Digital Transformation Player of the Year at Synnex India NBFC Summit & Awards 2023",
+    categoryKey: "events.card.card1.title", 
+    titleKey: "events.card.card1.description", 
     link: "#",
   },
   {
     image:
       "https://www.servosys.com/wp-content/uploads/2023/10/DSC_9915-1024x684.jpg",
-    category: "Awards",
-    title: "Servosys Solutions was honored as the winner of “Modernizing Digital Transformation” at FINNOVEX 2023, Dubai Middle East.",
+    categoryKey: "events.card.card2.title",
+    titleKey: "events.card.card2.description",
     link: "#",
   },
 ];
 
 export default function Events() {
+  const { t } = useTranslation(); 
+
   return (
     <Box sx={{ textAlign: "center", mt: 2 }}>
       <Typography variant="h4" fontWeight="bold">
-      Events, Awards & Accolades
+        {t('events.title')} 
       </Typography>
 
-      {/* Blog Cards */}
+      
       <Grid container spacing={1} justifyContent="center" sx={{ mt: 3 }}>
-        {eventData.map((blog, index) => (
+        {eventData.map((event, index) => (
           <Grid item sm={6} md={3} key={index}>
-            <BlogCard {...blog} />
+            <BlogCard 
+              image={event.image} 
+              category={t(event.categoryKey)} 
+              title={t(event.titleKey)} 
+              link={event.link} 
+            />
           </Grid>
         ))}
       </Grid>
@@ -44,7 +51,7 @@ export default function Events() {
           "&:hover": { backgroundColor: "#700A2E" },
         }}
       >
-        View All
+        {t('events.button')} 
       </Button>
     </Box>
   );

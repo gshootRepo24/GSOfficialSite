@@ -2,33 +2,41 @@ import { Box, Card, CardContent, CardMedia, IconButton, Typography } from "@mui/
 import { useState } from "react";
 import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 import SameSection from "../ReUsable/SameSection";
+import { useTranslation } from "react-i18next";
 
-let data = [
-  {
-    image: "https://www.servosys.com/wp-content/uploads/2023/06/5.webp",
-    description: "Retail Landing",
-  },
-  {
-    image: "https://www.servosys.com/wp-content/uploads/2023/06/3-1.webp",
-    description: "SME Lending",
-  },
-  {
-    image: "https://www.servosys.com/wp-content/uploads/2023/06/1.webp",
-    description: "Corprate Lending",
-  },
-  {
-    image: "https://www.servosys.com/wp-content/uploads/2023/06/4-1.webp",
-    description: "Gold Loan",
-  },
-  {
-    image: "https://www.servosys.com/wp-content/uploads/2023/06/2-1.webp",
-    description: "Customer Durable Lending",
-  },
-  
-];
+
 
 export default function ClientSucess() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const {t} = useTranslation();
+
+  let data = [
+    {
+      image: "https://www.servosys.com/wp-content/uploads/2023/06/5.webp",
+      description: t('clientSucess.title2'),
+    },
+    {
+      image: "https://www.servosys.com/wp-content/uploads/2023/06/3-1.webp",
+      description:t('clientSucess.title3'),
+    },
+    {
+      image: "https://www.servosys.com/wp-content/uploads/2023/06/1.webp",
+      description: t('clientSucess.title4'),
+    },
+    {
+      image: "https://www.servosys.com/wp-content/uploads/2023/06/4-1.webp",
+      description: t('clientSucess.title5'),
+    },
+    {
+      image: "https://www.servosys.com/wp-content/uploads/2023/06/2-1.webp",
+      description: t('clientSucess.title6'),
+    },
+    
+  ];
+
+
+
+
   const handlePrev = () => {
      data = rotateCounterClockwise([...data]);
 
@@ -59,12 +67,9 @@ export default function ClientSucess() {
       <Box textAlign="center" justifyContent="center" py={3} px={3}>
 
         <SameSection
-        Title='Client Success Spotlight'
-        SubHeading='Empowering Businesses with Servosys Solutions'
-        Description=' With our suites, you can foster digital banking transformation and
-          scale business operations to excellence while addressing challenges
-          with high TAT, organizational productivity, service quality, and
-          regulatory compliance.'
+        Title={t('clientSucess.title')}
+        SubHeading={t('clientSucess.handling')}
+        Description={t('clientSucess.description')}
         />
         {data.map((item,index) => (
 

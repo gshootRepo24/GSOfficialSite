@@ -1,64 +1,65 @@
+import SameSection from '../ReUsable/SameSection';
+import CardComponent from '../ReUsable/CardComponent';
+import { Container, Grid } from '@mui/material';
+import { useTranslation } from 'react-i18next'; 
 
-import SameSection from '../ReUsable/SameSection'
-import CardComponent from '../ReUsable/CardComponent'
-import { Container, Grid } from '@mui/material'
-
-
-const CardData=[
-    {
-        image:'https://www.servosys.com/wp-content/uploads/2023/06/paperless.webp',
-        title:'Future-Ready',
-        description:'Stay ahead of the curve with the latest innovations and technologies backed by robust Research and Development, and Industry advancements.'
-    },
-    {
-        image:'https://www.servosys.com/wp-content/uploads/2023/06/centralised.webp',
-        title:'Ai Powered',
-        description:'Stay ahead of the curve with the latest innovations and technologies backed by robust Research and Development, and Industry advancements.'
-    },
-    {
-        image:'https://www.servosys.com/wp-content/uploads/2023/06/process-mapping.webp',
-        title:'Low Code',
-        description:'Stay ahead of the curve with the latest innovations and technologies backed by robust Research and Development, and Industry advancements.'
-    },
-    {
-        image:'https://www.servosys.com/wp-content/uploads/2023/06/workflow.webp',
-        title:'Micro Service',
-        description:'Stay ahead of the curve with the latest innovations and technologies backed by robust Research and Development, and Industry advancements.'
-    },
-    {
-        image:'https://www.servosys.com/wp-content/uploads/2023/06/Integration.webp',
-        title:'Ai And Automation',
-        description:'Stay ahead of the curve with the latest innovations and technologies backed by robust Research and Development, and Industry advancements.'
-    },
-    {
-        image:'https://www.servosys.com/wp-content/uploads/2023/06/tracking.webp',
-        title:'End to End',
-        description:'Stay ahead of the curve with the latest innovations and technologies backed by robust Research and Development, and Industry advancements.'
-    }
-]
+const CardData = [
+  {
+    image: 'https://www.servosys.com/wp-content/uploads/2023/06/paperless.webp',
+    titleKey: 'hgs.Cards.card1.title',
+    descriptionKey: 'hgs.Cards.card1.description', 
+  },
+  {
+    image: 'https://www.servosys.com/wp-content/uploads/2023/06/centralised.webp',
+    titleKey: 'hgs.Cards.card2.title',
+    descriptionKey: 'hgs.Cards.card2.description',
+  },
+  {
+    image: 'https://www.servosys.com/wp-content/uploads/2023/06/process-mapping.webp',
+    titleKey: 'hgs.Cards.card3.title',
+    descriptionKey: 'hgs.Cards.card3.description',
+  },
+  {
+    image: 'https://www.servosys.com/wp-content/uploads/2023/06/workflow.webp',
+    titleKey: 'hgs.Cards.card4.title',
+    descriptionKey: 'hgs.Cards.card4.description',
+  },
+  {
+    image: 'https://www.servosys.com/wp-content/uploads/2023/06/Integration.webp',
+    titleKey: 'hgs.Cards.card5.title',
+    descriptionKey: 'hgs.Cards.card5.description',
+  },
+  {
+    image: 'https://www.servosys.com/wp-content/uploads/2023/06/tracking.webp',
+    titleKey: 'hgs.Cards.card6.title',
+    descriptionKey: 'hgs.Cards.card6.description',
+  },
+];
 
 export default function DigitizeYourBusiness() {
+  const { t } = useTranslation();
+
   return (
     <>
-    <SameSection
-    Title='How Does Servosys'
-    SubHeading='Digitize Your Business?'
-    Description='Ride the wave of technologies that are going to be epi-center of your futuristic journey to Digital Transformation'
-    />
-   <Container sx={{ mt: 4 }}>
-      <Grid container spacing={1} justifyContent="center">
-        {CardData.map((card, index) => (
-          <Grid item key={index}>
-            <CardComponent
-              image={card.image}
-              title={card.title}
-              description={card.description}
-              maxWidth={345}
-            />
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+      <SameSection
+        Title={t('hgs.title')}
+        SubHeading={t('hgs.heading')}
+        Description={t('hgs.description')}
+      />
+      <Container sx={{ mt: 4 }}>
+        <Grid container spacing={1} justifyContent="center">
+          {CardData.map((card, index) => (
+            <Grid item key={index}>
+              <CardComponent
+                image={card.image}
+                title={t(card.titleKey)} 
+                description={t(card.descriptionKey)} 
+                maxWidth={345}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </>
-  )
+  );
 }
