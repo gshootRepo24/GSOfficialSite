@@ -4,8 +4,10 @@ import styles from "./Header.module.css";
 import logo from "../assets/growshoot_logo-icon.svg";
 import { useTranslation } from "react-i18next";
 import Translator from "./ReUsable/Translator";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getColorPalette2 } from "./Shared/color";
+import { useGSTheme } from "./Shared/GSThemeContext";
 
 // Submenu data structure
 const menuItems = {
@@ -41,6 +43,9 @@ const menuItems = {
 };
 
 function Navbar() {
+
+  const { theme, setTheme } = useGSTheme();
+
   useEffect(()=>{
     console.log('App is loading....')
   },[])
@@ -84,6 +89,7 @@ function Navbar() {
         variant="contained" 
         className={styles.requestButton}
         endIcon={<ArrowRight />}
+        sx={{color:  getColorPalette2(theme).primaryFontColor }}
       >
         {t('nav.Request Demo')}
       </Button>
