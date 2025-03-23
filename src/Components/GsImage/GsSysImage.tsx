@@ -22,6 +22,8 @@ import pdfimage from "../../assets/GsImages/pdfImage.png";
 import phoneset from "../../assets/GsImages/phoneset.png";
 import tech from "../../assets/GsImages/tech.png";
 import Faq from "../ReUsable/Faq";
+import GsBanner from "../../assets/GsImages/GsImageBanner.png";
+import GsImageProcess from "../../assets/GsImages/GsImageProcess.png";
 
 const CardData = [
   {
@@ -113,9 +115,9 @@ export default function ServoSysDoc() {
       <Navbar />
       <SameTab
         float="right"
-        heading={t("servoimage.overview_title")}
+        heading={t("servoimage.GsImage")}
         description={t("servoimage.digitization_benefit")}
-        image="https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-3.jpg"
+        image={GsBanner}
       />
       <SameSection
         Title={t("servoimage.overview_title")}
@@ -123,7 +125,7 @@ export default function ServoSysDoc() {
       />
       <ImageTextCard
         position="left"
-        image="https://www.servosys.com/wp-content/uploads/2023/08/ServoDocs.png"
+        image={GsImageProcess}
         textContent={t("servoimage.gsimages_usage")}
       />
 

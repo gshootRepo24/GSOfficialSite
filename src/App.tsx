@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import GsImage from "./Components/GsImage/GsSysImage";
 import Mfile from "./Components/Mfile/Mfile";
 import Gsdocs from "./Components/GsDocs/GsDocs";
+import GsAbout from "./Components/About/GsAbout";
 
 
 const theme = createTheme({
@@ -22,9 +23,10 @@ export default function App() {
   const router = createBrowserRouter([
     {path:'/',element:<RootLayout/>},
     {path:'/servostreams',element:<RootLayout/>},
-    { path: '/Servoimage', element:<GsImage/> },
-    { path: '/Servodocs', element:<Gsdocs/> },
-    { path: '/mfile', element:<Mfile/> }
+    { path: '/Nav/GsImage', element:<GsImage/> },
+    { path: '/Nav/GsDocs', element:<Gsdocs/> },
+    { path: '/Nav/GSFiles', element:<Mfile/> },
+    { path: '/Nav/About-Us', element:<GsAbout/> }
   ])
   
   return (

@@ -1,156 +1,10 @@
-// import { useState } from 'react'
-// import SameSection from '../ReUsable/SameSection'
-// import { Box, Button, Paper, TextField, Typography } from '@mui/material'
-
-// export default function TalkComponent() {
-
-//   const [formData,setFormData]=useState({
-//     name:'',
-//     email:'',
-//     contact:'',
-//     message:''
-//   });
-//   const handleChange = (e:any) => {
-//     const { name, value } = e.target;
-//     setFormData((prevData) => ({
-//       ...prevData,
-//       [name]: value,
-//     }));
-//   };
-//   const handleSubmit = (e:any) => {
-//     e.preventDefault();
-//     console.log("Form Data Submitted:", formData);
-//     // Reset the form after submission
-//     setFormData({
-//       name: "",
-//       email: "",
-//       contact: "",
-//       message: "",
-//     });
-//   };
-
-//   return (
-//   <>
-//     <SameSection 
-//     Title='Unlock Future Today'
-//     SubHeading='Let Our Expert Talk To You'
-//     Description='Get in touch with industry’s experts and remove all the business constraints.'
-//     />
-
-   
-//        <Box
-//       sx={{
-//         display: "flex",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         minHeight: "100vh",
-//         backgroundColor: "#f5f5f5",
-//         padding: 2,
-//       }}
-//     >
-//       <Paper
-//         elevation={3}
-//         sx={{
-//           maxWidth: 800,
-//           width: "100%",
-//           display: "flex",
-//           flexDirection: { xs: "column", md: "row" },
-//           padding: 3,
-//           borderRadius: 2,
-//           backgroundColor: "white",
-//         }}
-//       >
-//         {/* Left Side: Contact Details */}
-//         <Box
-//           sx={{
-//             flex: 1,
-//             padding: 2,
-//             borderRight: { md: "1px solid #ddd" },
-//             textAlign: { xs: "center", md: "left" },
-//           }}
-//         >
-//           <Typography variant="h6" fontWeight="bold">
-//             Contact Details
-//           </Typography>
-//           <Typography variant="body1" mt={1}>
-//             📍 123 Main Street, City, Country
-//           </Typography>
-//           <Typography variant="body1" mt={1}>
-//             📞 +1 234 567 890
-//           </Typography>
-//           <Typography variant="body1" mt={1}>
-//             ✉️ contact@example.com
-//           </Typography>
-//         </Box>
-
-//         {/* Right Side: Form */}
-//         <Box sx={{ flex: 1, padding: 2 }}>
-//           <Typography variant="h6" fontWeight="bold">
-//             Get in Touch
-//           </Typography>
-//           <form onSubmit={handleSubmit}>
-//             <TextField
-//               fullWidth
-//               label="Name"
-//               name="name"
-//               value={formData.name}
-//               onChange={handleChange}
-//               variant="outlined"
-//               margin="normal"
-//               required
-//             />
-//             <TextField
-//               fullWidth
-//               label="Email"
-//               name="email"
-//               type="email"
-//               value={formData.email}
-//               onChange={handleChange}
-//               variant="outlined"
-//               margin="normal"
-//               required
-//             />
-//             <TextField
-//               fullWidth
-//               label="Phone"
-//               name="phone"
-//               type="tel"
-//               value={formData.contact}
-//               onChange={handleChange}
-//               variant="outlined"
-//               margin="normal"
-//             />
-//             <TextField
-//               fullWidth
-//               label="Message"
-//               name="message"
-//               value={formData.message}
-//               onChange={handleChange}
-//               variant="outlined"
-//               margin="normal"
-//               multiline
-//               rows={4}
-//               required
-//             />
-//             <Button type="submit" variant="contained" color="primary" sx={{ mt: 2, width: "100%" }}>
-//               Submit
-//             </Button>
-//           </form>
-//         </Box>
-//       </Paper>
-//     </Box>
-    
-//   </>
-//   )
-// }
-
 import { useState } from 'react';
 import SameSection from '../ReUsable/SameSection';
 import { Box, Button, Paper, TextField, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next'; // Import useTranslation
+import { useTranslation } from 'react-i18next';
 
 export default function TalkComponent() {
-  const { t } = useTranslation(); // Initialize translation hook
+  const { t } = useTranslation();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -159,7 +13,7 @@ export default function TalkComponent() {
     message: ''
   });
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -167,9 +21,10 @@ export default function TalkComponent() {
     }));
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
+
     // Reset the form after submission
     setFormData({
       name: "",
@@ -182,9 +37,9 @@ export default function TalkComponent() {
   return (
     <>
       <SameSection 
-        Title={t('Talk.title')} // Use translation for title
-        SubHeading={t('Talk.heading')} // Use translation for subheading
-        Description={t('Talk.description')} // Use translation for description
+        Title={t('Talk.title')}
+        SubHeading={t('Talk.heading')}
+        Description={t('Talk.description')}
       />
 
       <Box
@@ -194,7 +49,7 @@ export default function TalkComponent() {
           alignItems: "center",
           minHeight: "100vh",
           backgroundColor: "#f5f5f5",
-          padding: 2,
+          padding: { xs: 2, md: 4 },
         }}
       >
         <Paper
@@ -209,48 +64,50 @@ export default function TalkComponent() {
             backgroundColor: "white",
           }}
         >
-          {/* Left Side: Contact Details */}
+          {/* Left Side: Contact Information */}
           <Box
             sx={{
               flex: 1,
               padding: 2,
               borderRight: { md: "1px solid #ddd" },
               textAlign: { xs: "center", md: "left" },
+              marginBottom: { xs: 2, md: 0 },
             }}
           >
             <Typography variant="h6" fontWeight="bold">
-              {t('Talk.form.name')} {/* Use translation for "Contact Details" */}
+              {t('Talk.form.contactDetails')}
             </Typography>
             <Typography variant="body1" mt={1}>
-              📍 {t('contact.address')} {/* Use translation for address */}
+              📍 {t('contact.address')}
             </Typography>
             <Typography variant="body1" mt={1}>
-              📞 {t('contact.phone')} {/* Use translation for phone */}
+              📞 {t('contact.phone')}
             </Typography>
             <Typography variant="body1" mt={1}>
-              ✉️ {t('contact.email_sales')} {/* Use translation for sales email */}
+              ✉️ {t('contact.email_sales')}
             </Typography>
           </Box>
 
           {/* Right Side: Form */}
           <Box sx={{ flex: 1, padding: 2 }}>
-            <Typography variant="h6" fontWeight="bold">
-              {t('Talk.form.message')} {/* Use translation for "Get in Touch" */}
+            <Typography variant="h6" fontWeight="bold" mb={2}>
+              {t('Talk.form.message')}
             </Typography>
             <form onSubmit={handleSubmit}>
               <TextField
                 fullWidth
-                label={t('Talk.form.name')} // Use translation for name label
+                label={t('Talk.form.name')}
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 variant="outlined"
                 margin="normal"
                 required
+                aria-label="Enter your name"
               />
               <TextField
                 fullWidth
-                label={t('Talk.form.email')} // Use translation for email label
+                label={t('Talk.form.email')}
                 name="email"
                 type="email"
                 value={formData.email}
@@ -258,20 +115,22 @@ export default function TalkComponent() {
                 variant="outlined"
                 margin="normal"
                 required
+                aria-label="Enter your email address"
               />
               <TextField
                 fullWidth
-                label={t('Talk.form.phone')} // Use translation for phone label
+                label={t('Talk.form.phone')}
                 name="contact"
                 type="tel"
                 value={formData.contact}
                 onChange={handleChange}
                 variant="outlined"
                 margin="normal"
+                aria-label="Enter your contact number"
               />
               <TextField
                 fullWidth
-                label={t('Talk.form.message')} // Use translation for message label
+                label={t('Talk.form.message')}
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
@@ -280,9 +139,22 @@ export default function TalkComponent() {
                 multiline
                 rows={4}
                 required
+                aria-label="Enter your message"
               />
-              <Button type="submit" variant="contained" color="primary" sx={{ mt: 2, width: "100%" }}>
-                {t(' Talk.form.submit')} {/* Use translation for submit button text */}
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                sx={{
+                  mt: 2,
+                  width: "100%",
+                  padding: 1.5,
+                  textTransform: "none",
+                  fontSize: "16px",
+                }}
+                aria-label="Submit the form"
+              >
+                {t('Talk.form.submit')}
               </Button>
             </form>
           </Box>

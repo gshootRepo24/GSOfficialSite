@@ -2,23 +2,26 @@ import { useState, useEffect } from "react";
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 import Translator from "./ReUsable/Translator";
+import Banner1 from "../assets/MainImages/Banner1.png";
+import Banner2 from "../assets/MainImages/Banner2.png";
+import Banner3 from "../assets/MainImages/Banner3.png";
 
 const AutoSlider = () => {
   const data = [
     {
       id: "slide1",
-      image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-3.jpg",
+      image: Banner1,
       Title: <Translator string="Slider.Unlock Business Values With ModernTechnology" />,
       GoTo: "/",
     },
     {
       id: "slide2",
-      image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-2.jpg",
+      image: Banner2,
       Title: <Translator string="Slider.Fastest Solution Implementer" />,
     },
     {
       id: "slide3",
-      image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-4.jpg",
+      image: Banner3,
       Title: <Translator string="Slider.Digital_Lending_Platform" />,
     },
   ];

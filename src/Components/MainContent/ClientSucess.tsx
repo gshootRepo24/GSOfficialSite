@@ -3,28 +3,33 @@ import { useState } from "react";
 import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 import SameSection from "../ReUsable/SameSection";
 import { useTranslation } from "react-i18next";
+import RetailLanding from "../../Assets/MainImages/RetailLanding.png";
+import SmeLanding from "../../Assets/MainImages/SmeLanding.png";
+import CoprateLanding from "../../Assets/MainImages/CoprateLanding.png";
+import GoldLoan from "../../Assets/MainImages/GoldLoan.png";
+import CustomerDurable from "../../Assets/MainImages/CustomerDurable.png";
 
 export default function ClientSucess() {
   const { t } = useTranslation();
   const [data, setData] = useState([
     {
-      image: "https://www.servosys.com/wp-content/uploads/2023/06/5.webp",
+      image: RetailLanding,
       description: t('clientSucess.title2'),
     },
     {
-      image: "https://www.servosys.com/wp-content/uploads/2023/06/3-1.webp",
+      image: SmeLanding,
       description:t('clientSucess.title3'),
     },
     {
-      image: "https://www.servosys.com/wp-content/uploads/2023/06/1.webp",
+      image: CoprateLanding,
       description: t('clientSucess.title4'),
     },
     {
-      image: "https://www.servosys.com/wp-content/uploads/2023/06/4-1.webp",
+      image: GoldLoan,
       description: t('clientSucess.title5'),
     },
     {
-      image: "https://www.servosys.com/wp-content/uploads/2023/06/2-1.webp",
+      image: CustomerDurable,
       description: t('clientSucess.title6'),
     },
   ]);

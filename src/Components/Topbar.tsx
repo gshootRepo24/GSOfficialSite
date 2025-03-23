@@ -64,54 +64,76 @@ const changeLanguage = (lang: string) => {
   
   return (
     <div className={styles.topbar}>
+  <Box
+    sx={{
+      display: "flex",
+      flexDirection: { xs: "column", sm: "row" },
+      alignItems: "center",
+      justifyContent: "right",
+      gap: { xs: 2, sm: 0 }, 
+      width: "100%",
+    }}
+  >
+    {/* Contact Info */}
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", sm: "row" },
+        alignItems: "center",
+        gap: { xs: 1, sm: 2 },
+      }}
+    >
       <Box display="flex" alignItems="center" gap={1}>
         <PhoneIcon fontSize="small" />
-        <Typography variant="body2">917979737168</Typography>
+        <Typography variant="body2">+91 7979 737168</Typography>
       </Box>
-      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+      <Box display="flex" alignItems="center" gap={1}>
         <MailIcon fontSize="small" />
         <Typography variant="body2">info@growshoot.com</Typography>
       </Box>
-      <IconButton
-        onClick={handleClick}
-        size="large"
-        aria-controls="language-menu"
-        aria-haspopup="true"
-        color="inherit"
-      >
-        <LanguageIcon />
-      </IconButton>
+    </Box>
 
-      <Menu
-        id="language-menu"
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-        PaperProps={{
-          elevation: 3,
-          sx: { mt: 1.5 }
+    {/* Language Selector */}
+    <IconButton
+      onClick={handleClick}
+      size="large"
+      aria-controls="language-menu"
+      aria-haspopup="true"
+      color="inherit"
+      aria-label="Select Language"
+      sx={{
+        // marginTop: { xs: 0, sm: 0 }, // Add top margin on small screens
+      }}
+    >
+      <LanguageIcon />
+    </IconButton>
+  </Box>
+
+  <Menu
+    id="language-menu"
+    anchorEl={anchorEl}
+    open={Boolean(anchorEl)}
+    onClose={handleClose}
+    PaperProps={{
+      elevation: 3,
+      sx: { mt: 1.5 },
+    }}
+  >
+    {languages.map(({ code, name }) => (
+      <MenuItem
+        key={code}
+        onClick={() => changeLanguage(code)}
+        selected={i18n.language === code}
+        sx={{
+          fontWeight: i18n.language === code ? "bold" : "normal",
+          minWidth: 160,
         }}
       >
-        <MenuItem disabled>
-          {/* <Typography variant="subtitle2" color="text.secondary">
-            {t('common.language')}
-          </Typography> */}
-        </MenuItem>
-        
-        {languages.map(({ code, name }) => (
-          <MenuItem
-            key={code}
-            onClick={() => changeLanguage(code)}
-            // selected={currentLanguageCode === code}
-            sx={{
-              // opacity: currentLanguageCode === code ? 0.6 : 1,
-              minWidth: 160
-            }}
-          >
-            <ListItemText>{name}</ListItemText>
-          </MenuItem>
-        ))}
-      </Menu>
-    </div>
+        <ListItemText>{name}</ListItemText>
+      </MenuItem>
+    ))}
+  </Menu>
+</div>
+
   );
 }

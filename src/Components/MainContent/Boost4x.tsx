@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import HandShek from "../../assets/MainImages/HandShek.png";
+import LowCode from "../../assets/MainImages/LowCode.png";
+import Led from "../../assets/MainImages/Led.png";
 
 function Boost4x() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -18,17 +21,17 @@ function Boost4x() {
     {
       title: t("Boost.Handshake_with_Modern_Technologies"),
       text: t("Boost.Embracing"),
-      image: "https://www.servosys.com/wp-content/uploads/2021/11/Image-59.png",
+      image: HandShek,
     },
     {
       title: t("Boost.Low_Code"),
       text: t("Boost.Low_Code_T"),
-      image: "https://www.servosys.com/wp-content/uploads/2021/11/Low-Code-2048x1779.jpg",
+      image: LowCode,
     },
     {
       title: t("Boost.AI_Led"),
       text: t("Boost.AI_Led_T"),
-      image: "https://www.servosys.com/wp-content/uploads/2021/11/AI-Led-Solutions-2048x1365.jpg",
+      image: Led,
     },
   ];
 

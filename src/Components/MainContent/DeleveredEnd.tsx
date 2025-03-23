@@ -3,6 +3,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import SameSection from "../ReUsable/SameSection";
 import { useTranslation } from "react-i18next";
+import Banner4 from "../../Assets/MainImages/Banner4.png";
+import Banner3 from "../../Assets/MainImages/Banner3.png";
+import Banner2 from "../../Assets/MainImages/Banner2.png";
 
 export default function MainContent2() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -12,19 +15,19 @@ export default function MainContent2() {
     {
       title: t("Delevired_Slider.title1"),
       descrption: t("Delevired_Slider.description1"),
-      image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-4.jpg",
+      image: Banner4,
       buttonText: t("Delevired_Slider.ButtonText"),
     },
     {
       title: t("Delevired_Slider.title2"),
       descrption: t("Delevired_Slider.description2"),
-      image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-3.jpg",
+      image: Banner3,
       buttonText: t("Delevired_Slider.ButtonText"),
     },
     {
       title: t("Delevired_Slider.title3"),
       descrption: t("Delevired_Slider.description3"),
-      image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-2.jpg",
+      image: Banner2,
       buttonText: t("Delevired_Slider.ButtonText"),
     },
   ];

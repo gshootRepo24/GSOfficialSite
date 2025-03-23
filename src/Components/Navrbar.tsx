@@ -17,10 +17,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const menuItems = {
-  Product: ["ServoStreams", "ServoDocs", "ServoWebScan", "ServoImage"],
+  Product: ["GsStreams", "GsDocs", "GsWebScan", "GsImage","GSFiles"],
   Solutions: ["ARC Solution", "Digital Lending", "Digital CASA", "Home Loans", "Mortgage Lending"],
   Resources: ["About Us", "Careers", "Leadership Team", "Blog", "Contact Us", "Awards & Recognition"],
-  Company: ["About Us", "Careers", "Leadership Team", "Blog", "Contact Us", "Awards & Recognition"],
+  Company: ["About-Us", "Careers", "Leadership Team", "Blog", "Contact Us", "Awards & Recognition"],
 };
 
 function Navbar() {
@@ -110,12 +110,12 @@ function Navbar() {
       >
         {activeMenu &&
           menuItems[activeMenu as keyof typeof menuItems].map((item) => (
-            <MenuItem
+            <MenuItem tabIndex={0}
               key={item}
               onClick={handleMenuClose}
               sx={{ minWidth: 200 }}
             >
-              <Link to={`/${item.replace(/\s+/g, "").toLowerCase()}`} style={{ textDecoration: "none", color: "black" }}>
+              <Link to={`/Nav/${item.replace(/\s+/g, "").toLowerCase()}`} style={{ textDecoration: "none", color: "black" }}>
                 {item}
               </Link>
             </MenuItem>
@@ -158,7 +158,7 @@ function Navbar() {
                       }}
                     >
                       <Link
-                        to={`/${item.replace(/\s+/g, "").toLowerCase()}`}
+                        to={`/${item.replace(/\s+/g, "-").toLowerCase()}`}
                         style={{ textDecoration: "none", color: "black" }}
                         onClick={toggleMobileDrawer}
                       >
