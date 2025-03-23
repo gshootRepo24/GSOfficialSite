@@ -67,7 +67,9 @@ const Gsdocs = () => {
         <Box style={{ width: '100%', height: '100%', background: 'rgba(8, 7, 86, 0.8)' }}>
           <Box style={{ maxWidth: '1073px', margin: 'auto', position: 'absolute', top: '20%', left: 0, right: 0, textAlign: 'center', color: 'white' }}>
             <Typography variant="h1" style={{ color: 'white', fontSize: '50px', fontWeight: 'bold' }}>
-              {t('servodocs.servodocs')}
+            <strong>{t(`servodocs.ServoDocs`)}
+           <sup>{t(`® `)}</sup>
+          </strong>
             </Typography>
             <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '24px', fontSize: '20px', color: '#FFFDFD' }}>
               {t('servodocs.DigitizationText')}
@@ -87,7 +89,7 @@ const Gsdocs = () => {
                   // },
                 }}
               >
-                {t(`Download Brochure`)}
+                {t(`servodocs.DownloadBrochure`)}
               </Button>
               <Button
                 variant="contained"
@@ -103,7 +105,7 @@ const Gsdocs = () => {
                   // },
                 }}
               >
-                {t(`Request a Demo`)}
+                {t(`servodocs.RequestADemo`)}
               </Button>
             </Box>
           </Box>
@@ -112,11 +114,15 @@ const Gsdocs = () => {
 
       <Container maxWidth="lg" style={{ textAlign: "center", marginTop: "30px" }}>
         <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
-          {t(`Overview Of`)} <span style={{ color: '#1f2b5d' }}>{t(`Servo`)}</span> {t(`Docs®`)}
+          {/* <strong>{t(`servodocs.OverviewOf`)}</strong> */}
+          <strong>{t(`servodocs.OverviewOf`)}
+          </strong>
+           <span style={{ color: '#1f2b5d' }}>{t(`servodocs.Servo`)}</span>
+            {t(`servodocs.Docs®`)}
         </Typography>
         <Box style={{ backgroundColor: "#ffffff", textAlign: "center", fontSize: "20px", lineHeight: "35px" }}>
           <Typography variant="body1" style={{ fontWeight: 'bold' }}>
-            <strong>{t(`ServoDocs`)}</strong>
+            <strong>{t(`servodocs.ServoDocs`)}</strong>
             <sup>{t(`®`)}</sup> {t('servodocs.DMSDescription')}
           </Typography>
         </Box>
@@ -129,10 +135,11 @@ const Gsdocs = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="body1">
-              <b>{t(`ServoDocs`)} </b>{t('servodocs.ArchiveRetrieveDescription')}
+            <strong>{t(`servodocs.ServoDocs`)}</strong>
+            <sup>{t(`® `)}</sup> {t('servodocs.ArchiveRetrieveDescription')}
             </Typography>
             <Typography variant="body1">
-              {t(`Business applications like Lending Management System (LMS), Core Banking System (CBS), Customer Relationship Management (CRM), Customer On-boarding, Core Insurance, ERP, etc can be integrated with ServoDocsTM through APIs.`)}
+              {t(`servodocs.BusinessApplicationsIntegration`)}
             </Typography>
           </Grid>
         </Grid>
@@ -140,77 +147,96 @@ const Gsdocs = () => {
 
       <Container maxWidth="lg" style={{ textAlign: "center", paddingTop: "30px", paddingBottom: "20px" }}>
         <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '40px', fontWeight: 'bold', color: '#ED2427' }}>
-          {t(`AdvancedFeaturesOfServoDocs`)} <span style={{ color: '#1f2b5d' }}>{t(`Servo`)}</span> {t(`Docs®`)}
+          {t(`servodocs.AdvancedFeaturesOfServoDocs`)} <span style={{ color: '#1f2b5d' }}>{t(`servodocs.Servo`)}</span> {t(`servodocs.Docs®`)}
         </Typography>
       </Container>
 
       <Container maxWidth="lg" style={{ padding: "40px" }}>
         <Grid container spacing={2} justifyContent="center">
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left",  }}>
+            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left", }} sx={{ '&:hover': {
+                  backgroundColor: "transparent", 
+                  backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
+                },}}>
               <IoSettingsOutline style={{ fontSize: '50px' }} />
               <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
-                {t(`HIGHLY INTEGRATION-FRIENDLY`)}
+                {t(`servodocs.HIGHLYINTEGRATIONFRIENDLY`)}
               </Typography>
               <Typography variant="body2">
-                {t(`Readily available APIs allow integration with any 3rd party applications`)}
+                {t(`servodocs.ReadilyAvailableAPIs`)}
               </Typography>
             </Card>
           </Grid>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }}>
+            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
+                  backgroundColor: "transparent", 
+                  backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
+                },}}>
               <TiCloudStorageOutline style={{ fontSize: '50px' }} />
               <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
-                {t(`MULTI-STORAGE SUPPORT`)}
+                {t(`servodocs.MULTISTORAGESUPPORT`)}
               </Typography>
               <Typography variant="body2">
-                {t(`ServoDocs support multi-storage types in a single setup`)}
+                {t(`servodocs.MultiStorageSupport`)}
               </Typography>
             </Card>
           </Grid>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}}>
+            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
+                  backgroundColor: "transparent", 
+                  backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
+                },}}>
               <TbDeviceMobileCheck style={{ fontSize: '50px' }} />
               <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
-                {t(`FAST SEARCHING & MIS`)}
+                {t(`servodocs.FASTSEARCHINGMIS`)}
               </Typography>
               <Typography variant="body2">
-                {t(`Search on File, Folder and meta levels ensures instant retrieval.`)}
+                {t(`servodocs.SearchOnFileFolderMeta`)}
               </Typography>
             </Card>
           </Grid>
         </Grid>
         <Grid container spacing={2} justifyContent="center" style={{ marginTop: '24px' }}>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }}>
+            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
+                  backgroundColor: "transparent", 
+                  backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
+                },}}>
               <LuMessageCircleMore style={{ fontSize: '50px' }} />
               <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
-                {t(`PARALLEL READ/WRITE`)}
+                {t(`servodocs.
+                  /WRITE`)}
               </Typography>
               <Typography variant="body2">
-                {t(`Supports a high degree of parallel read/write operations that are faster than the traditional systems.`)}
+                {t(`servodocs.ParallelReadWriteSupport`)}
               </Typography>
             </Card>
           </Grid>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}}>
+            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
+                  backgroundColor: "transparent", 
+                  backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
+                },}}>
               <RiArrowLeftRightLine style={{ fontSize: '50px' }} />
               <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
-                {t(`SECURITY & ENCRYPTION`)}
+                {t(`servodocs.SECURITYANDENCRYPTION`)}
               </Typography>
               <Typography variant="body2">
-                {t(`To adhere to stringent data security policies, documents are stored and transferred in encrypted format.`)}
+                {t(`servodocs.DataSecurityPolicies`)}
               </Typography>
             </Card>
           </Grid>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}}>
+            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
+                  backgroundColor: "transparent", 
+                  backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
+                },}}>
               <PiCirclesFourFill style={{ fontSize: '50px' }} />
               <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
-                {t(`INCREASED PRODUCTIVITY`)}
+                {t(`servodocs.INCREASEDPRODUCTIVITY`)}
               </Typography>
               <Typography variant="body2">
-                {t(`"Work anywhere, organize documents better, collaborate effectively, save time, and boost productivity.`)}
+                {t(`servodocs.WorkAnywhereBoostProductivity`)}
               </Typography>
             </Card>
           </Grid>
@@ -219,7 +245,7 @@ const Gsdocs = () => {
 
       <Container maxWidth="lg" style={{ textAlign: "center", padding: "10px" }}>
         <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '24px', fontWeight: 'bold', color: '#ED2427' }}>
-          Breakthrough results delivered across BFSI
+        {t(`servodocs.BreakthroughResultsBFSI`)}
         </Typography>
       </Container>
 
@@ -232,12 +258,12 @@ const Gsdocs = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
-              Lowered TAT
+            {t(`servodocs.LoweredTAT`)}
             </Typography>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
-              <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
+            <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
               <Typography variant="body2">
-                Advance DMS automates workflows, streamlines document retrieval, ensures compliance, offers advanced search, and integrates with other systems, resulting in faster decision-making and reduced Turnaround Time (TAT).
+              {t(`servodocs.AdvanceDMSFeatures`)}
               </Typography>
             </Box>
           </Grid>
@@ -248,18 +274,18 @@ const Gsdocs = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
-              Compliance & Security
+            {t(`servodocs.Compliance&Security`)}
             </Typography>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
               <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
               <Typography variant="body2">
-                Ensures that sensitive financial documents are protected and adhere to regulatory requirements.
+              {t(`servodocs.SensitiveDocumentsProtection`)} 
               </Typography>
             </Box>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
               <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
               <Typography variant="body2">
-                Having a secure and compliant document repository can expedite audits and regulatory inspections.
+              {t(`servodocs.SecureCompliantRepository`)}
               </Typography>
             </Box>
           </Grid>
@@ -280,18 +306,18 @@ const Gsdocs = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
-              Lessened Manpower
+            {t(`servodocs.LessenedManpower`)}
             </Typography>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
               <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
               <Typography variant="body2">
-                Advanced DMS automates document processes, reducing the need for manual handling.
+              {t(`servodocs.AutomatesDocumentProcesses`)}
               </Typography>
             </Box>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
               <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
               <Typography variant="body2">
-                Quick retrieval reduces time spent searching for documents.
+              {t(`servodocs.QuickRetrieval`)}
               </Typography>
             </Box>
           </Grid>
@@ -302,18 +328,18 @@ const Gsdocs = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
-              Integration Friendly
+            {t(`servodocs.IntegrationFriendly`)}
             </Typography>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
               <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
               <Typography variant="body2">
-                Advanced DMS offers robust APIs for seamless integration with existing software.
+              {t(`servodocs.RobustAPIsIntegration`)}
               </Typography>
             </Box>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
               <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
               <Typography variant="body2">
-                Supports real-time data synchronization for up-to-the-minute document updates and collaboration.
+              {t(`servodocs.RealTimeDataSync`)}
               </Typography>
             </Box>
           </Grid>
@@ -327,7 +353,7 @@ const Gsdocs = () => {
 
       <Container maxWidth="lg">
         <Typography variant="h2" style={{ textAlign: "center", fontWeight: 'bold', color: '#ED2427', margin: '24px 0' }}>
-          ServoDocs® – Document Management System
+        {t(`servodocs.ServoDocsDMS`)}
         </Typography>
         <Box style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <img src={imageE} alt="ServoDocs" style={{ width: '100%' }} />
@@ -336,7 +362,7 @@ const Gsdocs = () => {
 
       <Container maxWidth="lg">
         <Typography variant="h2" style={{ textAlign: "center", fontWeight: 'bold', color: '#ED2427', margin: '24px 0' }}>
-          Trusted by Industry Leaders
+        {t(`servodocs.TrustedByIndustryLeaders`)}
         </Typography>
       </Container>
 
@@ -352,138 +378,138 @@ const Gsdocs = () => {
 
       <Container maxWidth="lg" style={{ padding: "0 10px", color: "#27273a" }}>
         <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
-          <strong>ServoDocs®: Streamline Your Document Management System</strong>
+          <strong> {t(`servodocs.StreamlineDocumentManagement`)} </strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          In the contemporary digital landscape, enterprises are generating an unprecedented volume of documentation. Effectively managing this bulky paperwork presents inherent challenges, including the risk of misplacement, time wastage, and frustration. In response to this need, Servosys Solutions has created ServoDocs, a sophisticated document management system (DMS) aimed at facilitating seamless document storage, retrieval, and collaboration.
+        {t(`servodocs.DigitalLandscapeText`)} 
         </Typography>
         <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
-          <strong>Overview of ServoDocs: Document Management Software</strong>
+          <strong>{t(`servodocs.OverviewOfServoDocs`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          ServoDocs is an innovative document management software capable of efficiently indexing, retrieving, and archiving documents while offering rapid search capabilities. The product’s primary design objective is optimal performance, complemented by its integration with external systems through the use of APIs, irrespective of the scale of the document repository.
+        {t(`servodocs.ServoDocsDescription`)} 
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          ServoDocs benefits both short-term transactional and long-term archive-retrieve use cases. Because the system allows permitted access to preserved documents, it assists in converting digitized paper documents and electronic files into valuable knowledge assets for enterprises that must deal with unstructured materials for conducting business. Users can retain versions of the papers they upload into the system with the use of file management software.
+        {t(`servodocs.ServoDocsBenefits`)}
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          ServoDocsTM can be integrated with business programs like ERP, CRM, Lending Management System (LMS), Core Banking System (CBS), Customer Onboarding, Core Insurance, etc., via APIs.
+        {t(`servodocs.IntegrationWithBusinessApps`)} 
         </Typography>
 
         <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
-          <strong>Benefits of Using Document Management System Software</strong>
+          <strong>{t(`servodocs.BenefitsOfDMS`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          For companies of all sizes, ServoDocs provides numerous advantages. These are but a handful:
+        {t(`servodocs.ForCompaniesOfAllSizes`)} 
         </Typography>
         <ul style={{ paddingLeft: '40px' }}>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Enhanced Efficiency:</strong> ServoDocs eliminates the need to manually search for paper documents, helping you save time and money. Its user-friendly design and robust search capabilities enable you to locate the necessary documents quickly.
+              <strong>{t(`servodocs.EnhancedEfficiency`)} </strong> {t(`servodocs.ServoDocsEfficiency`)}
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Improved Collaboration:</strong> With document management system features, users can collaborate more easily on documents when they use document management system software. You can assign projects to coworkers, track progress in real time, and exchange documents with them.
+              <strong>{t(`servodocs.ImprovedCollaboration`)}</strong>{t(`servodocs.ImprovedCollaborationDescription`)} 
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Enhanced Output:</strong> ServoDocs’ ability to streamline document management procedures can make your staff members more productive. They can concentrate more on their primary responsibilities and spend less time looking for paperwork.
+              <strong>{t(`servodocs.EnhancedOutput`)}</strong>  {t(`servodocs.EnhancedOutputDescription`)}
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Enhanced Security:</strong> Legal document management software protects your documents with solid security features, including role-based access control, encryption, and audit trails.
+              <strong>{t(`servodocs.EnhancedSecurity:`)}</strong> {t(`servodocs.EnhancedSecurityDescription`)}
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Lower Costs:</strong> The best document management software can assist you in lowering the price of managing documents and storing paper records. You can cut expenses on filing, copying, and printing.
+              <strong> {t(`servodocs.LowerCosts`)} </strong> {t(`servodocs.LowerCostsDescription`)}
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Disaster Recovery:</strong> ServoDocs allows you to save your documents on the cloud, where they are accessible from any location, even in an emergency.
+              <strong>{t(`servodocs.DisasterRecovery`)}</strong> {t(`servodocs.DisasterRecoveryDescription`)}
             </Typography>
           </li>
         </ul>
 
         <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
-          <strong>Advanced Features of DMS System: ServoDocs</strong>
+          <strong> {t(`servodocs.AdvancedFeaturesOfDMS`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          <strong>Key Features:</strong>
+          <strong>{t(`servodocs.KeyFeatures`)}</strong>
         </Typography>
         <ul style={{ marginBottom: '16px', paddingLeft: '40px' }}>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Highly Integration-Friendly:</strong> ServoDocs offers readily available APIs for seamless integration with any 3rd party applications.
+              <strong>{t(`servodocs.HighlyIntegrationFriendly`)}</strong> {t(`servodocs.ReadilyAvailableApis`)}
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Multi-Storage Support:</strong> ServoDocs supports multiple storage types within a single setup.
+              <strong>{t(`servodocs.MultiStorageSupportKey`)} </strong>  {t(`servodocs.MultiStorageSupportDescription`)} 
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Fast Searching:</strong> With the support of the finest DMS system, users can perform instant retrieval through file, folder, and meta-level searches.
+              <strong>{t(`servodocs.FastSearching`)}</strong>{t(`servodocs.SearchOnFileFolder`)}
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Parallel Read/Write:</strong> The system supports high levels of parallel read/write operations, resulting in faster performance compared to traditional systems.
+              <strong>{t(`servodocs.ParallelReadWrite`)}</strong>{t(`servodocs.ParallelReadWriteSupportKey`)}
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Security & Encryption:</strong> Documents are stored and transferred in encrypted format to comply with strict data security policies.
+              <strong>{t(`servodocs.SecurityAndEncryption`)} </strong>{t(`servodocs.DataSecurityPoliciesKey`)} 
             </Typography>
           </li>
           <li>
             <Typography variant="body1" style={{ marginBottom: '16px' }}>
-              <strong>Increased Productivity:</strong> ServoDocs enables users to work from anywhere, better organize documents, collaborate effectively, save time, and enhance productivity.
+              <strong>{t(`servodocs.IncreasedProductivity`)}</strong>{t(`servodocs.WorkAnywhereAndBoostProductivity`)} 
             </Typography>
           </li>
         </ul>
 
         <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
-          <strong>Breakthrough results delivered across BFSI</strong>
+          <strong>{t(`servodocs.BreakthroughResultsBFSIKey`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          <strong>Lowered Turnaround Time (TAT)</strong>
+          <strong>{t(`servodocs.LoweredTATKey`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          1. Advance DMS not only streamlines document retrieval and ensures compliance but also automates procedures.
+        {t(`servodocs.AdvanceDMSFeature`)}
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          2. It provides advanced search capabilities and system integration, resulting in prompt decision-making and reduced turnaround times (TAT).
+        {t(`servodocs.AdvancedSearchAndIntegration`)}
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          <strong>Compliance & Security</strong>
+          <strong>{t(`servodocs.ComplianceSecurity`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          1. Advance DMS guarantees the safety and compliance of confidential financial records.
+        {t(`servodocs.AdvanceDMSCompliance`)}
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          <strong>Reduced Manpower</strong>
+          <strong> {t(`servodocs.ReducedManpower`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          1. By automating document processes, advanced digital document management software diminishes the necessity for manual handling.
+        {t('servodocs.AutomatesDocumentProcessesKey')} 
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          1. Advanced document control software offers robust APIs for seamless interaction with existing software.
+        {t(`servodocs.RobustAPIsIntegrations`)}
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          2. It enables real-time data synchronization for collaborative and up-to-the-minute document modifications.
+        {t(`servodocs.RealTimeDataSyncKey`)}
         </Typography>
 
         <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
-          <strong>Getting Started with ServoDocs: Document Control Software</strong>
+          <strong>{t(`servodocs.GettingStartedServoDocs`)} </strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
-          Utilizing ServoDocs is straightforward to initiate. Prospective users can request a trial of the software from Servosys Solutions before making a purchase. The company offers a diverse array of options tailored to meet the specific requirements of your business. ServoDocs stands as a robust and user-friendly document management solution, capable of significantly enhancing productivity, security, efficiency, and collaboration for businesses of varying scales. In addition, Servosys Solutions extends its services to include a loan origination system, designed to optimize the loan processing workflow. For those seeking to streamline their document management processes, ServoDocs presents itself as a compelling solution worthy of consideration.
+        {t('servodocs.GettingStartedDescription')}
         </Typography>
       </Container>
     </main>
