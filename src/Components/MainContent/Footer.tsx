@@ -38,27 +38,49 @@ import {
               {t("company_info.description")}
             </Typography>
             {/* Subscription Form */}
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <TextField
-                variant="outlined"
-                placeholder="Email"
-                sx={{
-                  backgroundColor: "white",
-                  borderRadius: "5px",
-                  size: "small",
-                  input: { color: "black" },
-                }}
-                // fullWidth
-              />
-              <Button
-                variant="contained"
-                sx={{ backgroundColor: "#0d6efd",
-                  fontSize: "0.8rem",
-                  color: "white" }}
-              >
-                Get Quote
-              </Button>
-            </Box>
+            <Box
+  sx={{
+    display: "flex",
+    // bgcolor: "red",
+    alignItems: "center",
+    gap: 1,
+  }}
+>
+  <TextField
+    variant="filled"
+    placeholder="Email"
+    sx={{
+      height: "40px", 
+      backgroundColor: "white",
+      borderRadius: "5px",
+      fontSize: "0.8rem",
+      input: {
+        color: "black",
+        padding: "10px", 
+      },
+      "& .MuiFilledInput-root": {
+        padding: 0, 
+        height: "40px", 
+        borderRadius: "5px",
+      },
+    }}
+  />
+  <Button
+    variant="contained"
+    sx={{
+      backgroundColor: "#0d6efd",
+      height: "40px",
+      fontSize: "0.8rem",
+      color: "white",
+      padding: "0 16px", 
+      borderRadius: "5px", 
+      textTransform: "none", 
+    }}
+  >
+    Get Quote
+  </Button>
+</Box>
+
           </Box>
   
           {/* Links Section */}

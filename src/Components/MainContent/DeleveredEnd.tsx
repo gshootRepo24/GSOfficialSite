@@ -1,57 +1,55 @@
 import { Box, Typography, Button, Tabs, Tab } from "@mui/material";
-import  { useState } from "react";
-import {motion} from 'framer-motion'
+import { useState } from "react";
+import { motion } from "framer-motion";
 import SameSection from "../ReUsable/SameSection";
 import { useTranslation } from "react-i18next";
 
-
-
-
 export default function MainContent2() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
-  const data =[
+  const data = [
     {
-        title:t('Delevired_Slider.title1'),
-        descrption:t('Delevired_Slider.description1'),
-        image:'https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-4.jpg',
-        buttonText:'learn More'
+      title: t("Delevired_Slider.title1"),
+      descrption: t("Delevired_Slider.description1"),
+      image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-4.jpg",
+      buttonText: t("Delevired_Slider.ButtonText"),
     },
     {
-        title:t('Delevired_Slider.title2'),
-        descrption:t('Delevired_Slider.description2'),
-        image:'https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-3.jpg',
-        buttonText:'learn More'
+      title: t("Delevired_Slider.title2"),
+      descrption: t("Delevired_Slider.description2"),
+      image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-3.jpg",
+      buttonText: t("Delevired_Slider.ButtonText"),
     },
     {
-        title:t('Delevired_Slider.title3'),
-        descrption:t('Delevired_Slider.description3'),
-        image:'https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-2.jpg',
-        buttonText:'learn More'
-    }
-]
-
-
-
+      title: t("Delevired_Slider.title3"),
+      descrption: t("Delevired_Slider.description3"),
+      image: "https://www.servosys.com/wp-content/uploads/2023/07/servo-banner-2.jpg",
+      buttonText: t("Delevired_Slider.ButtonText"),
+    },
+  ];
 
   return (
-    <Box  py={3} px={3}>
-      <SameSection Title={t('Delevired.title')}
-        SubHeading={t('Delevired.heading')}
-        Description={t('Delevired.description')}/>
-     
+    <Box py={3} px={3}>
+      <SameSection
+        Title={t("Delevired.title")}
+        SubHeading={t("Delevired.heading")}
+        Description={t("Delevired.description")}
+      />
+
       <Box
         sx={{
           position: "relative",
-          height: "100vh",
+          height: { xs: "auto", md: "100vh" },
           color: "white",
           display: "flex",
+          flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: { xs: "center", md: "space-between" },
           overflow: "hidden",
         }}
       >
+        {/* Background Image Animation */}
         <motion.div
           key={activeIndex}
           initial={{ opacity: 0 }}
@@ -68,24 +66,47 @@ export default function MainContent2() {
             zIndex: -1,
           }}
         />
-        <Box sx={{ width: "50%", p: 5 }}>
-          <Typography variant="h3" fontWeight="bold">
+
+        {/* Left Section (Text Content) */}
+        <Box
+          sx={{
+            width: { xs: "90%", md: "50%" },
+            p: { xs: 2, md: 5 },
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
+          <Typography
+            variant="h3"
+            fontWeight="bold"
+            sx={{ fontSize: { xs: "1.8rem", md: "2.5rem" } }}
+          >
             {data[activeIndex].title}
           </Typography>
-          <Typography variant="body1" mt={2} mb={3}>
+          <Typography
+            variant="body1"
+            mt={2}
+            mb={3}
+            sx={{ fontSize: { xs: "0.9rem", md: "1rem" } }}
+          >
             {data[activeIndex].descrption}
           </Typography>
           <Button
             variant="contained"
             color="error"
-            sx={{ borderRadius: "20px" }}
+            sx={{
+              borderRadius: "20px",
+              fontSize: { xs: "0.8rem", md: "1rem" },
+              padding: { xs: "8px 16px", md: "10px 20px" },
+            }}
           >
             {data[activeIndex].buttonText}
           </Button>
         </Box>
+
+        {/* Right Section (Vertical Tabs) */}
         <Box
           sx={{
-            display: "flex",
+            display: { xs: "none", md: "flex" }, // Hide tabs on small screens
             flexDirection: "column",
             alignItems: "flex-end",
             height: "100%",
@@ -105,6 +126,38 @@ export default function MainContent2() {
                 writingMode: "vertical-rl",
                 textTransform: "none",
                 borderBottom: "none",
+              },
+              "& .Mui-selected": {
+                color: "#ff5b5b",
+              },
+            }}
+          >
+            {data.map((item, index) => (
+              <Tab key={index} label={item.title} />
+            ))}
+          </Tabs>
+        </Box>
+
+        {/* Horizontal Tabs for Small Screens */}
+        <Box
+          sx={{
+            display: { xs: "block", md: "none" },
+            mt: 3,
+            width: "100%",
+            textAlign: "center",
+          }}
+        >
+          <Tabs
+            value={activeIndex}
+            onChange={(e, newIndex) => setActiveIndex(newIndex)}
+            textColor="inherit"
+            centered
+            sx={{
+              "& .MuiTab-root": {
+                color: "white",
+                fontWeight: "bold",
+                fontSize: { xs: "0.8rem", sm: "1rem" },
+                textTransform: "none",
               },
               "& .Mui-selected": {
                 color: "#ff5b5b",

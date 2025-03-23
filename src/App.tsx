@@ -12,11 +12,13 @@ const theme = createTheme({
   typography: {
     fontFamily: "Winky Sans, sans-serif",
     fontSize:18,
-  },
+    fontWeightLight: 300,
+    
+    },
 });
 export default function App() {
 
-  console.log("i am loadign");
+  // console.log("i am loadign");
   const router = createBrowserRouter([
     {path:'/',element:<RootLayout/>},
     {path:'/servostreams',element:<RootLayout/>},

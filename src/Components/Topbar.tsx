@@ -4,7 +4,7 @@ import { PhoneIcon, MailIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageIcon from "@mui/icons-material/Language";
 import React, { useEffect, useState } from "react";
-import cookies from 'js-cookie';
+import { useSearchParams } from "react-router-dom";
 const languages = [
   { 
     code: "en",
@@ -26,14 +26,11 @@ const languages = [
 
 export default function Topbar() {
   
-  const { t, i18n } = useTranslation();
+  const {i18n } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const currentLanguageCode = cookies.get('i18next') || 'en';
-  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const [searchParam, setSearchParam] = useSearchParams();
 
-  useEffect(()=>{
-    document.body.dir = currentLanguage?.dir || 'ltr'
-  },[currentLanguage])
+  
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -43,18 +40,33 @@ export default function Topbar() {
     setAnchorEl(null);
   };
 
-  const handleLanguageChange = (code: string) => {
-    i18n.changeLanguage(code);
-    cookies.set('i18next', code);
-    document.dir = code === 'ar' ? 'rtl' : 'ltr';
+  
+const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    searchParam.set('lang', lang);
+    setSearchParam(searchParam);
+    document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
     handleClose();
+   
   };
+  useEffect(() => {
+    let lang = searchParam.get('lang')||window.navigator.language.split("-")[0];;
+    if(lang===undefined){
+      
+    }
+    
+    if (lang) {
+      i18n.changeLanguage(lang);
+      document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+  }, [searchParam, i18n]);
 
+  
   return (
     <div className={styles.topbar}>
       <Box display="flex" alignItems="center" gap={1}>
         <PhoneIcon fontSize="small" />
-        <Typography variant="body2">+91-7979737168</Typography>
+        <Typography variant="body2">917979737168</Typography>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
         <MailIcon fontSize="small" />
@@ -89,10 +101,10 @@ export default function Topbar() {
         {languages.map(({ code, name }) => (
           <MenuItem
             key={code}
-            onClick={() => handleLanguageChange(code)}
-            selected={currentLanguageCode === code}
+            onClick={() => changeLanguage(code)}
+            // selected={currentLanguageCode === code}
             sx={{
-              opacity: currentLanguageCode === code ? 0.6 : 1,
+              // opacity: currentLanguageCode === code ? 0.6 : 1,
               minWidth: 160
             }}
           >
