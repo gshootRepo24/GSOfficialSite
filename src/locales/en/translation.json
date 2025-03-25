@@ -267,7 +267,7 @@
       "title": "PRODUCTS",
       "servo_streams": "ServoStreams",
       "servo_docs": "ServoDocs",
-      "servo_webscan": "ServoWebScan",
+      "servo_webscan": "GSWebScan",
       "servo_image": "ServoImage"
     },
     "solutions": {
@@ -408,6 +408,34 @@
   "RealTimeDataSyncKey": "It enables real-time data synchronization for collaborative and up-to-date document modifications.",
   "GettingStartedServoDocs": "Getting Started with ServoDocs: Document Control Software",
   "GettingStartedDescription": "Utilizing ServoDocs is straightforward to initiate. Prospective users can request a trial of the software from Servosys Solutions before making a purchase. The company offers a diverse array of options tailored to meet the specific requirements of your business. ServoDocs stands as a robust and user-friendly document management solution, capable of significantly enhancing productivity, security, efficiency, and collaboration for businesses of varying scales. In addition, Servosys Solutions extends its services to include a loan origination system, designed to optimize the loan processing workflow. For those seeking to streamline their document management processes, ServoDocs presents itself as a compelling solution worthy of consideration."
+},
 
+"GSWebScan": {
+  "GSWebScan®": "GSWebScan",
+  "Description": "Allowing scanning of documents using any TWAIN compliant scanner through web Apps on mobile/desktop to efficaciously cater document digitization need of automation system.",
+  "OverviewOfServoWebScan": "Overview Of GSWebScan",
+  "DetailedDescription": "GSWebScan® helps businesses maintain smooth automation and increase productivity by enabling them to leverage their knowledge base – documents and data. Our GSWebScan – a TWAIN-compliant and web-based scanning technology helps organizations in their voluminous document scanning works. It simplifies multistep document scanning processes by providing them features such as quick and accessible-anywhere scanning, greater editing controls, auto-indexing, re-ordering/re-inserting of pages into multi-page documents, etc. With a gamut of tools/features, GSWebScan offers easy connectivity with scanners, cropping, resizing, and editing/deleting of documents. GSWebScan also enables users to access various features using APIs.",
+  "AdvancedFeaturesAndCapabilities": "Advanced Features and Capabilities of GSWebScan",
+  "TwainCompatibility": "TWAIN Compatibility",
+   "ScannedFilesIntegration": "Scanned files may be handed over to any other Workflow or DMS or even 3rd Party system via APIs.",
+   "EasyConfigurability": "Easy Configurability",
+   "PropertySettingsConfiguration": "Allows configuration of separate property settings such as Resolution & Colour-Depth, etc. of documents." ,
+   "DocumentEditing": "Document Editing",
+   "DocumentEditingDescription": "Supports basic document editing like add/delete/rotate and removal of scanning anomalies.",
+   "EasilyIntegrateWithWebApps": "Easily Integrate with Web Apps",
+   "BrowserSupportDescription": "The product is supported on Chrome and Internet Explorer browsers.",
+   "SingleMultipagePDFTIFF": "Single/Multipage PDF/TIFF",
+   "SingleMultipagePDFTIFFDescription": "Link scanned pages to 'document types', splitting them into multi-page PDFs or TIFFs.",
+   "TATReduction": "TAT Reduction",
+   "TATReductionDescription": "Drastically reduce Turnaround Time (TAT) as paper is instantly digitized and routed to systems/users.",
+   "ReadyToUse" : "Ready to Use",
+   "WebBasedScanningSolution": "Web-based scanning solution that streamlines document scanning with features like quick scanning, editing controls, auto-indexing, and seamless integration with scanners and APIs.",
+   "TATReductionProduction": "Reduces Turnaround Time (TAT) and boosts productivity for businesses by digitizing paper documents instantly.",
+   "ReducesDocumentHandlingTime": "Reduces Document Handling Time", "InstantDigitizationDescription": "GSWebScan enables instant digitization of paper documents, eliminating the need for manual handling and physical storage.",
+   "QuickScanningAndAutoIndexingDescription": "Quick scanning and auto-indexing streamline document workflows, reducing the time spent on document handling tasks.",
+   "EasyIntegration" : "Easy Integration",
+   "BrowserSupportAndIntegrationDescription" : "GSWebScan is supported on Chrome and Internet Explorer browsers; JavaScript allows scanning of files from other Web-based applications.",
+   "SimplifyDocumentManagement" : "Simplify Document Management",
+   "SimplifyDocumentCapturingDescription" : "GSWebScan have ability to simplify document capturing, enabling intelligent indexing by associating metadata for quick retrieval of documents."
 }
 }

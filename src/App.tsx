@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import GsImage from "./Components/GsImage/GsSysImage";
 import Mfile from "./Components/Mfile/Mfile";
 import Gsdocs from "./Components/GsDocs/GsDocs";
+import GSWebScan from "./Components/GSWebScan/GSWebScan";
 
 const theme = createTheme({
   typography: {
@@ -21,6 +22,7 @@ export default function App() {
     {path:'/servostreams',element:<RootLayout/>},
     { path: '/Servoimage', element:<GsImage/> },
     { path: '/Servodocs', element:<Gsdocs/> },
+    { path: '/ServoWebScan', element:<GSWebScan/> },
     { path: '/mfile', element:<Mfile/> }
   ])
   

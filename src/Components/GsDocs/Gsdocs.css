@@ -13,4 +13,6 @@
   font-family: poppins;
   src: url(./assets//Fonts/poppins-pxieyp8kv8jhgfvrjjfecg.woff2);
 }
-
+.css-lmqlpj-MuiImageList-root {
+  overflow-y: hidden;
+}

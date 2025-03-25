@@ -1,0 +1,8 @@
+@media (min-width: 1200px) {
+  .css-5c1adp-MuiContainer-root {
+      max-width: 1500px !important;
+  }
+}
+.css-lmqlpj-MuiImageList-root {
+  overflow-y: hidden;
+}
