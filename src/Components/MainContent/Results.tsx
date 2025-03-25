@@ -65,17 +65,22 @@ import { Box, Typography, Grid } from "@mui/material";
 import SameSection from "../ReUsable/SameSection";
 import bg from '../../assets/Footer/footer-bg.jpg';
 import { useTranslation } from 'react-i18next'; // Import useTranslation
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
 export default function Results() {
   const { t } = useTranslation(); // Initialize translation hook
+  const {colors} = useContext(ThemeContext);
 
   return (
     <>
       {/* Section Title */}
+      <Box sx={{background:colors.background}}>
       <SameSection
         Title={t('Result.title')} // Use translation for title
         SubHeading={t('Result.heading')} // Use translation for subheading
       />
+      </Box>
 
       {/* Stats Section with Background Image */}
       <Box

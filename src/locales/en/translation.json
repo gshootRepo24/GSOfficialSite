@@ -55,7 +55,8 @@
     "title2":"CASA",
     "description2":"Revolutionizing the CASA digital banking experience with our advanced BPM solutions for banks and financial institutions, enabling our clients to accelerate customer growth and streamline their account opening processes.",
     "title3":"Mortgage Loan",
-    "description3":"Our Integrated Mortgage Loan Automation Software Solutions orchestrate efficiency, precision, and user-centricity to streamline loan processing seamlessly."
+    "description3":"Our Integrated Mortgage Loan Automation Software Solutions orchestrate efficiency, precision, and user-centricity to streamline loan processing seamlessly.",
+    "ButtonText":"Learn More"
   },
   "clientSucess":{
     "title":"​Client Success Spotlight",
@@ -295,6 +296,7 @@
     "copyright": "© Copyright 2024, Servosys – All Rights Reserved."
   },
   "servoimage": {
+    "GsImage": "GSImages®",
     "digitization_benefit": "An API toolkit built on open source, pluggable into an APP, provides high performance ‘Desktop to Mobile’ imaging solutions for documents used in process automation workflow.",
     "overview_title": "Overview Of GSImages",
     "overview_description": "Modern-day App Developers are often able to leverage the power of development environments and MADPs (Mobile Application Development Platforms) to the hilt. But when it comes to building Mobile Apps with powerful imaging-rich features like management of images or digitized documents, it is not easy.",

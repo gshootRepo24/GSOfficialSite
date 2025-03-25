@@ -3,6 +3,8 @@ import { Box } from "@mui/material";
 import CardComponent from "../ReUsable/CardComponent";
 import SameSection from "../ReUsable/SameSection";
 import { useTranslation } from "react-i18next"; // Import useTranslation
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
 const cardData = [
   {
@@ -14,12 +16,13 @@ const cardData = [
 ];
 
 export default function Testimonials() {
+  const {colors} = useContext(ThemeContext)
   const { t } = useTranslation(); // Initialize translation hook
   const test = cardData[0];
 
   return (
     <>
-      <Box sx={{ mt: 2, justifyContent: 'center', alignItems: 'center' }}>
+      <Box sx={{ pt: 2, justifyContent: 'center', alignItems: 'center', background:colors.background }}>
         <SameSection
           Title={t('TestMon.title')} // Use translation for title
           SubHeading={t('TestMon.heading')} // Use translation for subheading

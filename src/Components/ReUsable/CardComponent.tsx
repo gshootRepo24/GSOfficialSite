@@ -28,15 +28,20 @@
 //   )
 // }
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
 export default function CardComponent({ image, title, maxWidth, description }: any) {
+  const {colors} = useContext(ThemeContext);
   return (
-    <Box sx={{ maxWidth: { maxWidth }, textAlign: "center", p: 2 }}>
+    <Box sx={{ maxWidth: { maxWidth }, textAlign: "center", p: 2, }}>
       <Card sx={{ 
         borderRadius: 3, 
         boxShadow: 3, 
         padding: 2, 
-        height: 350, // Set a fixed height for the card
+        background:colors.background,
+        color:colors.text,
+        // height: 350, // Set a fixed height for the card
         display: 'flex', 
         flexDirection: 'column', 
         justifyContent: 'space-between' 
@@ -52,7 +57,7 @@ export default function CardComponent({ image, title, maxWidth, description }: a
           <Typography variant="h6" fontWeight="bold" color="primary">
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" >
             {description}
           </Typography>
         </CardContent>

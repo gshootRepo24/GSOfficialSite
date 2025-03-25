@@ -2,6 +2,8 @@
 import { Box, Typography, Grid, Button } from "@mui/material";
 import BlogCard from "../ReUsable/BlogCart";
 import { useTranslation } from 'react-i18next'; 
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
 
 const blogData = [
@@ -27,9 +29,10 @@ const blogData = [
 
 export default function Insights() {
   const { t } = useTranslation(); 
+  const {colors} = useContext(ThemeContext);
 
   return (
-    <Box sx={{ textAlign: "center", mt: 2 }}>
+    <Box sx={{ textAlign: "center", pt: 2,background:colors.background,color:colors.text }}>
       <Typography variant="h4" fontWeight="bold">
         {t('Insights.title')} 
       </Typography>

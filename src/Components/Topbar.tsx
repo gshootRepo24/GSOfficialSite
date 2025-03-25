@@ -1,12 +1,22 @@
-import { Typography, Box, IconButton, Menu, MenuItem,ListItemText } from "@mui/material";
-import styles from "./Header.module.css";
+import {
+  Typography,
+  Box,
+  IconButton,
+  Menu,
+  MenuItem,
+  ListItemText,
+  Button,
+} from "@mui/material";
 import { PhoneIcon, MailIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageIcon from "@mui/icons-material/Language";
 import React, { useEffect, useState } from "react";
-import cookies from 'js-cookie';
+import { useSearchParams } from "react-router-dom";
+import { LightMode,DarkMode } from '@mui/icons-material'
+import { ThemeContext } from "./ThemesProvider/ThemeProvider";
+import { useContext } from "react";
 const languages = [
-  { 
+  {
     code: "en",
     name: "English",
     country_code: "gb",
@@ -25,15 +35,10 @@ const languages = [
 ];
 
 export default function Topbar() {
-  
-  const { t, i18n } = useTranslation();
+  const {theme,colors,toggleTheme}=useContext(ThemeContext);  
+  const { i18n } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const currentLanguageCode = cookies.get('i18next') || 'en';
-  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
-
-  useEffect(()=>{
-    document.body.dir = currentLanguage?.dir || 'ltr'
-  },[currentLanguage])
+  const [searchParam, setSearchParam] = useSearchParams();
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -43,32 +48,80 @@ export default function Topbar() {
     setAnchorEl(null);
   };
 
-  const handleLanguageChange = (code: string) => {
-    i18n.changeLanguage(code);
-    cookies.set('i18next', code);
-    document.dir = code === 'ar' ? 'rtl' : 'ltr';
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    searchParam.set("lang", lang);
+    setSearchParam(searchParam);
+    document.body.dir = lang === "ar" ? "rtl" : "ltr";
     handleClose();
   };
+  useEffect(() => {
+    let lang =
+      searchParam.get("lang") || window.navigator.language.split("-")[0];
+    if (lang === undefined) {
+    }
+
+    if (lang) {
+      i18n.changeLanguage(lang);
+      document.body.dir = lang === "ar" ? "rtl" : "ltr";
+    }
+  }, [searchParam, i18n]);
+  const isRTL = i18n.language === "ar";
 
   return (
-    <div className={styles.topbar}>
-      <Box display="flex" alignItems="center" gap={1}>
-        <PhoneIcon fontSize="small" />
-        <Typography variant="body2">+91-7979737168</Typography>
-      </Box>
-      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-        <MailIcon fontSize="small" />
-        <Typography variant="body2">info@growshoot.com</Typography>
-      </Box>
-      <IconButton
-        onClick={handleClick}
-        size="large"
-        aria-controls="language-menu"
-        aria-haspopup="true"
-        color="inherit"
+    <>
+      <Box
+        sx={{
+          display: "flex",
+          bgcolor: colors.topbar,
+          color: colors.text,
+          flexDirection: { xs: "column", sm: "row" },
+          alignItems: "left",
+          justifyContent: isRTL ? "left" : "right",
+          gap: { xs: 2, sm: 0 },
+          width: "100%",
+        }}
       >
-        <LanguageIcon />
-      </IconButton>
+        {/* Contact Info */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: "center",
+            gap: { xs: 1, sm: 2 },
+          }}
+        >
+          <Box display="flex" alignItems="center" gap={1}>
+            <PhoneIcon fontSize="small" />
+            <Typography variant="body2">+91 7979 737168</Typography>
+          </Box>
+          <Box display="flex" alignItems="center" gap={1}>
+            <MailIcon fontSize="small" />
+            <Typography variant="body2">info@growshoot.com</Typography>
+          </Box>
+        </Box>
+
+        {/* Language Selector */}
+        <IconButton
+          onClick={handleClick}
+          size="large"
+          aria-controls="language-menu"
+          aria-haspopup="true"
+          color="inherit"
+          aria-label="Select Language"
+          sx={
+            {
+              // marginTop: { xs: 0, sm: 0 }, // Add top margin on small screens
+            }
+          }
+        >
+          <LanguageIcon />
+        </IconButton>
+        <Button onClick={toggleTheme} style={{position:"relative",bottom:0,right:0}}>
+        {theme==='light'?<DarkMode sx={{color:'black'}} />:<LightMode sx={{color:'white'}} />}
+      </Button>
+
+      </Box>
 
       <Menu
         id="language-menu"
@@ -77,29 +130,24 @@ export default function Topbar() {
         onClose={handleClose}
         PaperProps={{
           elevation: 3,
-          sx: { mt: 1.5 }
+          sx: { mt: 1.5 },
         }}
       >
-        <MenuItem disabled>
-          {/* <Typography variant="subtitle2" color="text.secondary">
-            {t('common.language')}
-          </Typography> */}
-        </MenuItem>
-        
         {languages.map(({ code, name }) => (
           <MenuItem
             key={code}
-            onClick={() => handleLanguageChange(code)}
-            selected={currentLanguageCode === code}
+            onClick={() => changeLanguage(code)}
+            selected={i18n.language === code}
             sx={{
-              opacity: currentLanguageCode === code ? 0.6 : 1,
-              minWidth: 160
+              fontWeight: i18n.language === code ? "bold" : "normal",
+              minWidth: 160,
             }}
           >
             <ListItemText>{name}</ListItemText>
           </MenuItem>
         ))}
       </Menu>
-    </div>
+      
+    </>
   );
 }

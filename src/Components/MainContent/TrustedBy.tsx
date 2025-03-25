@@ -1,24 +1,35 @@
-import { Container, Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import SameSection from "../ReUsable/SameSection";
 import CardComponent from "../ReUsable/CardComponent";
 import { useTranslation } from "react-i18next";
-
+import AxisBank from "../../assets/Banks/AxisBank.png";
+import Avanse from "../../assets/Banks/Avanse.png";
+import ABCBank from "../../assets/Banks/ABCBank.png";
+import Aye from "../../assets/Banks/Aye.png";
+import icici from "../../assets/Banks/icici.png";
+import LandT from "../../assets/Banks/L&TBank.png";
+import KVBank from "../../assets/Banks/KVBank.png";
+import Fino from "../../assets/Banks/Fino.png";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 const BankData = [
-  { image: "https://www.servosys.com/wp-content/uploads/2023/07/12.webp" },
-  { image: "https://www.servosys.com/wp-content/uploads/2023/07/6-1.webp" },
-  { image: "https://www.servosys.com/wp-content/uploads/2023/06/2.png" },
-  { image: "https://www.servosys.com/wp-content/uploads/2023/06/1.png" },
-  { image: "https://www.servosys.com/wp-content/uploads/2023/06/5.png" },
-  { image: "https://www.servosys.com/wp-content/uploads/2023/07/111.webp" },
-  { image: "https://www.servosys.com/wp-content/uploads/2023/07/4.webp" },
-  { image: "https://www.servosys.com/wp-content/uploads/2023/07/6.webp" },
+  { image: AxisBank },
+  { image: Avanse},
+  { image: ABCBank },
+  { image: Aye },
+  { image: icici },
+  { image: LandT },
+  { image: KVBank },
+  { image: Fino },
 ];
 
 export default function TrustedBy() {
+  const {colors} = useContext(ThemeContext);
   const { t } = useTranslation();
   return (
     <>
-      <SameSection
+     <Box sx={{background:colors.background,color:colors.text}}>
+     <SameSection
         Title={t('​TRUSTEDBY.title')} 
         SubHeading={t('​TRUSTEDBY.heading')}
         Description={t('​TRUSTEDBY.description')}
@@ -39,6 +50,7 @@ export default function TrustedBy() {
           ))}
         </Grid>
       </Container>
+     </Box>
     </>
   );
 }
