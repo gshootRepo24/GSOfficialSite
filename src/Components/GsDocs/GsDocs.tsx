@@ -204,8 +204,7 @@ const Gsdocs = () => {
                 },}}>
               <LuMessageCircleMore style={{ fontSize: '50px' }} />
               <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
-                {t(`servodocs.
-                  /WRITE`)}
+                {t(`servodocs.PARALLELREAD/WRITE`)}
               </Typography>
               <Typography variant="body2">
                 {t(`servodocs.ParallelReadWriteSupport`)}
