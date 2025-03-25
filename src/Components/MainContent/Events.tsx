@@ -2,6 +2,8 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import BlogCard from "../ReUsable/BlogCart";
 import { useTranslation } from 'react-i18next'; 
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
+import { useContext } from "react";
 
 const eventData = [
   {
@@ -22,9 +24,10 @@ const eventData = [
 
 export default function Events() {
   const { t } = useTranslation(); 
+  const {colors}=useContext(ThemeContext);
 
   return (
-    <Box sx={{ textAlign: "center", mt: 2 }}>
+    <Box sx={{ textAlign: "center", pt: 2,background:colors.background,color:colors.text }}>
       <Typography variant="h4" fontWeight="bold">
         {t('events.title')} 
       </Typography>
@@ -46,7 +49,7 @@ export default function Events() {
       <Button
         variant="contained"
         sx={{
-          mt: 4,
+          m: 4,
           backgroundColor: "#89023E",
           "&:hover": { backgroundColor: "#700A2E" },
         }}

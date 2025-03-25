@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 export default function SameSection({ Title, SubHeading, Description }:any) {
   return (
-    <Box sx={{ mt:3}}>
+    <Box sx={{ pt:4}}>
       <Typography
         variant="h4"
         fontWeight="Bold"

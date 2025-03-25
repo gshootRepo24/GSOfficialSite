@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import HandShek from "../../assets/MainImages/HandShek.png";
 import LowCode from "../../assets/MainImages/LowCode.png";
 import Led from "../../assets/MainImages/Led.png";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
 function Boost4x() {
+  const {colors} = useContext(ThemeContext);
   const [activeIndex, setActiveIndex] = useState(0);
   const { t } = useTranslation();
 
@@ -37,13 +39,13 @@ function Boost4x() {
 
   return (
     <>
-      {/* Boost Header */}
-      <Box display="flex" alignItems="center" justifyContent="center" gap={1} flexWrap="wrap">
-        <Box textAlign="center">
+    <Box sx={{background:colors.background,color:colors.text}}>
+    <Box display="flex" alignItems="center" justifyContent="center" gap={1} flexWrap="wrap" >
+        <Box textAlign="center" color={colors.text}>
           <Typography
             variant="h4"
             fontWeight="bold"
-            color="#16224F"
+            // color="#16224F"
             sx={{ fontSize: { xs: "20px", sm: "28px", md: "32px" } }}
           >
             {t("Boost.BOOST")}
@@ -51,7 +53,7 @@ function Boost4x() {
           <Typography
             variant="h4"
             fontWeight="bold"
-            color="#16224F"
+            // color="#16224F"
             sx={{ fontSize: { xs: "20px", sm: "28px", md: "32px" } }}
           >
             {t("Boost.PRODUCTIVITY")}
@@ -77,8 +79,10 @@ function Boost4x() {
         justifyContent="center"
         gap={2}
         mb={4}
-        mt={3}
+        pt={4}
+        // mt={3}
         flexWrap="wrap"
+        bgcolor={colors.background}
       >
         {tabs.map((tab, index) => (
           <Button
@@ -142,6 +146,8 @@ function Boost4x() {
           />
         </Box>
       </Box>
+    </Box>
+     
     </>
   );
 }

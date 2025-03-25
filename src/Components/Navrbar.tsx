@@ -11,19 +11,25 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
-import logo from "../assets/growshoot_logo-icon.svg";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/growshoot_logo-icon.svg";
+import { ThemeContext } from "./ThemesProvider/ThemeProvider";
+import { useContext } from "react";
+
+
+
 
 const menuItems = {
-  Product: ["GsStreams", "GsDocs", "GsWebScan", "GsImage","GSFiles"],
+  Product: ["GsStreams", "GsDocs", "GsWebScan", "GsImage", "GSFiles"],
   Solutions: ["ARC Solution", "Digital Lending", "Digital CASA", "Home Loans", "Mortgage Lending"],
   Resources: ["About Us", "Careers", "Leadership Team", "Blog", "Contact Us", "Awards & Recognition"],
   Company: ["About-Us", "Careers", "Leadership Team", "Blog", "Contact Us", "Awards & Recognition"],
 };
 
 function Navbar() {
+  const {colors}=useContext(ThemeContext);  
   const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -31,7 +37,7 @@ function Navbar() {
   const [mobileActiveMenu, setMobileActiveMenu] = useState<string | null>(null); // For mobile submenus
 
   useEffect(() => {
-    console.log("App is loading....");
+    console.log("Navbar component loaded");
   }, []);
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>, menu: string) => {
@@ -53,138 +59,170 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" color="transparent" elevation={0} sx={{ padding: "0 16px" }}>
-      <Toolbar sx={{ justifyContent: "space-between" }}>
-        {/* Logo */}
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-          <img src={logo} alt="Logo" style={{ height: 50 }} />
-        </Box>
-
-        {/* Desktop Navigation */}
-        <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 4 }}>
-          {Object.keys(menuItems).map((menu) => (
-            <Box
-              key={menu}
-              onClick={(e) => handleMenuOpen(e, menu)}
-              sx={{ display: "flex", alignItems: "center", gap: 0.5, cursor: "pointer" }}
-            >
-              <Typography variant="body1">{t(`nav.${menu}`)}</Typography>
-              <ChevronDown size={16} />
-            </Box>
-          ))}
-          <Button
-            variant="contained"
-            endIcon={<ArrowRight />}
-            sx={{
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor: "#007bff",
-              ":hover": { backgroundColor: "#0056b3" },
-            }}
-          >
-            {t("nav.Request Demo")}
-          </Button>
-        </Box>
-
-        {/* Mobile Hamburger Menu */}
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          onClick={toggleMobileDrawer}
-          sx={{ display: { xs: "block", md: "none" } }}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Toolbar>
-
-      {/* Submenu for Desktop */}
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleMenuClose}
-        PaperProps={{
-          elevation: 3,
-          sx: { mt: 1.5 },
+    <>
+      {/* Skip Navigation Link */}
+      <a
+        href="#main-content"
+        className="skip-link"
+        style={{
+          position: "absolute",
+          left: "-9999px",
+          top: "0px",
+          zIndex: 1000,
         }}
       >
-        {activeMenu &&
-          menuItems[activeMenu as keyof typeof menuItems].map((item) => (
-            <MenuItem tabIndex={0}
-              key={item}
-              onClick={handleMenuClose}
-              sx={{ minWidth: 200 }}
-            >
-              <Link to={`/Nav/${item.replace(/\s+/g, "").toLowerCase()}`} style={{ textDecoration: "none", color: "black" }}>
-                {item}
-              </Link>
-            </MenuItem>
-          ))}
-      </Menu>
+        Skip to main content
+      </a>
+      {/* <Button onClick={toggleTheme} style={{position:"absolute",right:"0",bottom:"0"}}>
+        {theme==='light'?<LightMode/>:<DarkMode/>}
+      </Button> */}
+      <AppBar position="static" color="transparent" elevation={0} sx={{ padding: "0 16px", backgroundColor:colors.background,color:colors.text }}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          {/* Logo */}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <img src={logo} alt="Growshoot Logo" style={{ height: 50 }} />
+          </Box>
 
-      {/* Mobile Drawer */}
-      <Drawer
-        anchor="left"
-        open={mobileOpen}
-        onClose={toggleMobileDrawer}
-        PaperProps={{
-          sx: { width: "75%", padding: 2 },
-        }}
-      >
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          {Object.keys(menuItems).map((menu) => (
-            <Box key={menu}>
+          {/* Desktop Navigation */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 4 }}>
+            {Object.keys(menuItems).map((menu) => (
               <Box
-                onClick={() => toggleMobileSubMenu(menu)}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  cursor: "pointer",
-                  padding: "8px 0",
-                }}
+                key={menu}
+                onClick={(e) => handleMenuOpen(e, menu)}
+                sx={{ display: "flex", alignItems: "center", gap: 0.5, cursor: "pointer" }}
+                aria-haspopup="true"
+                aria-expanded={activeMenu === menu ? "true" : "false"}
+                role="menuitem"
               >
                 <Typography variant="body1">{t(`nav.${menu}`)}</Typography>
                 <ChevronDown size={16} />
               </Box>
-              <Collapse in={mobileActiveMenu === menu} timeout="auto" unmountOnExit>
-                <Box sx={{ pl: 2 }}>
-                  {menuItems[menu as keyof typeof menuItems].map((item) => (
-                    <Typography
-                      key={item}
-                      sx={{
-                        padding: "8px 0",
-                        cursor: "pointer",
-                      }}
-                    >
-                      <Link
-                        to={`/${item.replace(/\s+/g, "-").toLowerCase()}`}
-                        style={{ textDecoration: "none", color: "black" }}
-                        onClick={toggleMobileDrawer}
-                      >
-                        {item}
-                      </Link>
-                    </Typography>
-                  ))}
-                </Box>
-              </Collapse>
-            </Box>
-          ))}
-          <Button
-            variant="contained"
-            endIcon={<ArrowRight />}
-            sx={{
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor: "#007bff",
-              ":hover": { backgroundColor: "#0056b3" },
-            }}
+            ))}
+            <Button
+              variant="contained"
+              endIcon={<ArrowRight />}
+              sx={{
+                textTransform: "none",
+                fontWeight: "bold",
+                backgroundColor: "blue" , //getColorPalette2(theme).primaryFontColor
+                color: "#ffffff",
+                ":hover": { backgroundColor: "#0056b3" },
+                
+              }}
+            >
+              {t("nav.Request Demo")}
+            </Button>
+          </Box>
+
+          {/* Mobile Hamburger Menu */}
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={toggleMobileDrawer}
+            sx={{ display: { xs: "block", md: "none" } }}
           >
-            {t("nav.Request Demo")}
-          </Button>
-        </Box>
-      </Drawer>
-    </AppBar>
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+
+        {/* Submenu for Desktop */}
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleMenuClose}
+          PaperProps={{
+            elevation: 3,
+            sx: { mt: 1.5 },
+          }}
+        >
+          {activeMenu &&
+            menuItems[activeMenu as keyof typeof menuItems].map((item) => (
+              <MenuItem
+                key={item}
+                onClick={handleMenuClose}
+                sx={{ minWidth: 200 }}
+                tabIndex={0}
+              >
+                <Link
+                  to={`/Nav/${item.replace(/\s+/g, "").toLowerCase()}`}
+                  style={{ textDecoration: "none",color:colors.text }}
+                >
+                  {item}
+                </Link>
+              </MenuItem>
+            ))}
+        </Menu>
+
+        {/* Mobile Drawer */}
+        <Drawer
+          anchor="left"
+          open={mobileOpen}
+          onClose={toggleMobileDrawer}
+          PaperProps={{
+            sx: { width: "75%", padding: 2 },
+            role: "navigation",
+          }}
+        >
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }} tabIndex={-1}>
+            {Object.keys(menuItems).map((menu) => (
+              <Box key={menu}>
+                <Box
+                  onClick={() => toggleMobileSubMenu(menu)}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    cursor: "pointer",
+                    padding: "8px 0",
+                  }}
+                  aria-expanded={mobileActiveMenu === menu ? "true" : "false"}
+                  aria-haspopup="true"
+                  role="button"
+                >
+                  <Typography variant="body1">{t(`nav.${menu}`)}</Typography>
+                  <ChevronDown size={16} />
+                </Box>
+                <Collapse in={mobileActiveMenu === menu} timeout="auto" unmountOnExit>
+                  <Box sx={{ pl: 2 }}>
+                    {menuItems[menu as keyof typeof menuItems].map((item) => (
+                      <Typography
+                        key={item}
+                        sx={{
+                          padding: "8px 0",
+                          cursor: "pointer",
+                        }}
+                      >
+                        <Link
+                          to={`/${item.replace(/\s+/g, "-").toLowerCase()}`}
+                          style={{ textDecoration: "none", color: "black" }}
+                          onClick={toggleMobileDrawer}
+                        >
+                          {item}
+                        </Link>
+                      </Typography>
+                    ))}
+                  </Box>
+                </Collapse>
+              </Box>
+            ))}
+            <Button
+              variant="contained"
+              endIcon={<ArrowRight />}
+              sx={{
+                textTransform: "none",
+                fontWeight: "bold",
+                backgroundColor: "#007bff",
+                color: "#ffffff",
+                ":hover": { backgroundColor: "#0056b3" },
+              }}
+            >
+              {t("nav.Request Demo")}
+            </Button>
+          </Box>
+        </Drawer>
+      </AppBar>
+    </>
   );
 }
 

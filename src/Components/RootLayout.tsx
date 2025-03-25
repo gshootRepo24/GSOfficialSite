@@ -15,7 +15,9 @@ import Insights from './MainContent/Insights'
 import Events from './MainContent/Events'
 
 
+
 export default function RootLayout() {
+  
   return (
    <>
     <Topbar/>
@@ -33,6 +35,7 @@ export default function RootLayout() {
     <Insights/>
     <Events/>
     <Footer/>
+    
    </>
   )
 }

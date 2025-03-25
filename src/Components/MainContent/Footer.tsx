@@ -14,12 +14,15 @@ import {
   import LinkedInIcon from "@mui/icons-material/LinkedIn";
   import bg from '../../assets/Footer/footer-bg.jpg';
   import { useTranslation } from 'react-i18next';
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
   
   const Footer = () => {
     const { t } = useTranslation();
+    const {colors}=useContext(ThemeContext);
   
     return (
-      <Box sx={{ backgroundColor: "#1a1b41", backgroundImage:`url(${bg})`, color: "white", paddingTop: 4, mt: 4 }}>
+      <Box sx={{ backgroundColor: "#1a1b41", backgroundImage:`url(${bg})`, color: "white", paddingTop: 4, pt: 4 }}>
         {/* Top Section */}
         <Box
           sx={{
@@ -145,9 +148,10 @@ import {
         </Box>
   
         {/* Middle Section */}
+        <Box sx={{background:colors.topbar}}>
         <Box
           sx={{
-            backgroundColor: "#0f1b2d",
+            // backgroundColor: "#0f1b2d",
             padding: 2,
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
@@ -179,7 +183,7 @@ import {
         {/* Bottom Section */}
         <Box
           sx={{
-            backgroundColor: "#08192d",
+            // backgroundColor: "#08192d",
             padding: 2,
             textAlign: "center",
             color: "white",
@@ -212,6 +216,7 @@ import {
           <Typography variant="body2">
             {t("footer.copyright")}
           </Typography>
+        </Box>
         </Box>
       </Box>
     );

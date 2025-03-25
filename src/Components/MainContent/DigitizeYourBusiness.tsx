@@ -1,6 +1,6 @@
 import SameSection from '../ReUsable/SameSection';
 import CardComponent from '../ReUsable/CardComponent';
-import { Container, Grid } from '@mui/material';
+import { Box, Container, Grid } from '@mui/material';
 import { useTranslation } from 'react-i18next'; 
 import aipower from '../../Assets/MainImages/aipower.png';
 import futureready from '../../Assets/MainImages/futureready.png';
@@ -8,6 +8,8 @@ import low from '../../Assets/MainImages/low.png';
 import microservice from '../../Assets/MainImages/microservice.png';
 import endtoend from '../../Assets/MainImages/endtoend.png';
 import aiauto from '../../Assets/MainImages/aiauto.png';
+import { useContext } from 'react';
+import { ThemeContext } from '../ThemesProvider/ThemeProvider';
 
 const CardData = [
   {
@@ -44,10 +46,12 @@ const CardData = [
 
 export default function DigitizeYourBusiness() {
   const { t } = useTranslation();
+  const {colors} = useContext(ThemeContext)
 
   return (
     <>
-      <SameSection
+     <Box sx={{background:colors.background,color:colors.text}}>
+     <SameSection
         Title={t('hgs.title')}
         SubHeading={t('hgs.heading')}
         Description={t('hgs.description')}
@@ -58,10 +62,10 @@ export default function DigitizeYourBusiness() {
             <Grid
               item
               key={index}
-              xs={12}     // Full width on small screens
-              sm={6}      // Half width on small-medium screens
-              md={4}      // One-third width on medium screens
-              lg={3}      // One-fourth width on large screens
+              xs={12} 
+              sm={6}  
+              md={4}  
+              lg={4} 
             >
               <CardComponent
                 image={card.image}
@@ -73,6 +77,7 @@ export default function DigitizeYourBusiness() {
           ))}
         </Grid>
       </Container>
+     </Box>
     </>
   );
 }

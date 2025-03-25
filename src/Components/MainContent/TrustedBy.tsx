@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import SameSection from "../ReUsable/SameSection";
 import CardComponent from "../ReUsable/CardComponent";
 import { useTranslation } from "react-i18next";
@@ -10,6 +10,8 @@ import icici from "../../assets/Banks/icici.png";
 import LandT from "../../assets/Banks/L&TBank.png";
 import KVBank from "../../assets/Banks/KVBank.png";
 import Fino from "../../assets/Banks/Fino.png";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 const BankData = [
   { image: AxisBank },
   { image: Avanse},
@@ -22,10 +24,12 @@ const BankData = [
 ];
 
 export default function TrustedBy() {
+  const {colors} = useContext(ThemeContext);
   const { t } = useTranslation();
   return (
     <>
-      <SameSection
+     <Box sx={{background:colors.background,color:colors.text}}>
+     <SameSection
         Title={t('​TRUSTEDBY.title')} 
         SubHeading={t('​TRUSTEDBY.heading')}
         Description={t('​TRUSTEDBY.description')}
@@ -46,6 +50,7 @@ export default function TrustedBy() {
           ))}
         </Grid>
       </Container>
+     </Box>
     </>
   );
 }

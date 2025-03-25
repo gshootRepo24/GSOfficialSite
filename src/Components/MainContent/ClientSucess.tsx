@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardMedia, Grid2, IconButton, Typography } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 import SameSection from "../ReUsable/SameSection";
 import { useTranslation } from "react-i18next";
@@ -8,8 +8,10 @@ import SmeLanding from "../../Assets/MainImages/SmeLanding.png";
 import CoprateLanding from "../../Assets/MainImages/CoprateLanding.png";
 import GoldLoan from "../../Assets/MainImages/GoldLoan.png";
 import CustomerDurable from "../../Assets/MainImages/CustomerDurable.png";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
 export default function ClientSucess() {
+  const {colors} = useContext(ThemeContext)
   const { t } = useTranslation();
   const [data, setData] = useState([
     {
@@ -60,7 +62,7 @@ export default function ClientSucess() {
 
   return (
     <>
-      <Box  justifyContent="center" py={3} px={3}>
+      <Box  justifyContent="center" py={3} px={3} sx={{background:colors.background,color:colors.text}}>
         <SameSection
           Title={t("clientSucess.title")}
           SubHeading={t("clientSucess.handling")}
@@ -71,7 +73,7 @@ export default function ClientSucess() {
           {data.map((item, index) => (
             <Grid2>
             <Box key={index} p={1}>
-              <Card sx={{ maxWidth: 300,height:400 }}>
+              <Card sx={{ maxWidth: 300,height:400,background:colors.background,color:colors.text }}>
                 <CardMedia component="img" height="300" image={item.image} alt={item.description} />
                 <CardContent>
                   <Typography gutterBottom variant="h6" component="div">

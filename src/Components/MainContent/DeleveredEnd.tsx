@@ -1,15 +1,17 @@
 import { Box, Typography, Button, Tabs, Tab } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import SameSection from "../ReUsable/SameSection";
 import { useTranslation } from "react-i18next";
 import Banner4 from "../../Assets/MainImages/Banner4.png";
 import Banner3 from "../../Assets/MainImages/Banner3.png";
 import Banner2 from "../../Assets/MainImages/Banner2.png";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
 export default function MainContent2() {
   const [activeIndex, setActiveIndex] = useState(0);
   const { t } = useTranslation();
+  const {colors} = useContext(ThemeContext)
 
   const data = [
     {
@@ -33,7 +35,7 @@ export default function MainContent2() {
   ];
 
   return (
-    <Box py={3} px={3}>
+    <Box py={3} px={3} sx={{background:colors.background}} >
       <SameSection
         Title={t("Delevired.title")}
         SubHeading={t("Delevired.heading")}
@@ -44,7 +46,7 @@ export default function MainContent2() {
         sx={{
           position: "relative",
           height: { xs: "auto", md: "100vh" },
-          color: "white",
+          color:colors.text,
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
@@ -65,7 +67,7 @@ export default function MainContent2() {
             backgroundImage: `url(${data[activeIndex].image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            filter: "brightness(60%)",
+            filter: "brightness(100%)",
             zIndex: -1,
           }}
         />

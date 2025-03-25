@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 import Translator from "./ReUsable/Translator";
 import Banner1 from "../assets/MainImages/Banner1.png";
 import Banner2 from "../assets/MainImages/Banner2.png";
 import Banner3 from "../assets/MainImages/Banner3.png";
+import { ThemeContext } from "./ThemesProvider/ThemeProvider";
 
 const AutoSlider = () => {
+  const {colors} =useContext(ThemeContext)
   const data = [
     {
       id: "slide1",
@@ -45,7 +47,7 @@ const AutoSlider = () => {
   };
 
   return (
-    <Box sx={{ position: "relative", width: "100%", maxWidth: "100%", margin: "auto", overflow: "hidden" }}>
+    <Box sx={{ position: "relative", width: "100%", maxWidth: "100%", margin: "auto", overflow: "hidden", background:colors.background }}>
       {/* Image */}
       <Box
         component="img"

@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import SameSection from '../ReUsable/SameSection';
 import { Box, Button, Paper, TextField, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from '../ThemesProvider/ThemeProvider';
 
 export default function TalkComponent() {
   const { t } = useTranslation();
+  const {colors} = useContext(ThemeContext);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -36,7 +38,8 @@ export default function TalkComponent() {
 
   return (
     <>
-      <SameSection 
+  <Box sx={{background:colors.background,color:colors.text}}>
+  <SameSection 
         Title={t('Talk.title')}
         SubHeading={t('Talk.heading')}
         Description={t('Talk.description')}
@@ -48,7 +51,7 @@ export default function TalkComponent() {
           justifyContent: "center",
           alignItems: "center",
           minHeight: "100vh",
-          backgroundColor: "#f5f5f5",
+          backgroundColor: colors.background,
           padding: { xs: 2, md: 4 },
         }}
       >
@@ -61,7 +64,8 @@ export default function TalkComponent() {
             flexDirection: { xs: "column", md: "row" },
             padding: 3,
             borderRadius: 2,
-            backgroundColor: "white",
+            // backgroundColor: colors.background,
+            // color:colors.text
           }}
         >
           {/* Left Side: Contact Information */}
@@ -93,7 +97,7 @@ export default function TalkComponent() {
             <Typography variant="h6" fontWeight="bold" mb={2}>
               {t('Talk.form.message')}
             </Typography>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}  >
               <TextField
                 fullWidth
                 label={t('Talk.form.name')}
@@ -103,6 +107,7 @@ export default function TalkComponent() {
                 variant="outlined"
                 margin="normal"
                 required
+                
                 aria-label="Enter your name"
               />
               <TextField
@@ -160,6 +165,7 @@ export default function TalkComponent() {
           </Box>
         </Paper>
       </Box>
+  </Box>
     </>
   );
 }
