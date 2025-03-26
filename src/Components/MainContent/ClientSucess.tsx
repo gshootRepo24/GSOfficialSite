@@ -71,8 +71,8 @@ export default function ClientSucess() {
         <Box display="flex" justifyContent="center" position="relative">
           <Grid2 container spacing={1}>
           {data.map((item, index) => (
-            <Grid2>
-            <Box key={index} p={1}>
+            <Grid2 key={index}>
+            <Box  p={1}>
               <Card sx={{ maxWidth: 300,height:400,background:colors.background,color:colors.text }}>
                 <CardMedia component="img" height="300" image={item.image} alt={item.description} />
                 <CardContent>
