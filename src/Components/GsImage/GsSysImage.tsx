@@ -24,6 +24,8 @@ import tech from "../../assets/GsImages/tech.png";
 import Faq from "../ReUsable/Faq";
 import GsBanner from "../../assets/GsImages/GsImageBanner.png";
 import GsImageProcess from "../../assets/GsImages/GsImageProcess.png";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
+import { useContext } from "react";
 
 const CardData = [
   {
@@ -105,6 +107,7 @@ export default function ServoSysDoc() {
   // var stackTrace = Error().stack;
   // console.log(stackTrace); // if console.log is available
   console.log(ServoSysDoc);
+  const {colors}=useContext(ThemeContext)
   // console.trace();
 
   const { t } = useTranslation();
@@ -130,15 +133,17 @@ export default function ServoSysDoc() {
       />
 
       <SameSection Title={t("servoimage.features_title")} />
-      <Box
+      <Box sx={{background:colors.background}}>
+        <Box
         sx={{
           m: 2,
-          mt: 4,
+          // mt: 4,
           display: "flex",
           justifyContent: "center",
           gap: 1,
           maxWidth: "80%",
           margin: "auto",
+          
         }}
       >
         <Grid container spacing={3}>
@@ -153,8 +158,10 @@ export default function ServoSysDoc() {
           ))}
         </Grid>
       </Box>
-      <Box textAlign="center" mt={4}>
-        <Typography color="red" variant="h3">
+      </Box>
+      
+      <Box textAlign="center" sx={{background:colors.background,color:colors.text,pt:2}} >
+        <Typography  variant="h3">
           {t("servoimage.breakthrough_results")}
         </Typography>
         {TextImage.map((item) => (

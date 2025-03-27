@@ -1,12 +1,16 @@
 import { Box, Typography } from "@mui/material";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
 const ImageTextCard = ({ image, textContent, position, title }: any) => {
   const isLeft = position === "left";
+  const {colors} = useContext(ThemeContext)
 
   return (
     <Box
       sx={{
         display: "flex",
+        pt:2,
         flexDirection: { xs: "column", md: isLeft ? "row" : "row-reverse" },
         alignItems: "center",
         justifyContent: "space-between",
@@ -14,7 +18,10 @@ const ImageTextCard = ({ image, textContent, position, title }: any) => {
         padding: { xs: 2, md: 4 },
         gap: 3,
         margin: "auto",
-        maxWidth: "1200px",
+        maxWidth: "100%",
+        background:colors.background,
+        color:colors.text
+        
       }}
     >
       {/* Image Section */}
@@ -28,6 +35,7 @@ const ImageTextCard = ({ image, textContent, position, title }: any) => {
           borderRadius: 2,
           border: "1px solid #ccc",
           boxShadow: 1,
+          
         }}
       />
       
@@ -49,7 +57,7 @@ const ImageTextCard = ({ image, textContent, position, title }: any) => {
           sx={{
             fontSize: { xs: "16px", md: "18px" },
             lineHeight: 1.6,
-            color: "text.primary",
+            
           }}
         >
           {textContent}

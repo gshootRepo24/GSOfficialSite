@@ -84,7 +84,7 @@ function Navbar() {
           </Box>
 
           {/* Desktop Navigation */}
-          <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 4 }}>
+          <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 4}}>
             {Object.keys(menuItems).map((menu) => (
               <Box
                 key={menu}
@@ -135,18 +135,19 @@ function Navbar() {
             elevation: 3,
             sx: { mt: 1.5 },
           }}
+          
         >
           {activeMenu &&
             menuItems[activeMenu as keyof typeof menuItems].map((item) => (
               <MenuItem
                 key={item}
                 onClick={handleMenuClose}
-                sx={{ minWidth: 200 }}
+                sx={{ minWidth: 100,background:colors.background}}
                 tabIndex={0}
               >
                 <Link
                   to={`/Nav/${item.replace(/\s+/g, "").toLowerCase()}`}
-                  style={{ textDecoration: "none",color:colors.text }}
+                  style={{ textDecoration: "none",color:colors.link  }}
                 >
                   {item}
                 </Link>

@@ -12,77 +12,77 @@ import MfileCard from "./Card";
 import CardComponent from "../ReUsable/CardComponent";
 import Navbar from "../Navrbar";
 import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
-const Cards = [
-  {
-    icon: DirectionsWalk,
-    title: "Collective Intelligence",
-    desc: "Unlock insights as M-Files platform helps with organizing and finding information, managing versions and duplicates, and guiding content collaboration within the Microsoft Ecosystem.",
-  },
-  {
-    icon: MenuBookOutlined,
-    title: "Strong Regulatory Compliance",
-    desc: "M-Files' enhanced integration drives regulatory compliance by automating permissions and compliance controls according to business context and embedding them into daily workflows.",
-  },
-  {
-    icon: SchoolOutlined,
-    title: "Holistic View",
-    desc: "Gain a holistic view to all relevant enterprise information across systems and data repositories. With M-Files, teams could work within Microsoft applications, including Microsoft Outlook, Microsoft Teams, and Microsoft Copilot, and access the enterprise information through M-Files.",
-  },
-];
-const CardService = [
-  {
-    image:
-      "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-teams.png",
-    title: "Microsoft Teams Add-In",
-    maxWidth: 345,
-    description:
-      "M-Files Add-In for Microsoft Teams allows working in the context of a single team while providing unified access to all enterprise data from the M-Files Add-In tab. M-Files automates document governance and guides collaboration with workflows, while enabling ad-hoc conversations within Microsoft Teams.",
-  },
-  {
-    image:
-      "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-outlook.png",
-    title: "Microsoft Outlook Add-In",
-    maxWidth: 345,
-    description:
-      "M-Files Outlook Integration automates filing emails and conversations with the appropriate client and project, enabling users to concentrate more on their work. This enhanced integration streamlines email organization and ensures communications and official correspondence are safely retained within the M-Files platform, enhancing overall productivity, efficiency, and compliance.",
-  },
-  {
-    image:
-      "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-sharedpoint.png",
-    title: "Microsoft SharePoint Connector",
-    maxWidth: 345,
-    description:
-      "This M-Files integration connects to documents in SharePoint and adds new capabilities for knowledge work automation. M-Files allows connecting SharePoint documents to business objects from non-Microsoft systems, improving discoverability and driving business processes. M-Files supports complex, built-in workflows and compliance rules with states, triggers, actions, and conditions.",
-  },
-  {
-    image:
-      "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-365.png",
-    title: "M-Files Microsoft 365 Integration",
-    maxWidth: 345,
-    description:
-      "M-Files integrates into Microsoft 365 and eliminates the manual work associated with document creation, storing and usage while ensuring consistency, confidentiality, and context.",
-  },
-  {
-    image:
-      "https://www.m-files.com/wp-content/uploads/2025/02/logo-microsoft-office.png",
-    title: "Microsoft Excel, Word, PowerPoint",
-    maxWidth: 345,
-    description:
-      "M-Files helps find information based on what it is rather than where it is whether it is in Microsoft Excel or Microsoft PowerPoint. M-Files connects to all repositories and systems to create a single source of truth.",
-  },
-  {
-    image:
-      "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-copilot.png",
-    title: "Microsoft Copilot Connector",
-    maxWidth: 345,
-    description:
-      "Microsoft Copilot for Microsoft 365 is your AI companion at work. It helps access relevant data, summarize emails, transcribe meetings, create documents, and conduct research.",
-  },
-];
+
 
 export default function Mfile() {
   const {t} = useTranslation();
+  const {colors}= useContext(ThemeContext)
+  const Cards = [
+    {
+      icon: DirectionsWalk,
+      title:t('integration_section.features.collective_intelligence'),
+      desc: t('integration_section.features.collective_intelligence_description'),
+    },
+    {
+      icon: MenuBookOutlined,
+      title: t('integration_section.features.regulatory_compliance'),
+      desc: t('integration_section.features.regulatory_compliance_description'),
+    },
+    {
+      icon: SchoolOutlined,
+      title:  t('integration_section.features.holistic_view'),
+      desc:  t('integration_section.features.holistic_view_description'),
+    },
+  ];
+  const CardService = [
+    {
+      image:
+        "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-teams.png",
+      title: t('microsoft_integration.teams_addin.title'),
+      maxWidth: 345,
+      description:t('microsoft_integration.teams_addin.description'),
+    },
+    {
+      image:
+        "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-outlook.png",
+      title:  t('microsoft_integration.outlook_addin.title'),
+      maxWidth: 345,
+      description:
+      t('microsoft_integration.outlook_addin.description'),
+    },
+    {
+      image:
+        "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-sharedpoint.png",
+      title: t('microsoft_integration.sharepoint_connector.title'),
+      maxWidth: 345,
+      description:
+      t('microsoft_integration.sharepoint_connector.description'),
+    },
+    {
+      image:
+        "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-365.png",
+      title:  t('microsoft_integration.microsoft_365_integration.title'),
+      maxWidth: 345,
+      description: t('microsoft_integration.microsoft_365_integration.description'),
+    },
+    {
+      image:
+        "https://www.m-files.com/wp-content/uploads/2025/02/logo-microsoft-office.png",
+      title:  t('microsoft_integration.microsoft_office.title'),
+      maxWidth: 345,
+      description:t('microsoft_integration.microsoft_office.description'),
+    },
+    {
+      image:
+        "https://www.m-files.com/wp-content/uploads/2024/05/logo-microsoft-copilot.png",
+      title: t('microsoft_integration.copilot_connector.title'),
+      maxWidth: 345,
+      description:t('microsoft_integration.copilot_connector.description'),
+    },
+  ];
   return (
    
     <>
@@ -102,8 +102,8 @@ export default function Mfile() {
         position="right"
       />
     </Box>
-    <Box textAlign="center">
-      <Typography sx={{ color: "#1b254e", m: 4 }} variant="h4">
+    <Box textAlign="center" sx={{background:colors.background,color:colors.text}}>
+      <Typography sx={{  p: 4 }} variant="h4">
         {t("integration_section.features.single_view")} {/* Use translation */}
       </Typography>
 
@@ -123,8 +123,8 @@ export default function Mfile() {
         ))}
       </Box>
     </Box>
-    <Box sx={{ textAlign: "center", m: 4 }}>
-      <Typography sx={{ color: "#1b254e", m: 4 }} variant="h4">
+    <Box sx={{ textAlign: "center", p: 4,bgcolor:colors.background }}>
+      <Typography sx={{ color: colors.text, m: 4 }} variant="h4">
         {t("microsoft_integration.title")} {/* Use translation */}
       </Typography>
 
@@ -149,14 +149,15 @@ export default function Mfile() {
         </Grid2>
       </Box>
     </Box>
-    <Box sx={{ textAlign: 'center', m: 4 }}>
-      <Typography sx={{ color: "#1b254e", m: 4 }} variant="h4">
+    <Box sx={{ textAlign: 'center', p: 4,background:colors.background }}>
+      <Typography sx={{ color: colors.text, m: 4 }} variant="h4">
         {t("call_to_action.title")} {/* Use translation */}
       </Typography>
 
       <iframe src="https://fast.wistia.net/embed/iframe/2ckhpllgco?playbar=true&amp;muted=false&amp;videoFoam=true&amp;autoplay=1" frameBorder="0" width={1000} height={500} sandbox='allow-scripts allow-modal' allow="autoplay;encrypted-media;" title="Video Player"></iframe>
     </Box>
-    <Card sx={{ backgroundColor: "#1A253A", color: "white", borderRadius: 2, p: 4, maxWidth: 800, margin: "auto" }}>
+    <Box sx={{backgroundColor: colors.background, color: colors.text}}>
+       <Card sx={{ backgroundColor: colors.background,color: colors.text,borderRadius: 2, p: 4, maxWidth:'80%', margin: "auto" }}>
       <CardContent>
         <Typography variant="h4" fontWeight="bold" gutterBottom>
           {t("call_to_action.title")} {/* Use translation */}
@@ -188,6 +189,8 @@ export default function Mfile() {
         </Stack>
       </CardContent>
     </Card>
+    </Box>
+   
     <Footer />
   </>
   );

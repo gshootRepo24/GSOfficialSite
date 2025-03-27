@@ -1,9 +1,12 @@
 import { Box, Typography } from "@mui/material";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
+import { useContext } from "react";
 
 
 export default function SameTab({ heading, description, image }: any) {
+  const {colors}=useContext(ThemeContext)
   return (
-    <Box sx={{  position: "relative", width: "100%", maxWidth: "100%", margin: "auto" }}>
+    <Box sx={{ background:colors.background, position: "relative", width: "100%", maxWidth: "100%", margin: "auto" }}>
         <img
         src={image}
         alt={image}

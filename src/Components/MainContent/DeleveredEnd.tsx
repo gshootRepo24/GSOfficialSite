@@ -35,7 +35,7 @@ export default function MainContent2() {
   ];
 
   return (
-    <Box py={3} px={3} sx={{background:colors.background}} >
+    <Box py={3} px={3} sx={{background:colors.background,color:colors.text}} >
       <SameSection
         Title={t("Delevired.title")}
         SubHeading={t("Delevired.heading")}
@@ -52,6 +52,7 @@ export default function MainContent2() {
           alignItems: "center",
           justifyContent: { xs: "center", md: "space-between" },
           overflow: "hidden",
+          zIndex: 0,
         }}
       >
         {/* Background Image Animation */}
@@ -59,7 +60,7 @@ export default function MainContent2() {
           key={activeIndex}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          // transition={{ duration: 0.5 }}
           style={{
             position: "absolute",
             width: "100%",
@@ -68,7 +69,7 @@ export default function MainContent2() {
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "brightness(100%)",
-            zIndex: -1,
+           
           }}
         />
 

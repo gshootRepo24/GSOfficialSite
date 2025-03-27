@@ -60,7 +60,7 @@
   },
   "clientSucess":{
     "title":"​Client Success Spotlight",
-    "handling":"Empowering Businesses with Servosys Solutions",
+    "handling":"Empowering Businesses with GrowShoot Solutions",
     "description":"With our suites, you can foster digital banking transformation and scale business operations to excellence while addressing challenges with high TAT, organizational productivity, service quality, and regulatory compliance.",
     "title2":"Retail Landing",
     "title3":"SME Lending",
@@ -128,14 +128,14 @@
       "message":"Message"
     }
   },
-  "​TRUSTEDBY":{
+  "trusted":{
     "title":"​TRUSTED BY",
     "heading":"Leading Banks and Financial Institutions",
-    "description":"Leading BFSI players find Servosys BPMS solutions extremely reliable for Business Transformation."
+    "description":"Leading BFSI players find GrowShoot BPMS solutions extremely reliable for Business Transformation."
   },
   "Result":{
     "title":"​UNVEILING TANGIBLE RESULTS",
-    "heading":"Servosys Empowering Numerous Banks and Financial Institutions Across the Industry",
+    "heading":"GrowShoot Empowering Numerous Banks and Financial Institutions Across the Industry",
     "result":{
       "1":"Customer Delight with referenceability",
       "2":"YOY Consistently Profitable",
@@ -195,7 +195,7 @@
   "TestMon":{
     "title":"​TESTIMONIALS",
     "heading":"What the people say about us",
-    "description":"We have evaluated various products, and we thought Servosys Solutions is one of the best we have come across. We were also looking for a partner who is much more helpful in terms of migrations or much faster TAT, the needs we asked for, or the requirement we raised. Servosys was equally efficient and good in that particular aspect. We have been using this product for 3 odd years, and overall, I am very impressed."
+    "description":"We have evaluated various products, and we thought GrowShoot Solutions is one of the best we have come across. We were also looking for a partner who is much more helpful in terms of migrations or much faster TAT, the needs we asked for, or the requirement we raised. GrowShoot was equally efficient and good in that particular aspect. We have been using this product for 3 odd years, and overall, I am very impressed."
   },
   "navbar": {
     "logo": "Logo",
@@ -206,42 +206,42 @@
   },
   "hero_section": {
     "title": "Supercharge Your Microsoft Ecosystem",
-    "description": "With its integration with Microsoft products, M-Files knowledge work automation platform helps organizations optimize investments in Microsoft 365 by providing complementary capabilities for business processes and information governance. M-Files makes Microsoft 365 the single point of access for all enterprise data, empowering enterprises to find, access, and manage all connected data, regardless of its storage repository, through Microsoft 365 user interfaces."
+    "description": "With its integration with Microsoft products, GS-Files knowledge work automation platform helps organizations optimize investments in Microsoft 365 by providing complementary capabilities for business processes and information governance. GS-Files makes Microsoft 365 the single point of access for all enterprise data, empowering enterprises to find, access, and manage all connected data, regardless of its storage repository, through Microsoft 365 user interfaces."
   },
   "integration_section": {
     "title": "Achieve High ROI Through Microsoft Integration",
-    "description": "Uncover business-critical information concealed within the Ecosystem. M-Files works with popular business applications like ERPs and CRMs, helping to improve business processes and information management.",
+    "description": "Uncover business-critical information concealed within the Ecosystem. GS-Files works with popular business applications like ERPs and CRMs, helping to improve business processes and information management.",
     "features": {
       "single_view": "Single View of Enterprise Information",
       "collective_intelligence": "Collective Intelligence",
-      "collective_intelligence_description": "Unlock insights as M-Files platform helps with organizing and finding information, managing versions and duplicates, and guiding content collaboration within the Microsoft Ecosystem.",
+      "collective_intelligence_description": "Unlock insights as GS-Files platform helps with organizing and finding information, managing versions and duplicates, and guiding content collaboration within the Microsoft Ecosystem.",
       "regulatory_compliance": "Strong Regulatory Compliance",
-      "regulatory_compliance_description": "M-Files' enhanced integration drives regulatory compliance by automating permissions and compliance controls according to business context and embedding them into daily workflows.",
+      "regulatory_compliance_description": "GS-Files' enhanced integration drives regulatory compliance by automating permissions and compliance controls according to business context and embedding them into daily workflows.",
       "holistic_view": "Holistic View",
-      "holistic_view_description": "Gain a holistic view of all relevant enterprise information across systems and data repositories. With M-Files, teams can work within Microsoft applications, including Microsoft Outlook, Microsoft Teams, and Microsoft Copilot, and access enterprise information through M-Files."
+      "holistic_view_description": "Gain a holistic view of all relevant enterprise information across systems and data repositories. With GS-Files, teams can work within Microsoft applications, including Microsoft Outlook, Microsoft Teams, and Microsoft Copilot, and access enterprise information through GS-Files."
     }
   },
   "microsoft_integration": {
     "title": "Gain a Unified User Experience",
     "teams_addin": {
       "title": "Microsoft Teams Add-In",
-      "description": "M-Files Add-In for Microsoft Teams allows working in the context of a single team while providing unified access to all enterprise data from the M-Files Add-In tab. M-Files automates document governance and guides collaboration with workflows while enabling ad-hoc conversations within Microsoft Teams."
+      "description": "GS-Files Add-In for Microsoft Teams allows working in the context of a single team while providing unified access to all enterprise data from the GS-Files Add-In tab. GS-Files automates document governance and guides collaboration with workflows while enabling ad-hoc conversations within Microsoft Teams."
     },
     "outlook_addin": {
       "title": "Microsoft Outlook Add-In",
-      "description": "M-Files Outlook Integration automates filing emails and conversations with the appropriate client and project, enabling users to concentrate more on their work. This enhanced integration streamlines email organization and ensures communications and official correspondence are safely retained within the M-Files platform, enhancing overall productivity, efficiency, and compliance."
+      "description": "GS-Files Outlook Integration automates filing emails and conversations with the appropriate client and project, enabling users to concentrate more on their work. This enhanced integration streamlines email organization and ensures communications and official correspondence are safely retained within the GS-Files platform, enhancing overall productivity, efficiency, and compliance."
     },
     "sharepoint_connector": {
       "title": "Microsoft SharePoint Connector",
-      "description": "This M-Files integration connects to documents in SharePoint and adds new capabilities for knowledge work automation. M-Files allows connecting SharePoint documents to business objects from non-Microsoft systems, improving discoverability and driving business processes. M-Files supports complex, built-in workflows and compliance rules with states, triggers, actions, and conditions."
+      "description": "This GS-Files integration connects to documents in SharePoint and adds new capabilities for knowledge work automation. GS-Files allows connecting SharePoint documents to business objects from non-Microsoft systems, improving discoverability and driving business processes. GS-Files supports complex, built-in workflows and compliance rules with states, triggers, actions, and conditions."
     },
     "microsoft_365_integration": {
-      "title": "M-Files Microsoft 365 Integration",
-      "description": "M-Files integrates into Microsoft 365 and eliminates the manual work associated with document creation, storing, and usage while ensuring consistency, confidentiality, and context."
+      "title": "GS-Files Microsoft 365 Integration",
+      "description": "GS-Files integrates into Microsoft 365 and eliminates the manual work associated with document creation, storing, and usage while ensuring consistency, confidentiality, and context."
     },
     "microsoft_office": {
       "title": "Microsoft Excel, Word, PowerPoint",
-      "description": "M-Files helps find information based on what it is rather than where it is, whether it is in Microsoft Excel or Microsoft PowerPoint. M-Files connects to all repositories and systems to create a single source of truth."
+      "description": "GS-Files helps find information based on what it is rather than where it is, whether it is in Microsoft Excel or Microsoft PowerPoint. GS-Files connects to all repositories and systems to create a single source of truth."
     },
     "copilot_connector": {
       "title": "Microsoft Copilot Connector",
@@ -249,9 +249,9 @@
     }
   },
   "call_to_action": {
-    "try": "Try M-Files for Free",
+    "try": "Try GS-Files for Free",
     "get": " Get a Live Demo",
-    "title": "See M-Files In Action",
+    "title": "See GS-Files In Action",
     "description": "Seeing is believing. Schedule a demo to learn more about simplified search, automatic workflows, intuitive user interfaces, and built-in integrations with existing applications and file systems.",
     "ratings": {
       "rating_1": "4.3",
@@ -260,7 +260,7 @@
     }
   },
   "company_info": {
-    "description": "Servosys Solutions is a unit of EML Consultancy Services Private Limited, a company headquartered in New Delhi, India. We are one of the fastest-growing providers of software products and technology services for business process automation solutions that address challenges like process turn-around time, organizational productivity, regulatory compliance, business scalability, operational visibility, and excellence."
+    "description": "GrowShoot Solutions is a unit of EML Consultancy Services Private Limited, a company headquartered in New Delhi, India. We are one of the fastest-growing providers of software products and technology services for business process automation solutions that address challenges like process turn-around time, organizational productivity, regulatory compliance, business scalability, operational visibility, and excellence."
   },
   "footer": {
     "email": "Email",
@@ -293,7 +293,7 @@
       "privacy_policy": "Privacy Policy",
       "cookies_policy": "Cookies Policy"
     },
-    "copyright": "© Copyright 2024, Servosys – All Rights Reserved."
+    "copyright": "© Copyright 2024, GrowShoot – All Rights Reserved."
   },
   "servoimage": {
     "GsImage": "GSImages®",
@@ -324,7 +324,7 @@
     "integration_friendly_title": "Integration Friendly",
     "integration_friendly_description": "Advanced DMS offers robust APIs for seamless integration with existing software. Supports real-time data synchronization for up-to-the-minute document updates and collaboration.",
     "trusted_by": "TRUSTED BY",
-    "trusted_by_description": "Leading Banks and Financial Institutions. Leading BFSI players find Servosys BPMS solutions extremely reliable for Business Transformation."
+    "trusted_by_description": "Leading Banks and Financial Institutions. Leading BFSI players find GrowShoot BPMS solutions extremely reliable for Business Transformation."
   },
  "servodocs": {
   "ServoDocs®" : "ServoDocs®" ,
@@ -366,7 +366,7 @@
   "ServoDocsDMS" : "ServoDocs® – Document Management System",
   "TrustedByIndustryLeaders"  : "Trusted by Industry Leaders",
   "StreamlineDocumentManagement": "ServoDocs®: Streamline Your Document Management System",
-  "DigitalLandscapeText" : "In the contemporary digital landscape, enterprises are generating an unprecedented volume of documentation. Effectively managing this bulky paperwork presents inherent challenges, including the risk of misplacement, time wastage, and frustration. In response to this need, Servosys Solutions has created ServoDocs, a sophisticated document management system (DMS) aimed at facilitating seamless document storage, retrieval, and collaboration.",
+  "DigitalLandscapeText" : "In the contemporary digital landscape, enterprises are generating an unprecedented volume of documentation. Effectively managing this bulky paperwork presents inherent challenges, including the risk of misplacement, time wastage, and frustration. In response to this need, GrowShoot Solutions has created ServoDocs, a sophisticated document management system (DMS) aimed at facilitating seamless document storage, retrieval, and collaboration.",
   "OverviewOfServoDocs": "Overview of ServoDocs: Document Management Software",
   "ServoDocsDescription" : "ServoDocs is an innovative document management software capable of efficiently indexing, retrieving, and archiving documents while offering rapid search capabilities. The product’s primary design objective is optimal performance, complemented by its integration with external systems through the use of APIs, irrespective of the scale of the document repository. ",
   "ServoDocsBenefits" : "ServoDocs benefits both short-term transactional and long-term archive-retrieve use cases. Because the system allows permitted access to preserved documents, it assists in converting digitized paper documents and electronic files into valuable knowledge assets for enterprises that must deal with unstructured materials for conducting business. Users can retain versions of the papers they upload into the system with the use of file management software. ",
@@ -409,7 +409,7 @@
   "RobustAPIsIntegrations": "Advanced document control software offers robust APIs for seamless interaction with existing software.",
   "RealTimeDataSyncKey": "It enables real-time data synchronization for collaborative and up-to-date document modifications.",
   "GettingStartedServoDocs": "Getting Started with ServoDocs: Document Control Software",
-  "GettingStartedDescription": "Utilizing ServoDocs is straightforward to initiate. Prospective users can request a trial of the software from Servosys Solutions before making a purchase. The company offers a diverse array of options tailored to meet the specific requirements of your business. ServoDocs stands as a robust and user-friendly document management solution, capable of significantly enhancing productivity, security, efficiency, and collaboration for businesses of varying scales. In addition, Servosys Solutions extends its services to include a loan origination system, designed to optimize the loan processing workflow. For those seeking to streamline their document management processes, ServoDocs presents itself as a compelling solution worthy of consideration."
+  "GettingStartedDescription": "Utilizing ServoDocs is straightforward to initiate. Prospective users can request a trial of the software from GrowShoot Solutions before making a purchase. The company offers a diverse array of options tailored to meet the specific requirements of your business. ServoDocs stands as a robust and user-friendly document management solution, capable of significantly enhancing productivity, security, efficiency, and collaboration for businesses of varying scales. In addition, GrowShoot Solutions extends its services to include a loan origination system, designed to optimize the loan processing workflow. For those seeking to streamline their document management processes, ServoDocs presents itself as a compelling solution worthy of consideration."
 },
 
 "GSWebScan": {
@@ -439,5 +439,38 @@
    "BrowserSupportAndIntegrationDescription" : "GSWebScan is supported on Chrome and Internet Explorer browsers; JavaScript allows scanning of files from other Web-based applications.",
    "SimplifyDocumentManagement" : "Simplify Document Management",
    "SimplifyDocumentCapturingDescription" : "GSWebScan have ability to simplify document capturing, enabling intelligent indexing by associating metadata for quick retrieval of documents."
+},
+"GsAbout":{
+  "title":"About Us",
+  "description":"We are here to transform your business through innovative enterprise solutions",
+  "discover":{
+    "title":"Discover Growshoot Solutions",
+    "description":"Growshoot Solutions is a unit of EML Consultancy Services Private Limited, a company headquartered in New Delhi, India. We are one of the fastest-growing providers of software products and technology services for business process automation solutions that address challenges like process turn-around time, organizational productivity, service quality, regulatory compliance, business scalability, operational visibility and excellence."
+  },
+  "vision":{
+    "title":"Our Vision",
+    "description":"Our vision is to “ease the lives” of business users and individuals by providing state-of-the-art technology solutions at affordable prices."
+  },
+  "mission":{
+    "title":"Our Mission",
+    "description":"Streamlining processes to unlock business values and setting benchmarks through technology innovations."
+  },
+  "know_More":{
+    "title":"​Know Us More",
+    "highly_iintergrated":"HIGHLY INTEGRATION-FRIENDLY",
+    "highly_iintergrated_desc":"Readily available APIs allow integration with any 3rd party applications",
+    "futuristice":"Futuristic AI-Led Products Suite",
+    "futuristice_desc":"GsStreams® (BPMS), GsDocs® (DMS), GsWebScan® (Scanning Workflow) & GsImage© (Imaging API toolkit). Our products are technologically superior and built for high performance.",
+    "proven":"Proven and Accepted Solutions",
+    "proven_desc":"Mortgage Loan Solutions, CASA Solutions, Gold Loan Solutions, Retail Lending Solutions , Corporate Lending Solutions, Construction Finance Management & Monitoring Software Solution & Many more Lending Solutions",
+    "industries":"Industries Focus",
+    "industries_desc":"Although our products are horizontal and find applications in different industries, the initial customer acquisition focus has been on the services industries including Banking, Financial Services, and high-tech companies.",
+    "award": "Awards & Recognitions",
+    "award_desc":"The prestigious ‘India SME 100 Award’ for which 34,011 companies were nominated. Also, recognized for “Innovative Digital Lending” at Elets NBFC100 Tech Summit2023” New Delhi."
+   },
+   "committed":{
+    "title":"Growshoot is committed to making a positive impact through CSR initiatives.",
+    "description":"The Company recognizes the importance of corporate social responsibility in promoting the welfare of the society in which the Company is working. The CSR Policy shall be guided by the Company’s corporate vision and aspirations to be the Company of Choice for Customers, Shareholders, Employees and Community. The primary purpose of the Company’s CSR philosophy is to make a meaningful and measurable impact in the lives of economically, physically and socially challenged communities of the country."
+   }
 }
 }

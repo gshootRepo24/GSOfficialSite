@@ -1,8 +1,11 @@
 import { Box, Typography } from "@mui/material";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
+import { useContext } from "react";
 
 export default function SameSection({ Title, SubHeading, Description }:any) {
+  const {colors}=useContext(ThemeContext)
   return (
-    <Box sx={{ pt:4}}>
+    <Box sx={{ pt:4,background:colors.background,color:colors.text}}>
       <Typography
         variant="h4"
         fontWeight="Bold"

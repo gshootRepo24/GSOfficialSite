@@ -34,7 +34,7 @@ import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 export default function CardComponent({ image, title, maxWidth, description }: any) {
   const {colors} = useContext(ThemeContext);
   return (
-    <Box sx={{ maxWidth: { maxWidth }, textAlign: "center", p: 2, }}>
+    <Box sx={{ maxWidth: { maxWidth }, textAlign: "center", p: 2,border:"2px solid red" }}>
       <Card sx={{ 
         borderRadius: 3, 
         boxShadow: 3, 

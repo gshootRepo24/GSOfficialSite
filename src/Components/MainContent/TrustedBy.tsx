@@ -30,9 +30,9 @@ export default function TrustedBy() {
     <>
      <Box sx={{background:colors.background,color:colors.text}}>
      <SameSection
-        Title={t('​TRUSTEDBY.title')} 
-        SubHeading={t('​TRUSTEDBY.heading')}
-        Description={t('​TRUSTEDBY.description')}
+        Title={t('trusted.title')} 
+        SubHeading={t('trusted.heading')}
+        Description={t('trusted.description')}
       />
       <Container sx={{ mt: 4, width:'100%' }}>
         <Grid

@@ -30,7 +30,7 @@ export default function App() {
   // console.log("i am loadign");
   const router = createBrowserRouter([
     { path: "/", element: <RootLayout /> },
-    { path: "/servostreams", element: <RootLayout /> },
+    { path: "/Nav/Gsstreams", element: <RootLayout /> },
     { path: "/Nav/GsImage", element: <GsImage /> },
     { path: "/Nav/GsDocs", element: <Gsdocs /> },
     { path: "/Nav/GSFiles", element: <Mfile /> },
