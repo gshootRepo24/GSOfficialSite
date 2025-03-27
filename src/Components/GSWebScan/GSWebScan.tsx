@@ -29,9 +29,12 @@ import gicImg from "../../assets/GsDocs/Gic.webp";
 import bandhanImg from "../../assets/GsDocs/Bandhan.webp";
 import relianceImg from "../../assets/GsDocs/Reliance.webp";
 import suryodayImg from "../../assets/GsDocs/Suryoday.webp";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider"
+import { useContext } from "react"
 
 const GSWebScan = () => {
    const { t } = useTranslation();
+   const {colors} = useContext(ThemeContext)
    const itemData = [
     { img: axisBankImg, title: 'Axis Bank' },
     { img: avansImg, title: 'Avans' },
@@ -50,7 +53,7 @@ const GSWebScan = () => {
     <>
     <Topbar/>
     <Navbar/>
-    <main style={{ width: '100%', height: '65vh', backgroundColor: 'white', fontFamily: 'Poppins, sans-serif' }}>
+    <main style={{background:colors.background, width: '100%', height: '65vh', backgroundColor: 'white', fontFamily: 'Poppins, sans-serif' }}>
           <Box
             style={{
               width: '100%',
@@ -62,7 +65,7 @@ const GSWebScan = () => {
               position: 'relative'
             }}
           >
-            <Box style={{ width: '100%', height: '100%', background: 'rgba(8, 7, 86, 0.8)' }}>
+            <Box style={{background:colors, width: '100%', height: '100%' }}>
               <Box style={{ maxWidth: '1073px', margin: 'auto', position: 'absolute', top: '20%', left: 0, right: 0, textAlign: 'center', color: 'white' }}>
                 <Typography variant="h1" style={{ color: 'white', fontSize: '50px', fontWeight: 'bold' }}>
                 <strong>{t(`GSWebScan.GSWebScan®`)}
@@ -349,7 +352,7 @@ const GSWebScan = () => {
               ))}
             </ImageList>
           </Container>
-        </main>
+     </main>
     </>
   )
 }

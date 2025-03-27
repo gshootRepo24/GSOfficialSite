@@ -34,7 +34,7 @@ export default function App() {
     { path: "/Nav/GsImage", element: <GsImage /> },
     { path: "/Nav/GsDocs", element: <Gsdocs /> },
     { path: "/Nav/GSFiles", element: <Mfile /> },
-    { path: '/ServoWebScan', element:<GSWebScan/> },
+    { path: '/Nav/GsWebScan', element:<GSWebScan/> },
     { path: "/Nav/About-Us", element: <GsAbout /> },
   ]);
 
