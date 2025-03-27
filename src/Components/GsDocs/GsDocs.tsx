@@ -29,9 +29,12 @@ import suryodayImg from "../../assets/GsDocs/Suryoday.webp";
 import { useTranslation } from "react-i18next";
 import Navbar from "../Navrbar";
 import Topbar from "../Topbar";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemesProvider/ThemeProvider";
 
 const Gsdocs = () => {
   const { t } = useTranslation();
+ const {colors,theme} = useContext(ThemeContext)
   
   const itemData = [
     { img: axisBankImg, title: 'Axis Bank' },
@@ -57,7 +60,7 @@ const Gsdocs = () => {
         style={{
           width: '100%',
           height: '100%',
-          backgroundImage: `url(${bgImage})`,
+          backgroundImage: theme ==="light" ? `url(${bgImage})` : `url(${bgImage})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           marginTop: '10px',
@@ -66,12 +69,12 @@ const Gsdocs = () => {
       >
         <Box style={{ width: '100%', height: '100%', background: 'rgba(8, 7, 86, 0.8)' }}>
           <Box style={{ maxWidth: '1073px', margin: 'auto', position: 'absolute', top: '20%', left: 0, right: 0, textAlign: 'center', color: 'white' }}>
-            <Typography variant="h1" style={{ color: 'white', fontSize: '50px', fontWeight: 'bold' }}>
+            <Typography variant="h1" style={{  color: theme ==="dark" ? colors.text :'white', fontSize: '50px', fontWeight: 'bold' }}>
             <strong>{t(`servodocs.ServoDocs`)}
            <sup>{t(`® `)}</sup>
           </strong>
             </Typography>
-            <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '24px', fontSize: '20px', color: '#FFFDFD' }}>
+            <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '24px', fontSize: '20px', color: theme ==="dark" ? colors.text : '#FFFDFD' }}>
               {t('servodocs.DigitizationText')}
             </Typography>
             <Box style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '12px' }}>
@@ -80,7 +83,7 @@ const Gsdocs = () => {
                 disableElevation
                 style={{
                   padding: '10px 15px',
-                  backgroundColor: '#1976d2',
+                  backgroundColor:theme ==="dark" ? colors.background : '#1976d2',
                   color: 'white',
                   fontSize: '14px',
                   fontWeight: '600',
@@ -96,7 +99,7 @@ const Gsdocs = () => {
                 disableElevation
                 style={{
                   padding: '10px 15px',
-                  backgroundColor: 'red',
+                  backgroundColor:theme ==="dark" ? colors.background : 'red',
                   color: 'white',
                   fontSize: '14px',
                   fontWeight: '600',
@@ -113,22 +116,22 @@ const Gsdocs = () => {
       </Box>
 
       <Container maxWidth="lg" style={{ textAlign: "center", marginTop: "30px" }}>
-        <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
+        <Typography variant="h2" style={{background:colors.background, fontWeight: 'bold', color: theme ==="dark" ? colors.text :'#ED2427', marginBottom: '24px' }}>
           {/* <strong>{t(`servodocs.OverviewOf`)}</strong> */}
           <strong>{t(`servodocs.OverviewOf`)}
           </strong>
-           <span style={{ color: '#1f2b5d' }}>{t(`servodocs.Servo`)}</span>
+           <span style={{ color: theme ==="dark" ? colors.text :'#1f2b5d' }}>{t(`servodocs.Servo`)}</span>
             {t(`servodocs.Docs®`)}
         </Typography>
-        <Box style={{ backgroundColor: "#ffffff", textAlign: "center", fontSize: "20px", lineHeight: "35px" }}>
-          <Typography variant="body1" style={{ fontWeight: 'bold' }}>
+        <Box style={{ backgroundColor: theme ==="dark" ? colors.background :"#ffffff", textAlign: "center", fontSize: "20px", lineHeight: "35px" }}>
+          <Typography variant="body1" style={{color:colors.text, fontWeight: 'bold' }}>
             <strong>{t(`servodocs.ServoDocs`)}</strong>
             <sup>{t(`®`)}</sup> {t('servodocs.DMSDescription')}
           </Typography>
         </Box>
       </Container>
 
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{background:colors.background , color:colors.text}}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <img src="https://www.servosys.com/wp-content/uploads/2023/08/ServoDocs.png" alt="ServoDocs" style={{ width: '100%' }} />
@@ -145,16 +148,16 @@ const Gsdocs = () => {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg" style={{ textAlign: "center", paddingTop: "30px", paddingBottom: "20px" }}>
-        <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '40px', fontWeight: 'bold', color: '#ED2427' }}>
-          {t(`servodocs.AdvancedFeaturesOfServoDocs`)} <span style={{ color: '#1f2b5d' }}>{t(`servodocs.Servo`)}</span> {t(`servodocs.Docs®`)}
+      <Container maxWidth="lg" style={{background:colors.background, textAlign: "center", paddingTop: "30px", paddingBottom: "20px" }}>
+        <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '40px', fontWeight: 'bold', color:theme ==="dark" ? colors.text : '#ED2427' }}>
+          {t(`servodocs.AdvancedFeaturesOfServoDocs`)} <span style={{ color:theme ==="dark" ? colors.text : '#1f2b5d' }}>{t(`servodocs.Servo`)}</span> {t(`servodocs.Docs®`)}
         </Typography>
       </Container>
 
-      <Container maxWidth="lg" style={{ padding: "40px" }}>
+      <Container maxWidth="lg" style={{background:colors.background, padding: "40px" }}>
         <Grid container spacing={2} justifyContent="center">
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left", }} sx={{ '&:hover': {
+            <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left", }} sx={{ '&:hover': {
                   backgroundColor: "transparent", 
                   backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                 },}}>
@@ -168,7 +171,7 @@ const Gsdocs = () => {
             </Card>
           </Grid>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
+            <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
                   backgroundColor: "transparent", 
                   backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                 },}}>
@@ -182,7 +185,7 @@ const Gsdocs = () => {
             </Card>
           </Grid>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
+            <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
                   backgroundColor: "transparent", 
                   backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                 },}}>
@@ -198,7 +201,7 @@ const Gsdocs = () => {
         </Grid>
         <Grid container spacing={2} justifyContent="center" style={{ marginTop: '24px' }}>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
+            <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
                   backgroundColor: "transparent", 
                   backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                 },}}>
@@ -212,7 +215,7 @@ const Gsdocs = () => {
             </Card>
           </Grid>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
+            <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
                   backgroundColor: "transparent", 
                   backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                 },}}>
@@ -226,7 +229,7 @@ const Gsdocs = () => {
             </Card>
           </Grid>
           <Grid item>
-            <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
+            <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
                   backgroundColor: "transparent", 
                   backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                 },}}>
@@ -242,13 +245,13 @@ const Gsdocs = () => {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg" style={{ textAlign: "center", padding: "10px" }}>
-        <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '24px', fontWeight: 'bold', color: '#ED2427' }}>
+      <Container maxWidth="lg" style={{background:colors.background, textAlign: "center", padding: "10px" }}>
+        <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '24px', fontWeight: 'bold', color:theme==="dark" ? colors.text : '#ED2427' }}>
         {t(`servodocs.BreakthroughResultsBFSI`)}
         </Typography>
       </Container>
 
-      <Container maxWidth="lg" style={{ display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
+      <Container maxWidth="lg" style={{ background:colors.background, display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <ImageListItem>
@@ -256,10 +259,10 @@ const Gsdocs = () => {
             </ImageListItem>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
+            <Typography variant="h2" style={{ fontWeight: 'bold', color: theme==="dark" ? colors.text :'#ED2427', marginBottom: '24px' }}>
             {t(`servodocs.LoweredTAT`)}
             </Typography>
-            <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
+            <Box style={{color:colors.text, display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
             <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
               <Typography variant="body2">
               {t(`servodocs.AdvanceDMSFeatures`)}
@@ -269,10 +272,10 @@ const Gsdocs = () => {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg" style={{ display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
+      <Container maxWidth="lg" style={{background:colors.background,color:colors.text, display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
+            <Typography variant="h2" style={{ fontWeight: 'bold', color:theme==="dark" ? colors.text : '#ED2427', marginBottom: '24px' }}>
             {t(`servodocs.Compliance&Security`)}
             </Typography>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
@@ -296,7 +299,7 @@ const Gsdocs = () => {
         </Grid>
       </Container>
 
-      <Container maxWidth='lg' style={{ display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
+      <Container maxWidth='lg' style={{background:colors.background,color:colors.text, display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <ImageListItem>
@@ -304,7 +307,7 @@ const Gsdocs = () => {
             </ImageListItem>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
+            <Typography variant="h2" style={{ fontWeight: 'bold', color:theme === "dark" ? colors.text: '#ED2427', marginBottom: '24px' }}>
             {t(`servodocs.LessenedManpower`)}
             </Typography>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
@@ -323,10 +326,10 @@ const Gsdocs = () => {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg" style={{ display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
+      <Container maxWidth="lg" style={{background:colors.background,color:colors.text, display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px' }}>
+            <Typography variant="h2" style={{ fontWeight: 'bold', color:theme==="dark"? colors.text:'#ED2427', marginBottom: '24px' }}>
             {t(`servodocs.IntegrationFriendly`)}
             </Typography>
             <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
@@ -350,8 +353,8 @@ const Gsdocs = () => {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg">
-        <Typography variant="h2" style={{ textAlign: "center", fontWeight: 'bold', color: '#ED2427', margin: '24px 0' }}>
+      <Container maxWidth="lg" sx={{background:colors.background}}>
+        <Typography variant="h2" style={{ textAlign: "center", fontWeight: 'bold', color:theme==="dark"? colors.text : '#ED2427', margin: '24px 0' }}>
         {t(`servodocs.ServoDocsDMS`)}
         </Typography>
         <Box style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -359,13 +362,13 @@ const Gsdocs = () => {
         </Box>
       </Container>
 
-      <Container maxWidth="lg">
-        <Typography variant="h2" style={{ textAlign: "center", fontWeight: 'bold', color: '#ED2427', margin: '24px 0' }}>
+      <Container maxWidth="lg" sx={{background:colors.background}}>
+        <Typography variant="h2" style={{background:colors.background, textAlign: "center", fontWeight: 'bold', color:theme === "dark" ? colors.text : '#ED2427', margin: '24px 0' }}>
         {t(`servodocs.TrustedByIndustryLeaders`)}
         </Typography>
       </Container>
 
-      <Container maxWidth="lg" style={{ padding: "60px" }}>
+      <Container maxWidth="lg" style={{background:colors.background, padding: "60px" }}>
         <ImageList style={{ width: "100%", height: 450 }} cols={6} gap={15} rowHeight={164}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
@@ -375,14 +378,14 @@ const Gsdocs = () => {
         </ImageList>
       </Container>
 
-      <Container maxWidth="lg" style={{ padding: "0 10px", color: "#27273a" }}>
-        <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
+      <Container maxWidth="lg" style={{background:colors.background, padding: "0 10px", color:theme==="dark"? colors.text : "#27273a" }}>
+        <Typography variant="h2" style={{color:theme==="dark"? colors.text : "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
           <strong> {t(`servodocs.StreamlineDocumentManagement`)} </strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
         {t(`servodocs.DigitalLandscapeText`)} 
         </Typography>
-        <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
+        <Typography variant="h2" style={{ color:theme==="dark"? colors.text : "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
           <strong>{t(`servodocs.OverviewOfServoDocs`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
@@ -395,7 +398,7 @@ const Gsdocs = () => {
         {t(`servodocs.IntegrationWithBusinessApps`)} 
         </Typography>
 
-        <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
+        <Typography variant="h2" style={{ color:theme==="dark"? colors.text : "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
           <strong>{t(`servodocs.BenefitsOfDMS`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
@@ -434,7 +437,7 @@ const Gsdocs = () => {
           </li>
         </ul>
 
-        <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
+        <Typography variant="h2" style={{ color:theme==="dark"? colors.text : "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
           <strong> {t(`servodocs.AdvancedFeaturesOfDMS`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
@@ -473,7 +476,7 @@ const Gsdocs = () => {
           </li>
         </ul>
 
-        <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
+        <Typography variant="h2" style={{ color:theme==="dark"? colors.text : "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
           <strong>{t(`servodocs.BreakthroughResultsBFSIKey`)}</strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>
@@ -504,7 +507,7 @@ const Gsdocs = () => {
         {t(`servodocs.RealTimeDataSyncKey`)}
         </Typography>
 
-        <Typography variant="h2" style={{ color: "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
+        <Typography variant="h2" style={{ color:theme==="dark"? colors.text : "#27273A", fontWeight: 'bold', margin: '16px 0' }}>
           <strong>{t(`servodocs.GettingStartedServoDocs`)} </strong>
         </Typography>
         <Typography variant="body1" style={{ marginBottom: '16px' }}>

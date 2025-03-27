@@ -31,10 +31,11 @@ import relianceImg from "../../assets/GsDocs/Reliance.webp";
 import suryodayImg from "../../assets/GsDocs/Suryoday.webp";
 import { ThemeContext } from "../ThemesProvider/ThemeProvider"
 import { useContext } from "react"
+// import zIndex from "@mui/material/styles/zIndex"
 
 const GSWebScan = () => {
    const { t } = useTranslation();
-   const {colors} = useContext(ThemeContext)
+   const {colors,theme} = useContext(ThemeContext)
    const itemData = [
     { img: axisBankImg, title: 'Axis Bank' },
     { img: avansImg, title: 'Avans' },
@@ -53,26 +54,28 @@ const GSWebScan = () => {
     <>
     <Topbar/>
     <Navbar/>
-    <main style={{background:colors.background, width: '100%', height: '65vh', backgroundColor: 'white', fontFamily: 'Poppins, sans-serif' }}>
+    <main style={{ width: '100%', height: '65vh', fontFamily: 'Poppins, sans-serif' }}>
           <Box
             style={{
               width: '100%',
               height: '100%',
-              backgroundImage: `url(${servoScanBgImage})`,
+              backgroundImage: theme ==="light" ? `url(${servoScanBgImage})` : `url(${servoScanBgImage})`,
+              // backgroundImage: `url(${servoScanBgImage})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               marginTop: '10px',
-              position: 'relative'
+              position: 'relative',
+              zIndex: 100
             }}
           >
-            <Box style={{background:colors, width: '100%', height: '100%' }}>
-              <Box style={{ maxWidth: '1073px', margin: 'auto', position: 'absolute', top: '20%', left: 0, right: 0, textAlign: 'center', color: 'white' }}>
-                <Typography variant="h1" style={{ color: 'white', fontSize: '50px', fontWeight: 'bold' }}>
+            <Box style={{ width: '100%', height: '100%' }}>
+              <Box style={{maxWidth: '1073px', margin: 'auto', position: 'absolute', top: '20%', left: 0, right: 0, textAlign: 'center' }}>
+                <Typography variant="h1" style={{ color: theme ==="dark" ? colors.background :'white', fontSize: '50px', fontWeight: 'bold' }}>
                 <strong>{t(`GSWebScan.GSWebScan®`)}
                <sup>{t(`® `)}</sup>
               </strong>
                 </Typography>
-                <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '24px', fontSize: '20px', color: '#FFFDFD' }}>
+                <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '24px', fontSize: '20px', color:theme==="dark"? colors.background : '#FFFDFD' }}>
                   {t('GSWebScan.Description')}
                 </Typography>
                 <Box style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '12px' }}>
@@ -81,10 +84,10 @@ const GSWebScan = () => {
                     disableElevation
                     style={{
                       padding: '10px 15px',
-                      backgroundColor: '#1976d2',
                       color: 'white',
                       fontSize: '14px',
                       fontWeight: '600',
+                      background:theme === "dark" ? colors.background : "#1976d2"
                       // '&:hover': {
                       //   backgroundColor: '#115293',
                       // },
@@ -101,6 +104,8 @@ const GSWebScan = () => {
                       color: 'white',
                       fontSize: '14px',
                       fontWeight: '600',
+                       background:theme === "dark" ? colors.background : "red"
+                      // background: colors.background,
                       // '&:hover': {
                       //   backgroundColor: 'darkred',
                       // },
@@ -113,66 +118,66 @@ const GSWebScan = () => {
             </Box>
           </Box>
     
-          <Container maxWidth="lg" style={{ textAlign: "center", marginTop: "30px" }}>
-            <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px',fontSize:"40px" }}>
+          <Container maxWidth="lg" style={{background: colors.background, textAlign: "center", marginTop: "30px" }}>
+            <Typography variant="h2" style={{ color: theme === "dark" ? colors.text : "red", fontWeight: 'bold', marginBottom: '24px',fontSize:"40px" }}>
               <strong>{t(`GSWebScan.OverviewOfServoWebScan`)}
               </strong>
               <sup>{t(`®`)}</sup>
             </Typography>
-            <Box style={{ backgroundColor: "#ffffff", textAlign: "center", fontSize: "20px", lineHeight: "35px" }}>
-              <Typography variant="body1" style={{ fontWeight: 'bold' }}>
+            <Box style={{background: colors.background, color:colors.text, backgroundColor: "#ffffff", textAlign: "center", fontSize: "20px", lineHeight: "35px" }}>
+              <Typography variant="body1" style={{background:colors.background, fontWeight: 'bold' }}>
                  {t('GSWebScan.DetailedDescription')}
               </Typography>
             </Box>
           </Container>
-          <Container maxWidth="lg" style={{ textAlign: "center", paddingTop: "30px", paddingBottom: "20px" }}>
-            <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '40px', fontWeight: 'bold', color: '#ED2427' }}>
+          <Container maxWidth="lg" style={{background:  colors.background, textAlign: "center", paddingTop: "30px", paddingBottom: "20px" }}>
+            <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '40px', fontWeight: 'bold', color:theme==="dark"? colors.text : '#ED2427' }}>
               {t(`GSWebScan.AdvancedFeaturesAndCapabilities`)} 
                <sup>{t(`®`)}</sup>
                 
             </Typography>
           </Container>
     
-          <Container maxWidth="lg" style={{ padding: "40px" }}>
+          <Container maxWidth="lg" style={{background:colors.background, padding: "40px" }}>
             <Grid container spacing={2} justifyContent="center">
               <Grid item>
-                <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left", }} sx={{ '&:hover': {
-                      backgroundColor: "transparent", 
+                <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left", }} sx={{ '&:hover': {
+                       backgroundColor:"transparent",  
                       backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                     },}}>
                   <IoSettingsOutline style={{ fontSize: '50px' }} />
                   <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
                     {t(`GSWebScan.TwainCompatibility`)}
                   </Typography>
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                     {t(`GSWebScan.ScannedFilesIntegration`)}
                   </Typography>
                 </Card>
               </Grid>
               <Grid item>
-                <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
-                      backgroundColor: "transparent", 
+                <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
+                       backgroundColor:"transparent",  
                       backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                     },}}>
                   <TiCloudStorageOutline style={{ fontSize: '50px' }} />
                   <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
                     {t(`GSWebScan.EasyConfigurability`)}
                   </Typography>
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                     {t(`GSWebScan.PropertySettingsConfiguration`)}
                   </Typography>
                 </Card>
               </Grid>
               <Grid item>
-                <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
-                      backgroundColor: "transparent", 
+                <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
+                       backgroundColor:"transparent",  
                       backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                     },}}>
                   <TbDeviceMobileCheck style={{ fontSize: '50px' }} />
                   <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
                     {t(`GSWebScan.DocumentEditing`)}
                   </Typography>
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                     {t(`GSWebScan.DocumentEditingDescription`)}
                   </Typography>
                 </Card>
@@ -180,35 +185,35 @@ const GSWebScan = () => {
             </Grid>
             <Grid container spacing={2} justifyContent="center" style={{ marginTop: '24px' }}>
               <Grid item>
-                <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
-                      backgroundColor: "transparent", 
+                <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left" }} sx={{ '&:hover': {
+                      backgroundColor:"transparent", 
                       backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                     },}}>
                   <LuMessageCircleMore style={{ fontSize: '50px' }} />
                   <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
                     {t(`GSWebScan.EasilyIntegrateWithWebApps`)}
                   </Typography>
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                     {t(`GSWebScan.BrowserSupportDescription`)}
                   </Typography>
                 </Card>
               </Grid>
               <Grid item>
-                <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
-                      backgroundColor: "transparent", 
+                <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
+                      backgroundColor:"transparent", 
                       backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                     },}}>
                   <RiArrowLeftRightLine style={{ fontSize: '50px' }} />
                   <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
                     {t(`GSWebScan.SingleMultipagePDFTIFF`)}
                   </Typography>
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                     {t(`GSWebScan.SingleMultipagePDFTIFFDescription`)}
                   </Typography>
                 </Card>
               </Grid>
               <Grid item>
-                <Card style={{ maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
+                <Card style={{background:colors.background, color:colors.text, maxWidth: 285, minHeight: 206, padding: "20px", border: "1px solid grey", borderRadius: "30px", boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)", textAlign: "left"}} sx={{ '&:hover': {
                       backgroundColor: "transparent", 
                       backgroundImage: "linear-gradient(-90deg, #1E295D 0%, #ED2124CC 100%)",
                     },}}>
@@ -216,7 +221,7 @@ const GSWebScan = () => {
                   <Typography variant="body1" style={{ marginTop: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
                     {t(`GSWebScan.TATReduction`)}
                   </Typography>
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                     {t(`GSWebScan.TATReductionDescription`)}
                   </Typography>
                 </Card>
@@ -224,32 +229,32 @@ const GSWebScan = () => {
             </Grid>
           </Container>
     
-          <Container maxWidth="lg" style={{ textAlign: "center", padding: "10px" }}>
-            <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '24px', fontWeight: 'bold', color: '#ED2427', fontSize:"40px" }}>
+          <Container maxWidth="lg" style={{background:colors.background, textAlign: "center", padding: "10px" }}>
+            <Typography variant="h2" style={{ marginTop: '20px', marginBottom: '24px', fontWeight: 'bold', color:theme==="dark"? colors.text :'#ED2427', fontSize:"40px" }}>
             {t(`servodocs.BreakthroughResultsBFSI`)}
             </Typography>
           </Container>
     
           <Container maxWidth="lg" className="image_container" style={{display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={6} sx={{background:colors.background, color:colors.text}}>
                 <ImageListItem>
                   <img src={readyToUse} alt="Image A" loading="lazy" style={{ width: '100%' }} />
                 </ImageListItem>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px',fontSize:"40px" }}>
+              <Grid item xs={12} md={6} sx={{background:colors.background, color:colors.text}}>
+                <Typography variant="h2" style={{ fontWeight: 'bold', color: theme==="dark" ? colors.text :'#ED2427', marginBottom: '24px',fontSize:"40px" }}>
                 {t(`GSWebScan.ReadyToUse`)}
                 </Typography>
                 <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
                 <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                   {t(`GSWebScan.WebBasedScanningSolution`)}
                   </Typography>
                 </Box>
                 <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
                 <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                   {t(`GSWebScan.TATReductionProduction`)}
                   </Typography>
                 </Box>
@@ -259,24 +264,24 @@ const GSWebScan = () => {
     
           <Container maxWidth="lg" className="image_container" style={{ display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
-                <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px',fontSize:"40px" }}>
+              <Grid item xs={12} md={6} sx={{background:colors.background, color:colors.text}}>
+                <Typography variant="h2" style={{ fontWeight: 'bold', color:theme==="dark" ? colors.text : '#ED2427', marginBottom: '24px',fontSize:"40px" }}>
                 {t(`GSWebScan.ReducesDocumentHandlingTime`)}
                 </Typography>
                 <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
                   <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                   {t(`GSWebScan.InstantDigitizationDescription`)} 
                   </Typography>
                 </Box>
                 <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
                   <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                   {t(`GSWebScan.QuickScanningAndAutoIndexingDescription`)}
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={6} sx={{background:colors.background, color:colors.text}}>
                 <ImageListItem>
                   <img src={reduceDocumentHandling} alt="Image B" loading="lazy" style={{ width: '100%' }} />
                 </ImageListItem>
@@ -286,18 +291,18 @@ const GSWebScan = () => {
     
           <Container maxWidth='lg' className="image_container" style={{ display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={6} sx={{background:colors.background, color:colors.text}}>
                 <ImageListItem>
                   <img src={easyIntegration} alt="Image C" loading="lazy" style={{ width: '100%' }} />
                 </ImageListItem>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px',fontSize:"40px" }}>
+              <Grid item xs={12} md={6} sx={{background:colors.background, color:colors.text}}>
+                <Typography variant="h2" style={{ fontWeight: 'bold', color:theme==="dark" ? colors.text : '#ED2427', marginBottom: '24px',fontSize:"40px" }}>
                 {t(`GSWebScan.EasyIntegration`)}
                 </Typography>
                 <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
                   <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                   {t(`GSWebScan.BrowserSupportAndIntegrationDescription`)}
                   </Typography>
                 </Box>
@@ -307,18 +312,18 @@ const GSWebScan = () => {
     
           <Container maxWidth="lg" className="image_container" style={{ display: "flex", justifyContent: "center", fontSize: "20px", fontWeight: "500", lineHeight: "35px", fontFamily: "Poppins, sans-serif", textAlign: "left", marginBottom: "30px" }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
-                <Typography variant="h2" style={{ fontWeight: 'bold', color: '#ED2427', marginBottom: '24px',fontSize:"40px" }}>
+              <Grid item xs={12} md={6} sx={{background:colors.background, color:colors.text}}>
+                <Typography variant="h2" style={{ fontWeight: 'bold', color:theme==="dark" ? colors.text : '#ED2427', marginBottom: '24px',fontSize:"40px" }}>
                 {t(`GSWebScan.SimplifyDocumentManagement`)}
                 </Typography>
                 <Box style={{ display: "flex", alignItems: "top", paddingInlineStart: "5px" }}>
                   <GoDotFill style={{ marginLeft: '8px', fontSize: '24px' }} />
-                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:"#27273A", fontFamily:"poppins"}} >
+                  <Typography variant="body2" sx={{fontSize:"20px",fontWeight:500, lineHeight:"35px",color:theme === "dark" ? colors.text :"#27273A", fontFamily:"poppins"}} >
                   {t(`GSWebScan.SimplifyDocumentCapturingDescription`)}
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={6} sx={{background:colors.background, color:colors.text}}>
                 <ImageListItem>
                   <img src={simplifyDocManagement} alt="Image D" loading="lazy" style={{ width: '100%' }} />
                 </ImageListItem>
@@ -327,23 +332,23 @@ const GSWebScan = () => {
           </Container>
     
           <Container maxWidth="lg">
-            <Typography variant="h2" style={{ textAlign: "center", fontWeight: 'bold', color: '#ED2427', margin: '24px 0',fontSize:"40px" }}>
+            <Typography variant="h2" style={{background:colors.background, textAlign: "center", fontWeight: 'bold', color:theme==="dark"? colors.text : '#ED2427', margin: '24px 0',fontSize:"40px" }}>
             <strong>{t(`GSWebScan.GSWebScan®`)}
                <sup>{t(`® `)}</sup>
               </strong>
             </Typography>
-            <Box style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <Box style={{background:colors.background, display: "flex", justifyContent: "center", alignItems: "center" }}>
               <img src={gsWebScan} alt="GSWebScan" style={{ width: '50%' }} />
             </Box>
           </Container>
     
           <Container maxWidth="lg">
-            <Typography variant="h2" style={{ textAlign: "center", fontWeight: 'bold', color: '#ED2427', margin: '24px 0',fontSize:"40px" }}>
+            <Typography variant="h2" style={{background:colors.background, textAlign: "center", fontWeight: 'bold', color:theme==="dark"? colors.text : '#ED2427', margin: '24px 0',fontSize:"40px" }}>
             {t(`servodocs.TrustedByIndustryLeaders`)}
             </Typography>
           </Container>
     
-          <Container maxWidth="lg" style={{ padding: "60px" }}>
+          <Container maxWidth="lg" style={{background:colors.background, padding: "60px" }}>
             <ImageList style={{ width: "100%", height: 450 }} cols={6} gap={15} rowHeight={164}>
               {itemData.map((item) => (
                 <ImageListItem key={item.img}>
