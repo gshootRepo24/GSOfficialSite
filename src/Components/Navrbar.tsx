@@ -22,7 +22,7 @@ import { useContext } from "react";
 
 
 const menuItems = {
-  Product: ["GsStreams", "GsDocs", "GsWebScan", "GsImage", "GSFiles"],
+  Product: ["GsStreams", "GsDocs", "GsImage", "Complementing Microsoft"], //"GsWebScan"
   Solutions: ["ARC Solution", "Digital Lending", "Digital CASA", "Home Loans", "Mortgage Lending"],
   Resources: ["About Us", "Careers", "Leadership Team", "Blog", "Contact Us", "Awards & Recognition"],
   Company: ["About-Us", "Careers", "Leadership Team", "Blog", "Contact Us", "Awards & Recognition"],
