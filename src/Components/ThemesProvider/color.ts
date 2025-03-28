@@ -15,8 +15,7 @@ export const colors = {
     primary: "#bb86fc",
     secondary: "#03dac5",
      topbar:"#2F2009",
-    
-     link:"#80391e"
+      link:"#80391e"
     
   },
 };
