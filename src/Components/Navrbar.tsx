@@ -104,9 +104,9 @@ function Navbar() {
               sx={{
                 textTransform: "none",
                 fontWeight: "bold",
-                backgroundColor: "blue" , //getColorPalette2(theme).primaryFontColor
-                color: "#ffffff",
-                ":hover": { backgroundColor: "#0056b3" },
+                // backgroundColor: colors.primary , //getColorPalette2(theme).primaryFontColor
+                // color:colors.text,
+                // ":hover": { backgroundColor: colors.secondary },
                 
               }}
             >
@@ -213,9 +213,9 @@ function Navbar() {
               sx={{
                 textTransform: "none",
                 fontWeight: "bold",
-                backgroundColor: "#007bff",
+                backgroundColor:colors.primary,
                 color: "#ffffff",
-                ":hover": { backgroundColor: "#0056b3" },
+                ":hover": { backgroundColor:colors.primary },
               }}
             >
               {t("nav.Request Demo")}
